@@ -1,0 +1,40 @@
+{
+  "name": "react-datepicker",
+  "version": "1.0.0",
+  "description": "datepicker基础组件，ts+hook代码风格，支持日、周、月、季、年五种时间选择",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open --mode=development",
+    "build": "webpack --config webpack.config.js --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyuqin1991/react-datepicker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liuyuqin1991/react-datepicker/issues"
+  },
+  "homepage": "https://github.com/liuyuqin1991/react-datepicker#readme",
+  "devDependencies": {
+    "@types/react": "^17.0.42",
+    "@types/react-dom": "^17.0.14",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.2",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4",
+    "yargs": "^17.4.0"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
