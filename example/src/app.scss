@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+
+  .title {
+    padding: 0 0 20px;
+    font-size: 24px;
+
+    &.common {
+      padding: 20px 0;
+      margin: 0 20px;
+    }
+
+    &.special {
+      padding: 20px 0;
+      margin: 0 20px;
+    }
+  }
+
+  .label-panel {
+    padding: 30px 0 10px;
+    font-size: 20px;
+    color: #111;
+  }
+
+  .date-panel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .date-select {
+      width: 20%;
+      display: flex;
+      align-items: center;
+
+      > span {
+        color: #aaa;
+      }
+    }
+  }
+}

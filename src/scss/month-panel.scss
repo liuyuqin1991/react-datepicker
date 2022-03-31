@@ -1,0 +1,40 @@
+@import "./color.scss";
+
+.month-table {
+	padding: 15px 17px;
+
+	tr {
+		display: flex;
+		font-size: 12px;
+
+		td {
+			width: 70px;
+			height:  45px;
+			line-height: 45px;
+			text-align: center;
+		}
+	}
+
+	&:not(.is-quarter-mode) tr > td,
+	&.is-quarter-mode > tbody tr {
+		
+		&.disabled {
+			cursor:not-allowed;
+			background-color: $c-td-disabled-background;
+		}
+
+		&:not(.disabled) {
+			cursor: pointer;
+		}
+
+		&:not(.pick):hover {
+			background-color: $c-primary-2;
+		}
+	}
+
+	&:not(.is-quarter-mode) td.pick,
+	&.is-quarter-mode > tbody tr.pick {
+		background-color: $c-primary;
+		color: $c-white;
+	}
+}

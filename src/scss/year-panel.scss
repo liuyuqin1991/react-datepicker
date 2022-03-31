@@ -1,0 +1,40 @@
+@import "./color.scss";
+
+.year-table {
+	padding: 10px 12px;
+
+	tr {
+		display: flex;
+		font-size: 12px;
+
+		td {
+			width: 55px;
+			height:  50px;
+			line-height: 50px;
+			text-align: center;
+			color: $c-td-text;
+
+			&:not(.disabled) {
+				cursor: pointer;
+
+				&.pick {
+					background-color: $c-primary;
+					color: $c-white;
+				}
+
+				&:not(.pick):hover {
+					background-color: $c-primary-2;
+				}
+			}
+
+			&.disabled {
+				cursor:not-allowed;
+				background-color: $c-td-disabled-background;
+			}
+			
+			&.hide {
+				visibility: hidden;
+			}
+		}
+	}
+}

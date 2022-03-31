@@ -1,0 +1,54 @@
+@import "./color.scss";
+
+.picker-panel {
+	width: 244px;
+	color: $c-111;
+	border: 1px solid $c-ddd;
+	box-shadow: 0 2px 6px $c-ccc;
+	background: $c-white;
+	border-radius: 2px;
+	line-height: 20px;
+	margin: 5px 0;
+
+	.header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 10px 10px 5px;
+		color: $c-td-text;
+
+		.icon-btn {
+			font-size: 12px;
+			border: 0;
+			cursor: pointer;
+			outline: none;
+			padding: 3px 4px;
+			color: $c-aaa;
+			background-color: $c-n1;
+
+			&:hover {
+				color: $c-primary;
+			}
+		}
+
+		.date-label {
+			padding: 0 12px;
+			display: flex;
+			justify-content: center;
+			font-size: 14px;
+
+			>div {
+				margin: 0 5px;
+
+				&:not(.disabled) {
+					cursor: pointer;
+				}
+				
+				&:not(.disabled):hover {
+					color: $c-primary;
+				}
+			}
+		}
+	}
+}   
+

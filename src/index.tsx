@@ -1,4 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import '@src/scss';
 
-ReactDOM.render(<div>hello world components</div>, document.getElementById("root"));
+export { default as DatePicker } from './DatePicker';

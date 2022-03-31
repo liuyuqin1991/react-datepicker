@@ -11,7 +11,15 @@
 		"esModuleInterop": true,
 		"declaration": true,
 		"outDir": "./dist",
-		"allowJs": true
+		"allowJs": true,
+		"baseUrl": ".",
+		"paths": {
+			"@src/*": ["src/*"],
+			"@typing": ["src/typing/"],
+			"@scss": ["src/scss/"],
+			"@asset": ["src/asset/"],
+			"@hook": ["src/hook/"],
+		}
 	},
 	//包含
 	"include": [

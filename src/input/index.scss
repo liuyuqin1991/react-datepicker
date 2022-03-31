@@ -1,0 +1,33 @@
+@import "@scss/color.scss";
+
+.input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  > input {
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 0 10px;
+
+    &:focus {
+      outline: 0;
+      border-color: $c-primary;
+    }
+
+    &::placeholder {
+      font-size: 12px;
+      color: #bbb;
+    }
+  }
+
+  .input-icon {
+    position: absolute;
+    right: 10px;
+    color: $c-input-border-color;
+    cursor: pointer;
+  }
+}

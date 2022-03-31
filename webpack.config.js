@@ -1,25 +1,34 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const argv = require('yargs').argv;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const entryPath = argv.mode == 'development' ? "./example/src/index.tsx" : "./src/index.tsx";
+const isDev = argv.mode == 'development';
+const entryPath = isDev ? './example/src/index.tsx' : './src/index.tsx';
 
 module.exports = {
 	entry: path.resolve(__dirname, entryPath),
 	output: {
-		filename: "index.js",
+		filename: 'index.js',
 		path: path.resolve(__dirname, './dist'),
 		libraryTarget: 'umd',
 		umdNamedDefine: true
 	},
-	devtool: 'inline-source-map',
+	resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.css', '.scss'],
+    alias: {
+			'@src': path.resolve(__dirname, 'src/'),
+			'@typing': path.resolve(__dirname, 'src/typing/'),
+			'@scss': path.resolve(__dirname, 'src/scss/'),
+			'@asset': path.resolve(__dirname, 'src/asset/'),
+			'@hook': path.resolve(__dirname, 'src/hook/'),
+    },
+  },
+	devtool: isDev ? 'inline-source-map' : false,
 	devServer: {
 		static: './dist',
 		port: 9000,
-	},
-	resolve: {
-		extensions: [".ts", ".tsx", ".js", ".json"]
 	},
 	module: {
 		rules: [
@@ -29,12 +38,16 @@ module.exports = {
 			},
 			{
 				test: /\.(scss|css)$/,
-				use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+				use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
 			},
 			{
-				test: /\.(woff)|(ttf)$/,
-				type: 'asset/font'
+				test:/\.(ttf|woff|eot|woff2)$/i,
+				type: 'asset/resource'
 			},
+			{
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource'
+      },
 		]
 	},
 	plugins: [

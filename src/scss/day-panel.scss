@@ -1,0 +1,60 @@
+@import "./color.scss";
+
+.day-table {
+	padding: 10px;
+	color: $c-td-text;
+
+	tr {
+		display: flex;
+		font-size: 12px;
+
+		th {
+			width: 32px;
+			height:  32px;
+			line-height: 32px;
+			color: $c-th-text;
+			font-weight: normal;
+		}
+
+		td {
+			width: 32px;
+			height:  32px;
+			line-height: 32px;
+			text-align: center;
+
+			&.last,
+			&.next {
+				color: $c-td-disabled-text;
+			}
+		}
+	}
+
+	&:not(.is-week-mode) tr > td,
+	&.is-week-mode > tbody tr {
+
+		&.disabled {
+			cursor: not-allowed;
+			background-color: $c-td-disabled-background;
+		}
+
+		&:not(.disabled) {
+			cursor: pointer;
+		}
+
+		&:not(.pick):hover {
+			background-color: $c-primary-2;
+		}
+	}
+
+	&:not(.is-week-mode) td.pick, 
+	&.is-week-mode > tbody tr.pick {
+		background-color: $c-primary;
+		color: $c-white;
+		
+		.last,
+		.next {
+			background-color: $c-primary;
+			color: $c-white;
+		}
+	}
+}
