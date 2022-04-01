@@ -4,11 +4,13 @@
 ## 安装
 
 ```
+npm i react-datepicker-ts
 
 ```
 ## 使用
 
 ```
+import DatePicker from 'react-datepicker-ts';
 
 ```
 
@@ -24,6 +26,6 @@
 | className  | 类选择器<可选> |string | |
 | onPick  | 选择日期回调函数<必选> | (d: Date[]) => void | |
 | format  | 显示在输入框符合dayjs规范的格式<可选> | string | |
-| placeholder  | 未选日期的占位符<可选> | string | |
+| placeholder  | 未选日期时的占位符<可选> | string | |
 | disabledDateFunc  | 禁用日期回调函数<可选> | (d: Date) => void | |
 

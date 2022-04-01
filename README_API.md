@@ -30,7 +30,10 @@
 /*
 * 回调参数d包含开始和结束日期的数组，当只是日期选择而不包含时间选择时，时间部分均为当前时间
 * 1. 选择day模式，startDate与endDate相等
-* 2. 选择week模式，startDate为当周起始日期，endDate为当周结束日期
+* 2. 选择week模式，startDate为当周的起始日期，endDate为当周的结束日期
+* 3. 选择month模式，startDate为当月的起始日期，endDate为当月的结束日期
+* 4. 选择quarter模式，startDate为当季度的起始日期，endDate为当季度的结束日期
+* 5. 选择year模式，startDate为当年的起始日期，endDate为当年的结束日期
 */
 const onPick = (d: Date[]) => {
   const startDate = d[0];
@@ -48,7 +51,7 @@ const onPick = (d: Date[]) => {
 
 > String | 可选 | v1.0
 
-未选日期的占位符。
+未选日期时的占位符。
 
 ## disabledDateFunc
 
