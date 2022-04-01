@@ -15,13 +15,13 @@ import '@scss';
 
 
 interface DatePickerProps {
-    selectionMode?: SelectionMode,
-    defaultDate?: Date | string,
-    onPick: (date: Date[]) => void,
-    format?: string,
-    placeholder?: string,
-    disabledDateFunc?: (date: Date) => void,
-    className?: string;
+  selectionMode?: SelectionMode,
+  defaultDate?: Date | string,
+  onPick: (date: Date[]) => void,
+  format?: string,
+  placeholder?: string,
+  disabledDateFunc?: (date: Date) => void,
+  className?: string;
 }
 
 const DEFAULT_FORMATS_MAP = {

@@ -10,7 +10,7 @@
 		"resolveJsonModule": true,
 		"esModuleInterop": true,
 		"declaration": true,
-		"outDir": "./dist",
+		"outDir": "dist",
 		"allowJs": true,
 		"baseUrl": ".",
 		"paths": {

@@ -2,11 +2,11 @@
   "name": "react-datepicker",
   "version": "1.0.0",
   "description": "datepicker基础组件，ts+hook代码风格，支持日、周、月、季、年五种时间选择",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --mode=development",
-    "build": "webpack --config webpack.config.js --mode=production"
+    "build": "webpack --config webpack.config.js --mode=production",
+    "deploy": "gh-pages -b demo -d dist"
   },
   "repository": {
     "type": "git",
@@ -44,6 +44,7 @@
     "@popperjs/core": "^2.11.4",
     "classnames": "^2.3.1",
     "dayjs": "^1.11.0",
+    "gh-pages": "^3.2.3",
     "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
