@@ -2,9 +2,9 @@
 
 ## selectionMode
 
-<b>String | 可选 | v1.0</b>
+> String | 可选 | v1.0
 
-日期模式，默认值为`day`，可选值为` day | week | month | quarter | year `，v1.0版本加入。
+日期模式，默认值为`day`，可选值为` day | week | month | quarter | year `。
 
 ## defaultDate
 
