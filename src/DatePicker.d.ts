@@ -7,8 +7,9 @@ interface DatePickerProps {
     onPick: (date: Date[]) => void;
     format?: string;
     placeholder?: string;
-    disabledDateFunc?: (date: Date) => void;
+    disabledDateFunc?: (date: Date) => boolean;
     className?: string;
+    enableClear?: boolean;
 }
 declare const DatePicker: React.FC<DatePickerProps>;
 export default DatePicker;

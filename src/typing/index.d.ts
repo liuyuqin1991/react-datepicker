@@ -1,5 +1,5 @@
 declare type MAP_KEY = number | string;
-export declare type SelectionMode = 'year' | 'month' | 'week' | 'day' | 'quarter';
+export declare type SelectionMode = 'year' | 'month' | 'week' | 'day' | 'quarter' | 'time';
 export declare type TD = {
     style?: {
         [id: string]: boolean;

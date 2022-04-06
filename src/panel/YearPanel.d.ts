@@ -2,7 +2,7 @@ import React from 'react';
 import { Dayjs } from 'dayjs';
 interface YearPanelProps {
     defaultDate?: Dayjs;
-    date?: Dayjs;
+    virtualDate?: Dayjs;
     onPick: (date: Dayjs[]) => void;
     disabledDateFunc?: (date: Dayjs) => void;
 }
