@@ -136,7 +136,7 @@ const Demo: React.FC = () => {
         </div>
         <div className="time">
           <div className="label-panel">
-            6. 时间选择组件
+            6. 时间选择组件（设计灵感：避免滚动选择，特定时间直观显示点击）
           </div>
           <div className="date-panel">
             <div className="date-select">
