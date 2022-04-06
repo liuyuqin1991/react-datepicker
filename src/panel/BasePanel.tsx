@@ -1,35 +1,37 @@
 import React, { useState } from 'react';
-import { includes as _includes, toInteger as _toInteger, isFunction as _isFunction } from 'lodash';
+import { includes as _includes, toInteger as _toInteger } from 'lodash';
 import { Dayjs } from 'dayjs';
 
 import { SelectionMode } from '@typing';
 import DayPanel from './DayPanel';
 import MonthPanel from './MonthPanel';
 import YearPanel from './YearPanel';
+import TimePanel from './TimePanel';
 
 interface BasePanelProps {
   defaultDate?: Dayjs,
-  onPick: (date: Dayjs[]) => void,
+  onPick: (date: Dayjs[] | Dayjs) => void,
+  onClose?: () => void,
   isShowTime?: boolean,
   showWeekNumber?: boolean,
-  selectionMode?: SelectionMode,
+  selectionMode: SelectionMode,
   disabledDateFunc?: (date: Date) => void,
+  enableSecond?: boolean,
 }
 
 const BasePanel: React.FC<BasePanelProps> = (props) => {
-  const { selectionMode, defaultDate, onPick, disabledDateFunc } = props;
+  const { selectionMode, defaultDate, onPick, onClose, disabledDateFunc, enableSecond } = props;
   const [date, setDate] = useState<Dayjs>(defaultDate);
   const [currentPanel, setCurrentPanel] = useState<string>(() => {
-    if(_includes(['day', 'week'], selectionMode)){
+    if (_includes(['day', 'week'], selectionMode)){
       return 'day';
-    }
-    else if(_includes(['month', 'quarter'], selectionMode)){
+    } else if (_includes(['month', 'quarter'], selectionMode)){
       return 'month';
     }
-    return 'year';
+    return selectionMode;
   });
 
-  const onDatePick = (d: Dayjs[]) => {
+  const datePick = (d: Dayjs[]) => {
     // 日，周视图点击年视图进入时
     if (_includes(['day', 'week'], selectionMode) && currentPanel === 'year') {
       setDate(date.year(d[1].year()));
@@ -45,122 +47,151 @@ const BasePanel: React.FC<BasePanelProps> = (props) => {
       setDate(date.year(d[1].year()));
       setCurrentPanel('month');
     }
-    else if(_isFunction(onPick)) {
-      onPick(d);
-    }
+    else onPick(d);
   };
 
-  const onClickLast = (type: string, count: number) => {
+  const timePick = (d: Dayjs) => {
+    onPick(d);
+  }
+
+  const last = (type: string, count: number) => {
     setDate(date.subtract(count, type));
   };
 
-  const onClickNext = (type: string, count: number) => {
+  const next = (type: string, count: number) => {
     setDate(date.add(count, type));
   };
 
-  const onClickShowPanel = (evt: React.BaseSyntheticEvent, type: string) => {
+  const showPanel = (evt: React.BaseSyntheticEvent, type: string) => {
     setCurrentPanel(type);
+  };
+
+  const closePanel = () => {
+    onClose();
+  }
+
+  const renderDayPanel = () => {
+    return (
+      <>
+        <div className="header">
+          <button
+            type="button"
+            onClick={() => last('year',1)}
+            className="icon-btn icon-double-left">
+          </button>
+          <button
+            type="button"
+            onClick={() => last('month',1)}
+            className="icon-btn icon-left">
+          </button>
+          <div className="date-label">
+            <div className="year" onClick={(e: React.BaseSyntheticEvent) => showPanel(e, 'year')}>
+              {`${date.year()} 年 `}
+            </div>
+            <div className="month" onClick={(e: React.BaseSyntheticEvent) => showPanel(e, 'month')}>
+              {`${date.month() + 1} 月 `}
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={() => next('month',1)}
+            className="icon-btn icon-right">
+          </button>
+          <button
+            type="button"
+            onClick={() => next('year',1)}
+            className="icon-btn icon-double-right">
+          </button>
+        </div>
+        <DayPanel 
+          onPick={datePick}
+          defaultDate={defaultDate}
+          virtualDate={date}
+          selectionMode={selectionMode}
+          disabledDateFunc={disabledDateFunc}
+        />
+      </>
+    );
+  };
+
+  const renderMonthPanel = () => {
+    return (
+      <>
+        <div className="header">
+          <button
+            type="button"
+            onClick={() => last('year',1)}
+            className="icon-btn icon-double-left">
+          </button>
+          <div className="date-label">
+            <div className="month" onClick={(e: React.BaseSyntheticEvent) => showPanel(e, 'year')}>
+              {`${date.year()} 年 `}
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={() => next('year',1)}
+            className="icon-btn icon-double-right">
+          </button>
+        </div>
+        <MonthPanel
+          onPick={datePick}
+          defaultDate={defaultDate}
+          virtualDate={date}
+          selectionMode={selectionMode}
+        />
+      </>
+    );
+  };
+
+  const renderYearPanel = () => {
+    return (
+      <>
+        <div className="header">
+          <button
+            type="button"
+            onClick={() => last('year',10)}
+            className="icon-btn icon-double-left">
+          </button>
+          <div className="date-label">
+            <div className="year disabled">
+              {`${_toInteger(date.year() / 10)}0年 - ${_toInteger(date.year() / 10)}9年`}
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={() => next('year',10)}
+            className="icon-btn icon-double-right">
+          </button>
+        </div>
+        <YearPanel
+          onPick={datePick}
+          defaultDate={defaultDate}
+          virtualDate={date}
+        />
+      </>
+    );
+  };
+
+  const renderTimePanel = () => {
+    return (
+      <TimePanel
+        onPick={timePick}
+        defaultTime={defaultDate}
+        onClose={closePanel}
+        enableSecond={enableSecond}
+      />
+    );
   };
 
   const renderPanel = () => {
     if (currentPanel === 'day') {
-      return (
-        <>
-          <div className="header">
-            <button
-              type="button"
-              onClick={() => onClickLast('year',1)}
-              className="icon-btn icon-double-left">
-            </button>
-            <button
-              type="button"
-              onClick={() => onClickLast('month',1)}
-              className="icon-btn icon-left">
-            </button>
-            <div className="date-label">
-              <div className="year" onClick={(e: React.BaseSyntheticEvent) => onClickShowPanel(e, 'year')}>
-                {`${date.year()} 年 `}
-              </div>
-              <div className="month" onClick={(e: React.BaseSyntheticEvent) => onClickShowPanel(e, 'month')}>
-                {`${date.month() + 1} 月 `}
-              </div>
-            </div>
-            <button
-              type="button"
-              onClick={() => onClickNext('month',1)}
-              className="icon-btn icon-right">
-            </button>
-            <button
-              type="button"
-              onClick={() => onClickNext('year',1)}
-              className="icon-btn icon-double-right">
-            </button>
-          </div>
-          <DayPanel 
-            onPick={onDatePick}
-            defaultDate={defaultDate}
-            virtualDate={date}
-            selectionMode={selectionMode}
-            disabledDateFunc={disabledDateFunc}
-          />
-        </>
-      )
+      return renderDayPanel();
     } else if (currentPanel === 'month') {
-      return (
-        <>
-          <div className="header">
-            <button
-              type="button"
-              onClick={() => onClickLast('year',1)}
-              className="icon-btn icon-double-left">
-            </button>
-            <div className="date-label">
-              <div className="month" onClick={(e: React.BaseSyntheticEvent) => onClickShowPanel(e, 'year')}>
-                {`${date.year()} 年 `}
-              </div>
-            </div>
-            <button
-              type="button"
-              onClick={() => onClickNext('year',1)}
-              className="icon-btn icon-double-right">
-            </button>
-          </div>
-          <MonthPanel
-            onPick={onDatePick}
-            defaultDate={defaultDate}
-            virtualDate={date}
-            selectionMode={selectionMode}
-          />
-        </>
-      )
-    } else {
-      return (
-        <>
-          <div className="header">
-            <button
-              type="button"
-              onClick={() => onClickLast('year',10)}
-              className="icon-btn icon-double-left">
-            </button>
-            <div className="date-label">
-              <div className="year disabled">
-                {`${_toInteger(date.year() / 10)}0年 - ${_toInteger(date.year() / 10)}9年`}
-              </div>
-            </div>
-            <button
-              type="button"
-              onClick={() => onClickNext('year',10)}
-              className="icon-btn icon-double-right">
-            </button>
-          </div>
-          <YearPanel
-            onPick={onDatePick}
-            defaultDate={defaultDate}
-            date={date}
-          />
-        </>
-      )
-    }
+      return renderMonthPanel();
+    } else if (currentPanel === 'year') {
+      return renderYearPanel();
+    } else return renderTimePanel();
   };
 
   return (

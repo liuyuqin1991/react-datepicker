@@ -13,33 +13,33 @@ import { TD } from '@typing';
 
 interface YearPanelProps {
   defaultDate?: Dayjs,
-  date?: Dayjs,
+  virtualDate?: Dayjs,
   onPick: (date: Dayjs[]) => void,
   disabledDateFunc?: (date: Dayjs) => void,
 }
 
 const YearPanel: React.FC<YearPanelProps> = (props) => {
-  const { defaultDate, date, disabledDateFunc, onPick } = props;
+  const { defaultDate, virtualDate, disabledDateFunc, onPick } = props;
 
   const onDatePick = (td: TD) => {
     const { label, style } = td;
     if (_isEmpty(td) || style.disabled) return;
     onPick([
-      date.year(_toInteger(label)).startOf('year'),
-      date.year(_toInteger(label)).endOf('year'),
+      virtualDate.year(_toInteger(label)).startOf('year'),
+      virtualDate.year(_toInteger(label)).endOf('year'),
     ]);
   };
 
   /**
    * 计算日历cell数据数组
    */
-  const computeCellArray = (date: Dayjs): TD[] => {
+  const computeCellArray = (): TD[] => {
     const cell: TD[] = [];
-    const preYear: number = _toInteger(date.year() / 10) ;
+    const preYear: number = _toInteger(virtualDate.year() / 10) ;
     _times(12).map((index: number) => {
       // 前缀为年份的前三位，后缀为年份的最后一位
       const currentYear: number = _toInteger(`${_toString(preYear)}${_toString(index)}`);
-      const theYear: Dayjs = date.year(currentYear);
+      const theYear: Dayjs = virtualDate.year(currentYear);
       const style = {
         'select': true,
         'pick':  currentYear === defaultDate.year(),
@@ -67,7 +67,7 @@ const YearPanel: React.FC<YearPanelProps> = (props) => {
   const renderTbody = (): JSX.Element[] => {
     const trArray: JSX.Element[] = [];
     let tdArray: JSX.Element[] = [];
-    const cellArray: TD[] = computeCellArray(date);
+    const cellArray: TD[] = computeCellArray();
     cellArray.map((year: TD, index: number) => {
       tdArray.push(
         <td  key={`year-${year.label}`} className={classnames(year.style)} onClick={() => onDatePick(year)}>

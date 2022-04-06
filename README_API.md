@@ -1,24 +1,26 @@
 # API参数详细说明
 
-## selectionMode
+## Datepicker 参数
+
+### selectionMode
 
 > String | 可选 | v1.0
 
 日期模式，默认值为`day`，可选值为` day | week | month | quarter | year `。
 
-## defaultDate
+### defaultDate
 
 > Date | 可选 | v1.0
 
 默认日期。
 
-## className
+### className
 
 > String | 可选 | v1.0
 
 日期组件容器className。
 
-## onPick
+### onPick
 
 > Function | 必选 | v1.0
 
@@ -41,19 +43,19 @@ const onPick = (d: Date[]) => {
 };
 ```
 
-## format
+### format
 
 > String | 可选 | v1.0
 
 显示在输入框的格式。组件引入了dayjs，必须符合dayjs的format规范。[查看format规范](https://dayjs.gitee.io/docs/zh-CN/display/format)
 
-## placeholder
+### placeholder
 
 > String | 可选 | v1.0
 
 未选日期时的占位符。
 
-## disabledDateFunc
+### disabledDateFunc
 
 > Function | 可选 | v1.0
 
@@ -68,7 +70,7 @@ import isBetween from 'dayjs/plugin/isBetween';
 
 dayjs.extend(isBetween);
 
-const disabledDateFunc = (currentDate: Date) => {
+const disabledDateFunc = (currentDate: Date): boolean => {
   const d = dayjs(currentDate);
   const today = dayjs();
   // 只能选择当日的前后一个月日期内
@@ -76,3 +78,55 @@ const disabledDateFunc = (currentDate: Date) => {
 };
 
 ```
+
+## Timepicker 参数
+
+### defaultTime
+
+> Date | 可选 | v2.0
+
+默认时间。
+
+### className
+
+> String | 可选 | v2.0
+
+时间组件容器className。
+
+### onPick
+
+> Function | 必选 | v2.0
+
+选择时间回调函数.
+
+示例:
+
+```
+/*
+* 回调参数d为一个Date时间，只有时分秒有效
+*/
+const onPick = (d: Date) => {
+  const hour = d.getHours();
+  const minute = d.getMinutes();
+  const second = d.getSeconds();
+};
+```
+
+### format
+
+> String | 可选 | v2.0
+
+显示在输入框的格式。组件引入了dayjs，必须符合dayjs的format规范。[查看format规范](https://dayjs.gitee.io/docs/zh-CN/display/format)
+
+### placeholder
+
+> String | 可选 | v2.0
+
+未选时间时的占位符。
+### enableSecond
+
+> Boolean | 可选 | v2.0
+
+允许秒选择，默认为true。
+
+

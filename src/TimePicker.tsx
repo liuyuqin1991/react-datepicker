@@ -1,51 +1,37 @@
 import React, { useState, useRef } from 'react';
 import { assign as _assign, isFunction as _isFunction } from 'lodash';
 import dayjs, { Dayjs } from 'dayjs';
-import advancedFormat from 'dayjs/plugin/advancedFormat';
-import weekOfYear from 'dayjs/plugin/weekOfYear';
 import classnames from 'classnames';
 import { usePopper } from 'react-popper';
 
-import { SelectionMode } from '@typing';
 import { useClickOutside } from '@hook';
 import Input from '@src/input';
 import BasePanel from '@src/panel/BasePanel';
 
 import '@scss';
 
-
-interface DatePickerProps {
-  // v1.0参数
-  selectionMode?: SelectionMode,
-  defaultDate?: Date | string,
-  onPick: (date: Date[]) => void,
+interface TimePickerProps {
+  // v2.0参数
+  defaultTime?: Date | string,
+  onPick: (date: Date) => void,
   format?: string,
   placeholder?: string,
-  disabledDateFunc?: (date: Date) => boolean,
   className?: string;
-  // v2.0参数
-  enableClear?: boolean,
-
+  enableSecond?: boolean,
 }
 
-const DEFAULT_FORMATS_MAP = {
-  day: 'YYYY-MM-DD',
-  month: 'YYYY-M',
-  year: 'YYYY',
-  week: 'YYYY-w',
-  quarter: 'YYYY-Q',
-  time: 'HH:mm:ss',
-};
-
-const DatePicker: React.FC<DatePickerProps> = (props) => {
-  const { className, selectionMode = 'day', onPick, format, defaultDate, placeholder, disabledDateFunc } = props;
+const TimePicker: React.FC<TimePickerProps> = (props) => {
+  const { className, format, defaultTime, placeholder, enableSecond = true, onPick } = props;
+  const DEFAULT_FORMATS = enableSecond ? 'HH:mm:ss' : 'HH:mm';
   // state
   const [pickerVisible, setPickerVisible] = useState<boolean>(false);
-  const [date, setDate] = useState<Dayjs>(dayjs(defaultDate));
-  const [text, setText] = useState<string>(() => {
-    return defaultDate ? dayjs(defaultDate).format(format || DEFAULT_FORMATS_MAP[selectionMode]) : '';
+  const [time, setTime] = useState<Dayjs>(() => {
+    return defaultTime ? dayjs(defaultTime) : dayjs().hour(0).minute(0).second(0);
   });
-  const datePickerRef = useRef<HTMLDivElement>(null);
+  const [text, setText] = useState<string>(() => {
+    return defaultTime ? dayjs(defaultTime).format(format || DEFAULT_FORMATS) : '';
+  });
+  const timePickerRef = useRef<HTMLDivElement>(null);
   // popper相关
   const [referenceElement, setReferenceElement] = useState(null);
   const [popperElement, setPopperElement] = useState(null);
@@ -56,11 +42,8 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
       options: { padding: 8 } 
     }],
   });
-  // 扩展dayjs的功能
-  dayjs.extend(advancedFormat);
-  dayjs.extend(weekOfYear);
 
-  useClickOutside(datePickerRef, () => { setPickerVisible(false) });
+  useClickOutside(timePickerRef, () => { setPickerVisible(false) });
 
   const onInputFocus = () => {
     if (!pickerVisible) {
@@ -68,25 +51,29 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
     }
   }
 
-  const onDatePick = (d: Dayjs[]) => {
-    setDate(d[1]);
-    setText(d[1].format(format || DEFAULT_FORMATS_MAP[selectionMode]));
+  const onTimePick = (d: Dayjs) => {
+    setTime(d);
+    setText(d.format(format || DEFAULT_FORMATS));
     if(_isFunction(onPick)){
-      onPick([d[0].toDate(), d[1].toDate()]);
+      onPick(d.toDate());
     }
     setPickerVisible(false);
   };
 
   const onClearText = () => {
     setText('');
-    setDate(dayjs());
+    setTime(dayjs());
   }
 
+  const closePanel = () => {
+    setPickerVisible(false);
+  };
+
   return (
-    <div ref={datePickerRef}  className={classnames('datepicker-box', className)}>
+    <div ref={timePickerRef}  className={classnames('timepicker-box', className)}>
       <div ref={setReferenceElement}>
         <Input 
-          selectionMode={selectionMode}
+          selectionMode="time"
           onFocus={onInputFocus}
           value={text}
           placeholder={placeholder}
@@ -97,10 +84,11 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
         pickerVisible && 
         <div ref={setPopperElement} style={_assign(styles.popper, { zIndex: 10 })} {...attributes.popper}>
           <BasePanel
-            selectionMode={selectionMode}
-            onPick={onDatePick}
-            defaultDate={date}
-            disabledDateFunc={disabledDateFunc}
+            selectionMode="time"
+            onPick={onTimePick}
+            onClose={closePanel}
+            defaultDate={time}
+            enableSecond={enableSecond}
           />
         </div>
       }
@@ -108,5 +96,5 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
   ) 
 };
 
-export default DatePicker;
+export default TimePicker;
 

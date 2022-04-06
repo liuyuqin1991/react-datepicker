@@ -1,5 +1,6 @@
 import React from 'react';
 import DatePicker from '@src/DatePicker';
+import TimePicker from '@src/TimePicker';
 import dayjs from 'dayjs';
 import isBetween from 'dayjs/plugin/isBetween';
 
@@ -13,7 +14,11 @@ const Demo: React.FC = () => {
     window.console.log(`开始时间：${dayjs(d[0]).format('YYYY/MM/DD HH:mm:ss')} —— 结束时间：${dayjs(d[1]).format('YYYY/MM/DD HH:mm:ss')}`);
   };
 
-  const disabledDateFunc = (currentDate: Date) => {
+  const timePick = (d: Date) => {
+    window.console.log(`时间：${dayjs(d).format('YYYY/MM/DD HH:mm:ss')}`);
+  }
+
+  const disabledDateFunc = (currentDate: Date): boolean => {
     const d = dayjs(currentDate);
     const today = dayjs();
     // 只能选择当日的前后一个月日期内
@@ -126,6 +131,33 @@ const Demo: React.FC = () => {
             <div className="date-select">
               <span>日：</span>
               <DatePicker selectionMode="day" onPick={onPick} disabledDateFunc={disabledDateFunc} />
+            </div>
+          </div>
+        </div>
+        <div className="time">
+          <div className="label-panel">
+            6. 时间选择组件
+          </div>
+          <div className="date-panel">
+            <div className="date-select">
+              <span>基础时间：</span>
+              <TimePicker onPick={timePick} />
+            </div>
+            <div className="date-select">
+              <span>预设时间：</span>
+              <TimePicker onPick={timePick} defaultTime="2022-2-22 06:50:25" />
+            </div>
+            <div className="date-select">
+              <span>格式化：</span>
+              <TimePicker onPick={timePick} defaultTime="2022-2-22 06:50:25" format="HH时mm分ss秒" />
+            </div>
+            <div className="date-select">
+              <span>占位符：</span>
+              <TimePicker onPick={timePick} placeholder="请选择起始时间" />
+            </div>
+            <div className="date-select">
+              <span>禁用秒：</span>
+              <TimePicker onPick={timePick} defaultTime="2022-2-22 06:50:25" enableSecond={false} />
             </div>
           </div>
         </div>

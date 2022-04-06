@@ -23,6 +23,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-time:before {
+  content: "\e906";
+}
 .icon-close:before {
   content: "\e905";
 }

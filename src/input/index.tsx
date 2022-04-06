@@ -30,6 +30,7 @@ const DEFAULT_PLACEHOLDER_MAP: ParameterMap<string> = {
 	'month': '请选择月',
 	'quarter': '请选择季',
 	'year': '请选择年',
+	'time': '请选择时间',
 }
 
 const Input: React.FC<InputProps> = (props) => {
@@ -73,7 +74,7 @@ const Input: React.FC<InputProps> = (props) => {
 	};
 
 	const iconCls = useMemo(() => {
-		return `input-icon ${(value && isHover) ? 'icon-close' : 'icon-calendar'}`;
+		return `input-icon ${(value && isHover) ? 'icon-close' : selectionMode === 'time' ? 'icon-time' : 'icon-calendar'}`;
 	}, [value, isHover]);
 
   return (

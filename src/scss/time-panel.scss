@@ -1,0 +1,111 @@
+@import "./color.scss";
+
+.time-panel {
+  .action-panel {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+  
+    .hour-panel,
+    .minute-panel,
+    .second-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .label { 
+      display: flex;
+      justify-content: center;
+      font-size: 12;
+    }
+  
+    .input-panel {
+      display: flex;
+      justify-content: center;
+      padding-top: 8px;
+      position: relative;
+  
+      > input {
+        width: 16px;
+        height: 32px;
+        line-height: 32px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        padding: 0 8px;
+        cursor: not-allowed;
+  
+        &:focus {
+          outline: 0;
+        }
+    
+        &::placeholder {
+          font-size: 12px;
+          color: #bbb;
+        }
+      }
+  
+      &:not(.second-panel .input-panel)::after {
+        content: ":";
+        position: absolute;
+        top: 30%;
+        right: -60%;
+      }
+  
+    }
+  
+    .slider-panel {
+      display: flex;
+      justify-content: center;
+      height: 250px;
+      padding: 15px 0 5px;
+      margin-right: 20px;
+    }
+  }
+
+  .btn-panel {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 15px;
+    border-top: 1px solid $c-inner-border;
+    font-size: 12px;
+
+    .btn-cancel,
+    .btn-ok {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .btn-ok {
+      margin-left: 15px;
+      color: $c-primary;
+      cursor: pointer;
+    }
+  }
+}
+
+.rc-slider-handle {
+  border: solid 2px $c-primary;
+
+  &:hover {
+    border-color: $c-primary;
+  }
+
+  &.rc-slider-handle-dragging {
+    border-color: $c-primary !important;
+    box-shadow: 0 0 0 5px $c-primary-2 !important;
+  }
+}
+
+
+
+.rc-slider-track {
+  background-color: $c-primary;
+}
+
+.rc-slider-dot-active {
+  border-color: $c-primary;
+}
