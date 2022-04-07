@@ -62,7 +62,7 @@ const TimePicker: React.FC<TimePickerProps> = (props) => {
 
   const onClearText = () => {
     setText('');
-    setTime(dayjs());
+    setTime(dayjs().hour(0).minute(0).second(0));
   }
 
   const closePanel = () => {
