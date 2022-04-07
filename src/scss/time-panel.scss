@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: row;
     padding: 10px;
-  
+
     .hour-panel,
     .minute-panel,
     .second-panel {
@@ -13,6 +13,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      position: relative;
+
+      &:not(:last-child)::after {
+        content: ":";
+        position: absolute;
+        top: 13px;
+        right: 0;
+      }
     }
   
     .label { 
@@ -25,7 +33,6 @@
       display: flex;
       justify-content: center;
       padding-top: 8px;
-      position: relative;
   
       > input {
         width: 16px;
@@ -46,14 +53,6 @@
           color: #bbb;
         }
       }
-  
-      &:not(.second-panel .input-panel)::after {
-        content: ":";
-        position: absolute;
-        top: 30%;
-        right: -60%;
-      }
-  
     }
   
     .slider-panel {
@@ -100,12 +99,14 @@
   }
 }
 
-
+.rc-slider-rail {
+  background-color: $c-eee;
+}
 
 .rc-slider-track {
-  background-color: $c-primary;
+  background-color: $c-eee;
 }
 
 .rc-slider-dot-active {
-  border-color: $c-primary;
+  border-color: $c-eee;
 }
