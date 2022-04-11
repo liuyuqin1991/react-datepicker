@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { includes as _includes, toInteger as _toInteger } from 'lodash';
 import { Dayjs } from 'dayjs';
 
-import { SelectionMode } from '@typing';
+import { SelectionMode } from 'Typing';
 import DayPanel from './DayPanel';
 import MonthPanel from './MonthPanel';
 import YearPanel from './YearPanel';
 import TimePanel from './TimePanel';
+
+import 'Scss/base-panel.scss';
 
 interface BasePanelProps {
   defaultDate?: Dayjs,

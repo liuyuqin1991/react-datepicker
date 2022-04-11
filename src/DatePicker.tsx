@@ -6,13 +6,11 @@ import weekOfYear from 'dayjs/plugin/weekOfYear';
 import classnames from 'classnames';
 import { usePopper } from 'react-popper';
 
-import { SelectionMode } from '@typing';
-import { useClickOutside } from '@hook';
-import Input from '@src/input';
-import BasePanel from '@src/panel/BasePanel';
-
-import '@scss';
-
+import { SelectionMode } from 'Typing';
+import { useClickOutside } from 'Hook';
+import Input from 'Src/input';
+import BasePanel from 'Src/panel/BasePanel';
+import 'Scss/picker.scss';
 
 interface DatePickerProps {
   // v1.0参数

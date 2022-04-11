@@ -2,8 +2,8 @@ import React, { useMemo, useRef } from 'react';
 import { isFunction as _isFunction } from 'lodash';
 import classNames from 'classnames';
 
-import { SelectionMode, ParameterMap } from '@typing';
-import { useHover } from '@hook';
+import { SelectionMode, ParameterMap } from 'Typing';
+import { useHover } from 'Hook';
 import './index.scss';
 
 

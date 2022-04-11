@@ -9,7 +9,8 @@ import {
 import { Dayjs } from 'dayjs';
 import classnames from 'classnames';
 
-import { TD } from '@typing';
+import { TD } from 'Typing';
+import 'Scss/year-panel.scss';
 
 interface YearPanelProps {
   defaultDate?: Dayjs,

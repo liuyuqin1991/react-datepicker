@@ -5,25 +5,29 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const isDev = argv.mode == 'development';
-const entryPath = isDev ? './example/src/index.tsx' : './src/index.tsx';
+const entryPath = isDev ? './example/src/index.tsx' : './src/index.ts';
 
 module.exports = {
 	entry: path.resolve(__dirname, entryPath),
 	output: {
 		filename: 'index.js',
 		path: path.resolve(__dirname, './dist'),
-		libraryTarget: 'umd',
 		clean: true,
-		umdNamedDefine: true
+		library: {
+			name: 'react-datepicker-ts',
+			type: 'umd',
+			umdNamedDefine: true,
+			export: 'default',
+		},
 	},
 	resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.css', '.scss'],
     alias: {
-			'@src': path.resolve(__dirname, 'src/'),
-			'@typing': path.resolve(__dirname, 'src/typing/'),
-			'@scss': path.resolve(__dirname, 'src/scss/'),
-			'@asset': path.resolve(__dirname, 'src/asset/'),
-			'@hook': path.resolve(__dirname, 'src/hook/'),
+			'Src': path.resolve(__dirname, 'src/'),
+			'Typing': path.resolve(__dirname, 'src/typing/'),
+			'Scss': path.resolve(__dirname, 'src/scss/'),
+			'Asset': path.resolve(__dirname, 'src/asset/'),
+			'Hook': path.resolve(__dirname, 'src/hook/'),
     },
   },
 	devtool: isDev ? 'inline-source-map' : false,
@@ -35,7 +39,8 @@ module.exports = {
 		rules: [
 			{
 				test: /\.(tsx|ts)$/,
-				use: ['ts-loader']
+				use: ['ts-loader'],
+				exclude: /node_modules/,
 			},
 			{
 				test: /\.(scss|css)$/,
@@ -55,6 +60,14 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, './example/public/index.html'),
 			filename: path.resolve(__dirname, './dist/index.html'),
+			inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: true,
+      },
+      chunksSortMode: 'auto',
+      isDev,
 		}),
 		new MiniCssExtractPlugin({
 			filename: 'css/[name].[chunkhash:8].css',

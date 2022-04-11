@@ -1,8 +1,9 @@
 import React from 'react';
-import DatePicker from '@src/DatePicker';
-import TimePicker from '@src/TimePicker';
 import dayjs from 'dayjs';
 import isBetween from 'dayjs/plugin/isBetween';
+
+import DatePicker from '../../src/DatePicker';
+import TimePicker from '../../src/TimePicker';
 
 import './app.scss';
 

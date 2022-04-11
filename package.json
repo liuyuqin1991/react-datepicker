@@ -1,9 +1,9 @@
 {
   "name": "react-datepicker-ts",
-  "version": "2.0.0",
+  "version": "2.0.13",
   "description": "datepicker基础组件，ts+hook代码风格，支持日、周、月、季、年五种时间选择",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --mode=development",
@@ -32,6 +32,7 @@
     "eslint": "^7.19.0",
     "eslint-plugin-react": "^7.29.4",
     "html-webpack-plugin": "^5.5.0",
+    "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.6.0",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
@@ -48,7 +49,6 @@
     "classnames": "^2.3.1",
     "dayjs": "^1.11.0",
     "gh-pages": "^3.2.3",
-    "lodash": "^4.17.21",
     "rc-slider": "^10.0.0-alpha.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

@@ -3,7 +3,8 @@ import { isFunction as _isFunction, get as _get, includes as _includes, times as
 import { Dayjs } from 'dayjs';
 import classnames from 'classnames';
 
-import { SelectionMode, TD } from '@typing';
+import { SelectionMode, TD } from 'Typing';
+import 'Scss/month-panel.scss';
 
 interface MonthPanelProps {
   selectionMode: SelectionMode,

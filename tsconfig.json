@@ -12,22 +12,23 @@
 		"declaration": true,
 		"outDir": "dist",
 		"allowJs": true,
-		"baseUrl": ".",
+		"baseUrl": "./",
+		"moduleResolution": "node",
+		"lib": [
+			"es5",
+			"dom",
+			"es2015.promise"
+		],
 		"paths": {
-			"@src/*": ["src/*"],
-			"@typing": ["src/typing/"],
-			"@scss": ["src/scss/"],
-			"@asset": ["src/asset/"],
-			"@hook": ["src/hook/"],
+			"Src/*": ["src/*"],
+			"Typing": ["src/typing/"],
+			"Scss": ["src/scss/"],
+			"Asset": ["src/asset/"],
+			"Hook": ["src/hook/"],
 		}
 	},
 	//包含
-	"include": [
-		"./src/**/*",
-		"./example/**/*"
-	],
+	"include": ["./"],
 	//不包含 
-	"exclude": [
-		"node_modules"
-	]
+	"exclude": ["node_modules", "dist"]
 }

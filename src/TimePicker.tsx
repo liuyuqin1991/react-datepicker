@@ -4,11 +4,10 @@ import dayjs, { Dayjs } from 'dayjs';
 import classnames from 'classnames';
 import { usePopper } from 'react-popper';
 
-import { useClickOutside } from '@hook';
-import Input from '@src/input';
-import BasePanel from '@src/panel/BasePanel';
-
-import '@scss';
+import { useClickOutside } from 'Hook';
+import Input from 'Src/input';
+import BasePanel from 'Src/panel/BasePanel';
+import 'Scss/picker.scss';
 
 interface TimePickerProps {
   // v2.0参数

@@ -3,7 +3,8 @@ import { isFunction as _isFunction, get as _get, times as _times } from 'lodash'
 import { Dayjs } from 'dayjs';
 import classnames from 'classnames';
 
-import { SelectionMode, TD } from '@typing';
+import { SelectionMode, TD } from 'Typing';
+import 'Scss/day-panel.scss';
 
 interface DayPanelProps {
   selectionMode: SelectionMode,

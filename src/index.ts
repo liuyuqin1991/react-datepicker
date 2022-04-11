@@ -4,4 +4,4 @@ import TimePicker from './TimePicker';
 export {
   DatePicker,
   TimePicker
-}
+};
