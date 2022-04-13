@@ -35,6 +35,7 @@
       padding-top: 8px;
   
       > input {
+        box-sizing: content-box;
         width: 16px;
         height: 32px;
         line-height: 32px;

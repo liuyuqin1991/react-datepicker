@@ -3,6 +3,7 @@
 .day-table {
 	padding: 10px;
 	color: $c-td-text;
+	border-collapse: separate;
 
 	tr {
 		display: flex;
@@ -14,6 +15,7 @@
 			line-height: 32px;
 			color: $c-th-text;
 			font-weight: normal;
+			text-align: center;
 		}
 
 		td {
