@@ -12,10 +12,16 @@ npm i react-datepicker-ts
 ## 使用
 
 ```
-import DatePicker from 'react-datepicker-ts';
+import { DatePicker } from 'react-datepicker-ts';
+
+<DatePicker selectionMode="day" onPick={onPick} defaultDate="2022-2-22" format="YYYY/MM/DD" />
+
+// or
+import { TimePicker } from 'react-datepicker-ts';
+
+<TimePicker onPick={timePick} defaultTime="2022-2-22 06:50:25" placeholder="请选择起始时间" enableSecond={false}
 
 ```
-
 
 ## API
 
