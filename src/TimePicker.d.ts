@@ -7,6 +7,7 @@ interface TimePickerProps {
     placeholder?: string;
     className?: string;
     enableSecond?: boolean;
+    enableClear?: boolean;
 }
 declare const TimePicker: React.FC<TimePickerProps>;
 export default TimePicker;

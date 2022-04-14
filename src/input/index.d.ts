@@ -9,6 +9,7 @@ interface InputProps {
     onBlur?(e?: React.ChangeEvent<HTMLInputElement>): void;
     onIconClick?(e?: React.MouseEvent): void;
     selectionMode: SelectionMode;
+    enableClear: boolean;
 }
 declare const Input: React.FC<InputProps>;
 export default Input;
