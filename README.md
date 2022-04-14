@@ -3,6 +3,10 @@
 
 <i>组件使用的第三方库：lodash，dayjs，classnames，react-popper，rc-slider</i>
 
+## 试用
+
+[Demo地址](liuyuqin1991.github.io/react-datepicker/)
+
 ## 安装
 
 ```
