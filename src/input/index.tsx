@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import { SelectionMode, ParameterMap } from 'Typing';
 import { useHover } from 'Hook';
-import './index.scss';
+import 'Scss/input.scss';
 
 
 interface InputProps {

@@ -1,7 +1,7 @@
 # react-datepicker
-> datepicker基础组件，ts + react hook代码风格，支持日、周、月、季、年五种时间选择
+DatePicker基础组件，react hook + typescript 代码风格，日期组件支持日、周、月、季、年选择，时间组件支持标准时、分、秒选择。
 
-<i>组件使用的第三方库：lodash，dayjs，classnames，react-popper，rc-slider</i>
+> <i>组件使用的第三方库：lodash，dayjs，classnames，react-popper，rc-slider</i>
 
 ## 试用
 

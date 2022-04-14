@@ -2,18 +2,17 @@
 
 .day-table {
 	padding: 10px;
-	color: $c-td-text;
+	color: $c-datepicker-td-text;
 	border-collapse: separate;
 
 	tr {
 		display: flex;
-		font-size: 12px;
 
 		th {
 			width: 32px;
 			height:  32px;
 			line-height: 32px;
-			color: $c-th-text;
+			color: $c-datepicker-th-text;
 			font-weight: normal;
 			text-align: center;
 		}
@@ -26,7 +25,7 @@
 
 			&.last,
 			&.next {
-				color: $c-td-disabled-text;
+				color: $c-datepicker-td-disabled-text;
 			}
 		}
 	}
@@ -36,7 +35,7 @@
 
 		&.disabled {
 			cursor: not-allowed;
-			background-color: $c-td-disabled-background;
+			background-color: $c-datepicker-td-disabled-background;
 		}
 
 		&:not(.disabled) {
@@ -44,19 +43,19 @@
 		}
 
 		&:not(.pick):hover {
-			background-color: $c-primary-2;
+			background-color: $c-datepicker-primary-light;
 		}
 	}
 
 	&:not(.is-week-mode) td.pick, 
 	&.is-week-mode > tbody tr.pick {
-		background-color: $c-primary;
-		color: $c-white;
+		background-color: $c-datepicker-primary;
+		color: $c-datepicker-white;
 		
 		.last,
 		.next {
-			background-color: $c-primary;
-			color: $c-white;
+			background-color: $c-datepicker-primary;
+			color: $c-datepicker-white;
 		}
 	}
 }

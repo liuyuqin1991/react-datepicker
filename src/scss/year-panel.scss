@@ -6,31 +6,30 @@
 
 	tr {
 		display: flex;
-		font-size: 12px;
 
 		td {
 			width: 55px;
 			height:  50px;
 			line-height: 50px;
 			text-align: center;
-			color: $c-td-text;
+			color: $c-datepicker-td-text;
 
 			&:not(.disabled) {
 				cursor: pointer;
 
 				&.pick {
-					background-color: $c-primary;
-					color: $c-white;
+					background-color: $c-datepicker-primary;
+					color: $c-datepicker-white;
 				}
 
 				&:not(.pick):hover {
-					background-color: $c-primary-2;
+					background-color: $c-datepicker-primary-light;
 				}
 			}
 
 			&.disabled {
 				cursor:not-allowed;
-				background-color: $c-td-disabled-background;
+				background-color: $c-datepicker-td-disabled-background;
 			}
 			
 			&.hide {

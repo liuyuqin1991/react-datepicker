@@ -6,7 +6,6 @@
 
 	tr {
 		display: flex;
-		font-size: 12px;
 
 		td {
 			width: 70px;
@@ -21,7 +20,7 @@
 		
 		&.disabled {
 			cursor:not-allowed;
-			background-color: $c-td-disabled-background;
+			background-color: $c-datepicker-td-disabled-background;
 		}
 
 		&:not(.disabled) {
@@ -29,13 +28,13 @@
 		}
 
 		&:not(.pick):hover {
-			background-color: $c-primary-2;
+			background-color: $c-datepicker-primary-light;
 		}
 	}
 
 	&:not(.is-quarter-mode) td.pick,
 	&.is-quarter-mode > tbody tr.pick {
-		background-color: $c-primary;
-		color: $c-white;
+		background-color: $c-datepicker-primary;
+		color: $c-datepicker-white;
 	}
 }
