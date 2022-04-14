@@ -18,12 +18,12 @@
 				cursor: pointer;
 
 				&.pick {
-					background-color: $c-datepicker-primary;
+					background-color: var(--c-datepicker-primary);
 					color: $c-datepicker-white;
 				}
 
 				&:not(.pick):hover {
-					background-color: $c-datepicker-primary-light;
+					background-color: var(--c-datepicker-primary-light);
 				}
 			}
 

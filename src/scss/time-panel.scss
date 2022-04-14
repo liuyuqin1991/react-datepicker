@@ -77,22 +77,22 @@
 
     .btn-ok {
       margin-left: 15px;
-      color: $c-datepicker-primary;
+      color: var(--c-datepicker-primary);
       cursor: pointer;
     }
   }
 }
 
 .rc-slider-handle {
-  border: solid 3px $c-datepicker-primary;
+  border: solid 3px var(--c-datepicker-primary);
 
   &:hover {
-    border-color: $c-datepicker-primary;
+    border-color: var(--c-datepicker-primary);
   }
 
   &.rc-slider-handle-dragging {
-    border-color: $c-datepicker-primary !important;
-    box-shadow: 0 0 0 5px $c-datepicker-primary-light !important;
+    border-color: var(--c-datepicker-primary) !important;
+    box-shadow: 0 0 0 5px var(--c-datepicker-primary-light) !important;
   }
 }
 

@@ -26,7 +26,7 @@
 			background-color: $c-datepicker-white;
 
 			&:hover {
-				color: $c-datepicker-primary;
+				color: var(--c-datepicker-primary);
 			}
 		}
 
@@ -44,7 +44,7 @@
 				}
 				
 				&:not(.disabled):hover {
-					color: $c-datepicker-primary;
+					color: var(--c-datepicker-primary);
 				}
 			}
 		}

@@ -1,6 +1,7 @@
-// 一般只需要改这两个主题色变量即可
-$c-datepicker-primary: #13a474;
-$c-datepicker-primary-light: rgba($c-datepicker-primary,0.1);
+:root {
+  --c-datepicker-primary: rgb(19,164,116);
+  --c-datepicker-primary-light: rgba(19,164,116,0.1);
+}
 
 $c-datepicker-white: #fff;
 $c-datepicker-text: #111;

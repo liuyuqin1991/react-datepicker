@@ -14,7 +14,7 @@
 
     &:focus {
       outline: 0;
-      border-color: $c-datepicker-primary;
+      border-color: var(--c-datepicker-primary);
     }
 
     &::placeholder {
