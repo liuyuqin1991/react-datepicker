@@ -30,7 +30,7 @@ const Demo: React.FC = () => {
     <>
       <div className="content">
         <div className="title">
-            datepicker组件demo
+            DatePicker组件
         </div>
         <div className="default">
           <div className="label-panel">
@@ -70,7 +70,7 @@ const Demo: React.FC = () => {
             </div>
             <div className="date-select">
               <span>周：</span>
-              <DatePicker selectionMode="week" onPick={onPick} defaultDate="2022-2-22"/>
+              <DatePicker selectionMode="week" onPick={onPick} defaultDate="2022-2-22" enableClear={false} />
             </div>
             <div className="date-select">
               <span>月：</span>
@@ -135,6 +135,9 @@ const Demo: React.FC = () => {
             </div>
           </div>
         </div>
+        <div className="title">
+            TimePicker组件
+        </div>
         <div className="time">
           <div className="label-panel">
             6. 时间选择组件（设计灵感：避免滚动选择，特定时间直观显示点击）
@@ -146,7 +149,7 @@ const Demo: React.FC = () => {
             </div>
             <div className="date-select">
               <span>预设时间：</span>
-              <TimePicker onPick={timePick} defaultTime="2022-2-22 06:50:25" />
+              <TimePicker onPick={timePick} defaultTime="2022-2-22 06:50:25" enableClear={false} />
             </div>
             <div className="date-select">
               <span>格式化：</span>

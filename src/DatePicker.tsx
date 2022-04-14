@@ -20,10 +20,9 @@ interface DatePickerProps {
   format?: string,
   placeholder?: string,
   disabledDateFunc?: (date: Date) => boolean,
-  className?: string;
+  className?: string,
   // v2.0参数
   enableClear?: boolean,
-
 }
 
 const DEFAULT_FORMATS_MAP = {
@@ -36,7 +35,16 @@ const DEFAULT_FORMATS_MAP = {
 };
 
 const DatePicker: React.FC<DatePickerProps> = (props) => {
-  const { className, selectionMode = 'day', onPick, format, defaultDate, placeholder, disabledDateFunc } = props;
+  const {
+    className,
+    selectionMode = 'day',
+    onPick,
+    format,
+    defaultDate,
+    placeholder,
+    enableClear = true,
+    disabledDateFunc
+  } = props;
   // state
   const [pickerVisible, setPickerVisible] = useState<boolean>(false);
   const [date, setDate] = useState<Dayjs>(dayjs(defaultDate));
@@ -89,6 +97,7 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
           value={text}
           placeholder={placeholder}
           onIconClick={onClearText}
+          enableClear={enableClear}
         />
       </div>
       {

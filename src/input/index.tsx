@@ -22,6 +22,8 @@ interface InputProps {
 	onIconClick?(e?: React.MouseEvent): void
 	//日期模式
 	selectionMode: SelectionMode
+	// 是否允许清除
+	enableClear: boolean
 }
 
 const DEFAULT_PLACEHOLDER_MAP: ParameterMap<string> = {
@@ -34,7 +36,7 @@ const DEFAULT_PLACEHOLDER_MAP: ParameterMap<string> = {
 }
 
 const Input: React.FC<InputProps> = (props) => {
-	const { onFocus, onBlur, onIconClick } = props;
+	const { enableClear, onFocus, onBlur, onIconClick } = props;
 	const { inputClassName, value, placeholder, selectionMode } = props;
 	const inputRef = useRef(null);
 	const iconRef = useRef(null);
@@ -68,13 +70,13 @@ const Input: React.FC<InputProps> = (props) => {
 	}
 
 	const handleIconClick = () => {
-		if (value) {
+		if (value && enableClear) {
 			onIconClick();
 		}
 	};
 
 	const iconCls = useMemo(() => {
-		return `input-icon ${(value && isHover) ? 'icon-close' : selectionMode === 'time' ? 'icon-time' : 'icon-calendar'}`;
+		return `input-icon ${(value && isHover && enableClear) ? 'icon-close' : selectionMode === 'time' ? 'icon-time' : 'icon-calendar'}`;
 	}, [value, isHover]);
 
   return (

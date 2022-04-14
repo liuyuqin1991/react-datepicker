@@ -79,6 +79,12 @@ const disabledDateFunc = (currentDate: Date): boolean => {
 
 ```
 
+### enableClear
+
+> Boolean | 可选 | v2.0
+
+允许日期清除，默认为true。
+
 ## Timepicker 参数
 
 ### defaultTime
@@ -128,5 +134,11 @@ const onPick = (d: Date) => {
 > Boolean | 可选 | v2.0
 
 允许秒选择，默认为true。
+
+### enableClear
+
+> Boolean | 可选 | v2.0
+
+允许时间清除，默认为true。
 
 

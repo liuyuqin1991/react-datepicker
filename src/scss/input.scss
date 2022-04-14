@@ -18,7 +18,7 @@
     }
 
     &::placeholder {
-      color: $c-datepicker-text;
+      color: $c-datepicker-text-light;
     }
   }
 
@@ -27,5 +27,6 @@
     right: 10px;
     color: $c-datepicker-icon;
     cursor: pointer;
+    font-size: 14px;
   }
 }

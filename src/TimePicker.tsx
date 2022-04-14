@@ -17,10 +17,19 @@ interface TimePickerProps {
   placeholder?: string,
   className?: string;
   enableSecond?: boolean,
+  enableClear?: boolean,
 }
 
 const TimePicker: React.FC<TimePickerProps> = (props) => {
-  const { className, format, defaultTime, placeholder, enableSecond = true, onPick } = props;
+  const {
+    className,
+    format,
+    defaultTime,
+    placeholder,
+    enableSecond = true,
+    enableClear = true,
+    onPick
+  } = props;
   const DEFAULT_FORMATS = enableSecond ? 'HH:mm:ss' : 'HH:mm';
   // state
   const [pickerVisible, setPickerVisible] = useState<boolean>(false);
@@ -77,6 +86,7 @@ const TimePicker: React.FC<TimePickerProps> = (props) => {
           value={text}
           placeholder={placeholder}
           onIconClick={onClearText}
+          enableClear={enableClear}
         />
       </div>
       {

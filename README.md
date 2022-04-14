@@ -53,6 +53,7 @@ import { TimePicker } from 'react-datepicker-ts';
 | format  | 显示在输入框符合dayjs规范的格式<可选> | string | '请选择日期' |
 | placeholder  | 未选日期时的占位符<可选> | string | '请选择日期'|
 | disabledDateFunc  | 禁用日期回调函数<可选> | (d: Date) => boolean | |
+| enableClear  | 允许日期清除<可选> | boolean | true |
 
 ### TimePicker参数
 
@@ -64,3 +65,4 @@ import { TimePicker } from 'react-datepicker-ts';
 | format  | 显示在输入框符合dayjs规范的格式<可选> | string | 'HH:mm:ss' |
 | placeholder  | 未选日期时的占位符<可选> | string | '请选择时间' |
 | enableSecond  | 允许秒选择<可选> | boolean | true |
+| enableClear  | 允许时间清除<可选> | boolean | true |
