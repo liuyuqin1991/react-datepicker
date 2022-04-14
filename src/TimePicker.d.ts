@@ -1,5 +1,5 @@
 import React from 'react';
-import '@scss';
+import 'Scss/picker.scss';
 interface TimePickerProps {
     defaultTime?: Date | string;
     onPick: (date: Date) => void;

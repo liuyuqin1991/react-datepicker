@@ -1,6 +1,6 @@
 import React from 'react';
-import { SelectionMode } from '@typing';
-import '@scss';
+import { SelectionMode } from 'Typing';
+import 'Scss/picker.scss';
 interface DatePickerProps {
     selectionMode?: SelectionMode;
     defaultDate?: Date | string;

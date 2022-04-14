@@ -1,5 +1,6 @@
 import React from 'react';
 import { Dayjs } from 'dayjs';
+import 'Scss/year-panel.scss';
 interface YearPanelProps {
     defaultDate?: Dayjs;
     virtualDate?: Dayjs;

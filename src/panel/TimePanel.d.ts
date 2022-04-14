@@ -1,7 +1,7 @@
 import React from 'react';
 import { Dayjs } from 'dayjs';
 import 'rc-slider/assets/index.css';
-import '@scss/time-panel.scss';
+import 'Scss/time-panel.scss';
 interface TimePanelProps {
     defaultTime?: Dayjs;
     onPick: (time: Dayjs) => void;

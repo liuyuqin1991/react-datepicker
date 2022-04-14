@@ -1,6 +1,6 @@
 import React from 'react';
-import { SelectionMode } from '@typing';
-import './index.scss';
+import { SelectionMode } from 'Typing';
+import 'Scss/input.scss';
 interface InputProps {
     inputClassName?: string;
     placeholder?: string;

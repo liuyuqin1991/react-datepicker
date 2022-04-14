@@ -1,6 +1,7 @@
 import React from 'react';
 import { Dayjs } from 'dayjs';
-import { SelectionMode } from '@typing';
+import { SelectionMode } from 'Typing';
+import 'Scss/month-panel.scss';
 interface MonthPanelProps {
     selectionMode: SelectionMode;
     defaultDate?: Dayjs;
