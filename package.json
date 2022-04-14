@@ -1,6 +1,6 @@
 {
   "name": "react-datepicker-ts",
-  "version": "2.0.24",
+  "version": "2.0.25",
   "description": "DatePicker基础组件，react hook + typescript 代码风格，日期组件支持日、周、月、季、年选择，时间组件支持标准时、分、秒选择。",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
