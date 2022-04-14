@@ -27,6 +27,17 @@ import { TimePicker } from 'react-datepicker-ts';
 
 ```
 
+## 主题色变更
+
+组件默认采用的是绿色主题色系，如需变更，只需要在项目css中重写两个主题色相关变量即可，如下图改为antd主题色
+```
+// index.css 
+:root {
+  --c-datepicker-primary: #1890FF;
+  --c-datepicker-primary-light: #bae7ff;
+}
+```
+
 ## API
 
 [查看API参数详细介绍](./README_API.md)
