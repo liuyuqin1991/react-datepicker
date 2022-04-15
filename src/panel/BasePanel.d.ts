@@ -7,9 +7,8 @@ interface BasePanelProps {
     onPick: (date: Dayjs[] | Dayjs) => void;
     onClose?: () => void;
     isShowTime?: boolean;
-    showWeekNumber?: boolean;
     selectionMode: SelectionMode;
-    disabledDateFunc?: (date: Date) => void;
+    disabledDateFunc?: (date: Date) => boolean;
     enableSecond?: boolean;
 }
 declare const BasePanel: React.FC<BasePanelProps>;

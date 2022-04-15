@@ -1,3 +1,4 @@
 import DatePicker from './DatePicker';
 import TimePicker from './TimePicker';
-export { DatePicker, TimePicker };
+import DateRangePicker from './DateRangePicker';
+export { DatePicker, TimePicker, DateRangePicker };

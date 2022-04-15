@@ -1,16 +1,15 @@
 import React from 'react';
 import { SelectionMode } from 'Typing';
 import 'Scss/picker.scss';
-interface DatePickerProps {
+interface DateRangePickerProps {
     selectionMode?: SelectionMode;
-    defaultDate?: Date | string;
+    defaultDate?: Date[] | string[];
     onPick: (date: Date[]) => void;
     format?: string;
     placeholder?: string;
     disabledDateFunc?: (date: Date) => boolean;
     className?: string;
     enableClear?: boolean;
-    showWeekNumber?: boolean;
 }
-declare const DatePicker: React.FC<DatePickerProps>;
-export default DatePicker;
+declare const DateRangePicker: React.FC<DateRangePickerProps>;
+export default DateRangePicker;
