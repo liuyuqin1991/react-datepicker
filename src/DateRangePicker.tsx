@@ -8,32 +8,29 @@ import { usePopper } from 'react-popper';
 
 import { SelectionMode } from 'Typing';
 import { DEFAULT_FORMATS_MAP } from 'Src/constants';
-import { useClickOutside } from 'Hook';
+import { rangeDateToText } from 'Util';
 import Input from 'Src/input';
-import BasePanel from 'Src/panel/BasePanel';
+import DateRangePanel from 'Src/panel/DateRangePanel';
 import 'Scss/picker.scss';
 
-interface DatePickerProps {
-  // v1.0参数
+interface DateRangePickerProps {
+  // v3.0参数
   selectionMode?: SelectionMode,
-  defaultDate?: Date | string,
+  defaultDate?: Date[] | string[],
   onPick: (date: Date[]) => void,
   format?: string,
   placeholder?: string,
   disabledDateFunc?: (date: Date) => boolean,
   className?: string,
-  // v2.0参数
   enableClear?: boolean,
-  // v3.0参数
-  showWeekNumber?: boolean,
 }
 
-const DatePicker: React.FC<DatePickerProps> = (props) => {
+const DateRangePicker: React.FC<DateRangePickerProps> = (props) => {
   const {
     className,
     selectionMode = 'day',
     onPick,
-    format,
+    format = DEFAULT_FORMATS_MAP[selectionMode],
     defaultDate,
     placeholder,
     enableClear = true,
@@ -41,11 +38,15 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
   } = props;
   // state
   const [pickerVisible, setPickerVisible] = useState<boolean>(false);
-  const [date, setDate] = useState<Dayjs>(dayjs(defaultDate));
-  const [text, setText] = useState<string>(() => {
-    return defaultDate ? dayjs(defaultDate).format(format || DEFAULT_FORMATS_MAP[selectionMode]) : '';
+  const [date, setDate] = useState<Dayjs[]>(() => {
+    // 默认日期必须同时包含开始和结束日期
+    if (defaultDate && defaultDate.length === 2) {
+      return [dayjs(defaultDate[0]), dayjs(defaultDate[1])];
+    }
+    return [dayjs(), dayjs()];
   });
-  const datePickerRef = useRef<HTMLDivElement>(null);
+  const [text, setText] = useState<string>(defaultDate ? rangeDateToText(date, format) : '');
+  const dateRangePickerRef = useRef<HTMLDivElement>(null);
   // popper相关
   const [referenceElement, setReferenceElement] = useState(null);
   const [popperElement, setPopperElement] = useState(null);
@@ -60,46 +61,50 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
   dayjs.extend(advancedFormat);
   dayjs.extend(weekOfYear);
 
-  useClickOutside(datePickerRef, () => { setPickerVisible(false) });
-
   const onInputFocus = () => {
     if (!pickerVisible) {
       setPickerVisible(true);
     }
   }
 
-  const onDatePick = (d: Dayjs[]) => {
-    setDate(d[1]);
-    setText(d[1].format(format || DEFAULT_FORMATS_MAP[selectionMode]));
+  // 点击确定后的回调函数
+  const datePick = (d: Dayjs[]) => {
+    setDate(d);
+    setText(rangeDateToText(d, format));
     if(_isFunction(onPick)){
       onPick([d[0].toDate(), d[1].toDate()]);
     }
     setPickerVisible(false);
   };
 
-  const onClearText = () => {
+  const clearText = () => {
     setText('');
-    setDate(dayjs());
+    setDate([dayjs(), dayjs()]);
+  }
+
+  const closePanel = () => {
+    setPickerVisible(false);
   }
 
   return (
-    <div ref={datePickerRef}  className={classnames('datepicker-box', className)}>
+    <div ref={dateRangePickerRef}  className={classnames('daterangepicker-box', className)}>
       <div ref={setReferenceElement}>
         <Input 
           selectionMode={selectionMode}
           onFocus={onInputFocus}
           value={text}
           placeholder={placeholder}
-          onIconClick={onClearText}
+          onIconClick={clearText}
           enableClear={enableClear}
         />
       </div>
       {
         pickerVisible && 
         <div ref={setPopperElement} style={_assign(styles.popper, { zIndex: 10 })} {...attributes.popper}>
-          <BasePanel
+          <DateRangePanel
             selectionMode={selectionMode}
-            onPick={onDatePick}
+            onPick={datePick}
+            onClose={closePanel}
             defaultDate={date}
             disabledDateFunc={disabledDateFunc}
           />
@@ -109,5 +114,5 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
   ) 
 };
 
-export default DatePicker;
+export default DateRangePicker;
 

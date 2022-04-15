@@ -12,6 +12,7 @@ const devOption = {
 		path: path.resolve(__dirname, './dist'),
 		clean: true,
 	},
+	devtool: 'source-map',
 };
 
 const proOption = {
@@ -50,9 +51,9 @@ const baseOption = Object.assign({
 			'Scss': path.resolve(__dirname, 'src/scss/'),
 			'Asset': path.resolve(__dirname, 'src/asset/'),
 			'Hook': path.resolve(__dirname, 'src/hook/'),
+			'Util': path.resolve(__dirname, 'src/util/'),
     },
   },
-	devtool: 'source-map',
 	devServer: {
 		static: './dist',
 		port: 9000,

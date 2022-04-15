@@ -1,13 +1,14 @@
 @import 'Asset/font/iconfont.css';
 
-.datepicker-box {
+.datepicker-box,
+.timepicker-box {
   width: 168px;
   position: relative;
   font-size: 12px;
 }
 
-.timepicker-box {
-  width: 168px;
+.daterangepicker-box {
+  width: 280px;
   position: relative;
   font-size: 12px;
 }

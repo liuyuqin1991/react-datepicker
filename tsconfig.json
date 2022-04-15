@@ -25,6 +25,7 @@
 			"Scss": ["src/scss"],
 			"Asset": ["src/asset"],
 			"Hook": ["src/hook"],
+			"Util": ["src/util"],
 		}
 	},
 	//包含

@@ -4,6 +4,7 @@ import isBetween from 'dayjs/plugin/isBetween';
 
 import DatePicker from 'Src/DatePicker';
 import TimePicker from 'Src/TimePicker';
+import DateRangePicker from 'Src/DateRangePicker';
 
 import './app.scss';
 
@@ -11,7 +12,7 @@ const Demo: React.FC = () => {
 
   dayjs.extend(isBetween);
 
-  const onPick = (d: Date[]) => {
+  const datePick = (d: Date[]) => {
     window.console.log(`开始时间：${dayjs(d[0]).format('YYYY/MM/DD HH:mm:ss')} —— 结束时间：${dayjs(d[1]).format('YYYY/MM/DD HH:mm:ss')}`);
   };
 
@@ -39,23 +40,23 @@ const Demo: React.FC = () => {
           <div className="date-panel">
             <div className="date-select">
               <span>日：</span>
-              <DatePicker selectionMode="day" onPick={onPick}/>
+              <DatePicker selectionMode="day" onPick={datePick}/>
             </div>
             <div className="date-select">
               <span>周：</span>
-              <DatePicker selectionMode="week" onPick={onPick}/>
+              <DatePicker selectionMode="week" onPick={datePick}/>
             </div>
             <div className="date-select">
               <span>月：</span>
-              <DatePicker selectionMode="month" onPick={onPick}/>
+              <DatePicker selectionMode="month" onPick={datePick}/>
             </div>
             <div className="date-select">
               <span>季：</span>
-              <DatePicker selectionMode="quarter" onPick={onPick}/>
+              <DatePicker selectionMode="quarter" onPick={datePick}/>
             </div>
             <div className="date-select">
               <span>年：</span>
-              <DatePicker selectionMode="year" onPick={onPick}/>
+              <DatePicker selectionMode="year" onPick={datePick}/>
             </div>
           </div>
         </div>
@@ -66,23 +67,23 @@ const Demo: React.FC = () => {
           <div className="date-panel">
             <div className="date-select">
               <span>日：</span>
-              <DatePicker selectionMode="day" onPick={onPick} defaultDate="2022-2-22"/>
+              <DatePicker selectionMode="day" onPick={datePick} defaultDate="2022-2-22"/>
             </div>
             <div className="date-select">
               <span>周：</span>
-              <DatePicker selectionMode="week" onPick={onPick} defaultDate="2022-2-22" enableClear={false} />
+              <DatePicker selectionMode="week" onPick={datePick} defaultDate="2022-2-22" enableClear={false} />
             </div>
             <div className="date-select">
               <span>月：</span>
-              <DatePicker selectionMode="month" onPick={onPick} defaultDate="2022-2-22"/>
+              <DatePicker selectionMode="month" onPick={datePick} defaultDate="2022-2-22"/>
             </div>
             <div className="date-select">
               <span>季：</span>
-              <DatePicker selectionMode="quarter" onPick={onPick} defaultDate="2022-2-22"/>
+              <DatePicker selectionMode="quarter" onPick={datePick} defaultDate="2022-2-22"/>
             </div>
             <div className="date-select">
               <span>年：</span>
-              <DatePicker selectionMode="year" onPick={onPick} defaultDate="2022-2-22"/>
+              <DatePicker selectionMode="year" onPick={datePick} defaultDate="2022-2-22"/>
             </div>
           </div>
         </div>
@@ -93,23 +94,23 @@ const Demo: React.FC = () => {
           <div className="date-panel">
             <div className="date-select">
               <span>日：</span>
-              <DatePicker selectionMode="day" onPick={onPick} defaultDate="2022-2-22" format="YYYY/MM/DD" />
+              <DatePicker selectionMode="day" onPick={datePick} defaultDate="2022-2-22" format="YYYY/MM/DD" />
             </div>
             <div className="date-select">
               <span>周：</span>
-              <DatePicker selectionMode="week" onPick={onPick} defaultDate="2022-2-22" format="YYYY年第w周"/>
+              <DatePicker selectionMode="week" onPick={datePick} defaultDate="2022-2-22" format="YYYY年第w周"/>
             </div>
             <div className="date-select">
               <span>月：</span>
-              <DatePicker selectionMode="month" onPick={onPick} defaultDate="2022-2-22" format="YYYY年M月"/>
+              <DatePicker selectionMode="month" onPick={datePick} defaultDate="2022-2-22" format="YYYY年M月"/>
             </div>
             <div className="date-select">
               <span>季：</span>
-              <DatePicker selectionMode="quarter" onPick={onPick} defaultDate="2022-2-22" format="YYYY年第Q季度"/>
+              <DatePicker selectionMode="quarter" onPick={datePick} defaultDate="2022-2-22" format="YYYY年第Q季度"/>
             </div>
             <div className="date-select">
               <span>年：</span>
-              <DatePicker selectionMode="year" onPick={onPick} defaultDate="2022-2-22" format="YYYY年"/>
+              <DatePicker selectionMode="year" onPick={datePick} defaultDate="2022-2-22" format="YYYY年"/>
             </div>
           </div>
         </div>
@@ -120,7 +121,7 @@ const Demo: React.FC = () => {
           <div className="date-panel">
             <div className="date-select">
               <span>日：</span>
-              <DatePicker selectionMode="day" onPick={onPick} placeholder="请选择开始日期" />
+              <DatePicker selectionMode="day" onPick={datePick} placeholder="请选择开始日期" />
             </div>
           </div>
         </div>
@@ -131,7 +132,7 @@ const Demo: React.FC = () => {
           <div className="date-panel">
             <div className="date-select">
               <span>日：</span>
-              <DatePicker selectionMode="day" onPick={onPick} disabledDateFunc={disabledDateFunc} />
+              <DatePicker selectionMode="day" onPick={datePick} disabledDateFunc={disabledDateFunc} />
             </div>
           </div>
         </div>
@@ -162,6 +163,36 @@ const Demo: React.FC = () => {
             <div className="date-select">
               <span>禁用秒：</span>
               <TimePicker onPick={timePick} defaultTime="2022-2-22 06:50:25" enableSecond={false} />
+            </div>
+          </div>
+        </div>
+        <div className="title">
+            DateRangePicker组件
+        </div>
+        <div className="daterange">
+          <div className="label-panel">
+            1. 默认
+          </div>
+          <div className="date-panel">
+            <div className="date-select">
+              <span>日：</span>
+              <DateRangePicker onPick={datePick} placeholder="请选择日期范围" disabledDateFunc={disabledDateFunc} format="YYYY年MM月DD日"/>
+            </div>
+            <div className="date-select">
+              <span>周：</span>
+              <DateRangePicker onPick={datePick} defaultDate={['2022-2-22', '2022-4-22']} selectionMode="week" format="YYYY年第w周" />
+            </div>
+            <div className="date-select">
+              <span>月：</span>
+              <DateRangePicker onPick={datePick} selectionMode="month"/>
+            </div>
+            <div className="date-select">
+              <span>季：</span>
+              <DateRangePicker onPick={datePick} selectionMode="quarter"/>
+            </div>
+            <div className="date-select">
+              <span>年：</span>
+              <DateRangePicker onPick={datePick} selectionMode="year"/>
             </div>
           </div>
         </div>
