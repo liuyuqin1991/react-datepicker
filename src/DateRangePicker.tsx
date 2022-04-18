@@ -26,6 +26,7 @@ interface DateRangePickerProps {
   disabledDateFunc?: (date: Date) => boolean,
   className?: string,
   enableClear?: boolean,
+  enableShowWeekNum?: boolean,
   titleLabel?: string,
   contentLabel?: string[],
 }
@@ -39,6 +40,7 @@ const DateRangePicker: React.FC<DateRangePickerProps> = (props) => {
     defaultDate,
     placeholder = DEFAULT_PLACEHOLDER_MAP['date-range'],
     enableClear = true,
+    enableShowWeekNum = true,
     titleLabel = '请选择日期范围',
     contentLabel = ['起始日期：', '结束日期：'],
     disabledDateFunc
@@ -115,6 +117,7 @@ const DateRangePicker: React.FC<DateRangePickerProps> = (props) => {
             defaultDate={date}
             disabledDateFunc={disabledDateFunc}
             format={format}
+            enableShowWeekNum={enableShowWeekNum}
             titleLabel={titleLabel}
             contentLabel={contentLabel}
           />

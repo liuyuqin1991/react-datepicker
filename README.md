@@ -1,5 +1,8 @@
 # react-datepicker
-DatePicker基础组件，react hook + typescript 代码风格，日期组件支持日、周、月、季、年选择，时间组件支持标准时、分、秒选择。
+Datepicker基础组件库，react hook + typescript 代码风格，包含DatePicker，TimePicker，DateRangePicker三个子组件:
+* DatePicker，标准单日期选择组件，支持日，周，月，季，年5种日期维度选择；
+* TimePicker，标准时间选择组件，全新设计，避免滚动选择，特定时间点直观显示
+* DateRangePicker，范围双日期选择组件，支持日，周，月，季，年5种日期维度选择；
 
 > <i>组件使用的第三方库：lodash，dayjs，classnames，react-popper，rc-slider</i>
 
@@ -50,10 +53,12 @@ import { TimePicker } from 'react-datepicker-ts';
 | defaultDate | 默认日期<可选> | Date | |
 | className  | 类选择器<可选> |string | |
 | onPick  | 选择日期回调函数<必选> | (d: Date[]) => void | |
-| format  | 显示在输入框符合dayjs规范的格式<可选> | string | '请选择日期' |
+| format  | 显示在输入框符合dayjs规范的格式<可选> | string | 'YYYY-MM-DD' |
 | placeholder  | 未选日期时的占位符<可选> | string | '请选择日期'|
 | disabledDateFunc  | 禁用日期回调函数<可选> | (d: Date) => boolean | |
 | enableClear  | 允许日期清除<可选> | boolean | true |
+| enableShowWeekNum  | 允许周数显示<可选> | boolean | true |
+
 
 ### TimePicker参数
 
@@ -66,3 +71,19 @@ import { TimePicker } from 'react-datepicker-ts';
 | placeholder  | 未选日期时的占位符<可选> | string | '请选择时间' |
 | enableSecond  | 允许秒选择<可选> | boolean | true |
 | enableClear  | 允许时间清除<可选> | boolean | true |
+
+### DateRangePicker参数
+
+| 参数 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| selectionMode | 日期类型<可选> | string | day |
+| defaultDate | 默认日期<可选> | Date[] | |
+| className  | 类选择器<可选> |string | |
+| onPick  | 选择日期回调函数<必选> | (d: Date[]) => void | |
+| format  | 显示在输入框符合dayjs规范的格式<可选> | string | 'YYYY-MM-DD' |
+| placeholder  | 未选日期时的占位符<可选> | string | '请选择日期范围'|
+| disabledDateFunc  | 禁用日期回调函数<可选> | (d: Date) => boolean | |
+| enableClear  | 允许日期清除<可选> | boolean | true |
+| enableShowWeekNum  | 允许周数显示<可选> | boolean | true |
+| titleLabel  | 标题文字<可选> |string | '请选择日期范围' |
+| contentLabel  | 内容文字<可选> |string[] | ['起始日期：', '结束日期：']|

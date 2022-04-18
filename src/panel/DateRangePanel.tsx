@@ -12,6 +12,7 @@ interface DateRangePanelProps {
   format: string,
   titleLabel: string,
   contentLabel: string[],
+  enableShowWeekNum: boolean,
   onPick: (date: Dayjs[]) => void,
   onClose: () => void,
   disabledDateFunc?: (date: Date) => boolean,
@@ -25,6 +26,7 @@ const DateRangePanel: React.FC<DateRangePanelProps> = (props) => {
     format,
     titleLabel,
     contentLabel,
+    enableShowWeekNum,
     onPick,
     onClose,
     disabledDateFunc
@@ -61,6 +63,7 @@ const DateRangePanel: React.FC<DateRangePanelProps> = (props) => {
           defaultDate={date[0].toDate()}
           disabledDateFunc={disabledDateFunc}
           format={format}
+          enableShowWeekNum={enableShowWeekNum}
         />
       </div>
       <div className="daterange-select-panel">
@@ -71,6 +74,7 @@ const DateRangePanel: React.FC<DateRangePanelProps> = (props) => {
           defaultDate={date[1].toDate()}
           disabledDateFunc={disabledDateFunc}
           format={format}
+          enableShowWeekNum={enableShowWeekNum}
         />
       </div>
       <div className="daterange-tip-panel">
