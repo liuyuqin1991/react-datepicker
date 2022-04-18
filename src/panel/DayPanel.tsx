@@ -4,6 +4,7 @@ import { Dayjs } from 'dayjs';
 import classnames from 'classnames';
 
 import { SelectionMode, TD } from 'Typing';
+import { WEEK_CN_SHORT_ARRAY } from 'Src/constants';
 import 'Scss/day-panel.scss';
 
 interface DayPanelProps {
@@ -12,13 +13,13 @@ interface DayPanelProps {
   virtualDate?: Dayjs,
   // 默认日期，初始化和pick后的默认日期
   defaultDate?: Dayjs,
+  enableShowWeekNum: boolean,
   onPick: (date: Dayjs[]) => void,
   disabledDateFunc?: (date: Date) => void,
 }
 
 const DayPanel: React.FC<DayPanelProps> = (props) => {
-  const { selectionMode, defaultDate, virtualDate, disabledDateFunc, onPick } = props;
-  const WEEK_CN_SHORT_ARRAY: string[] = ['日','一','二','三','四','五','六'];
+  const { selectionMode, defaultDate, virtualDate, enableShowWeekNum, disabledDateFunc, onPick } = props;
 
   const onPickDay = (td: TD) => {
     const { label, style } = td;
@@ -52,10 +53,17 @@ const DayPanel: React.FC<DayPanelProps> = (props) => {
       endDate = virtualDate.date(label);
       startDate = endDate.subtract(6,'day');
     }
-    if(_isFunction(onPick)){
-      onPick([startDate, endDate]);
-    }
+    onPick([startDate, endDate]);
   };
+
+  const getWeekNum = (td: TD): number => {
+    const { label, style } = td;
+    if(_get(style, 'last')) {
+      return virtualDate.subtract(1,'month').date(label).week();
+    } else if(_get(style, 'next')) {
+      return  virtualDate.add(1,'month').date(label).week();
+    } else return virtualDate.date(label).week();
+  }
   
   /**
    * 计算日历cell数据数组
@@ -132,9 +140,10 @@ const DayPanel: React.FC<DayPanelProps> = (props) => {
   /**
    * 渲染日历Header
    */
-  const renderHeader = ():JSX.Element => {
-    return (
+  const renderHeader = (): JSX.Element => {
+    return(
       <tr>
+        { enableShowWeekNum && selectionMode === 'week' &&(<th key="week-num-th" className="week-num-th"></th>)}
         {
           WEEK_CN_SHORT_ARRAY.map((week: string, index: number)=>{
             return <th key={`${week}-${index}`}>{week}</th>
@@ -182,6 +191,14 @@ const DayPanel: React.FC<DayPanelProps> = (props) => {
         }
         if(index !== 0 && ( index + 1 ) % 7 === 0){
           const cls =  classnames({'pick' : pickTrFlag , 'disabled': disabledTrFlag});
+          if (enableShowWeekNum) {
+            const weekNum = getWeekNum(day);
+            dayTemp.unshift(
+              <td key={`week-num-${weekNum}`} className="week-num-td">
+                {weekNum}
+              </td>
+            );
+          }
           week.push(
             <tr key={`week-${index / 7}`} className={cls} onClick={() => onPickWeek(day)}>
               {dayTemp}

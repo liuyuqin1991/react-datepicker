@@ -19,3 +19,5 @@ export const DEFAULT_PLACEHOLDER_MAP: ParameterMap<string> = {
   'date-range': '请选择日期范围',
   'time-range': '请选择时间范围',
 }
+
+export const WEEK_CN_SHORT_ARRAY: string[] = ['日','一','二','三','四','五','六'];

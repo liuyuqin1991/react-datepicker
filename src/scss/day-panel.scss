@@ -28,6 +28,12 @@
 				color: $c-datepicker-td-disabled-text;
 			}
 		}
+
+		.week-num-th,
+		.week-num-td {
+			color: $c-datepicker-text-light;
+			border-right: 1px solid $c-datepicker-border;
+		}
 	}
 
 	&:not(.is-week-mode) tr > td,

@@ -71,7 +71,7 @@ const Demo: React.FC = () => {
             </div>
             <div className="date-select">
               <span>周：</span>
-              <DatePicker selectionMode="week" onPick={datePick} defaultDate="2022-2-22" enableClear={false} />
+              <DatePicker selectionMode="week" onPick={datePick} defaultDate="2022-2-22" enableClear={false} enableShowWeekNum={false} />
             </div>
             <div className="date-select">
               <span>月：</span>

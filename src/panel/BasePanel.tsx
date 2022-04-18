@@ -14,14 +14,22 @@ interface BasePanelProps {
   defaultDate?: Dayjs,
   onPick: (date: Dayjs[] | Dayjs) => void,
   onClose?: () => void,
-  isShowTime?: boolean,
   selectionMode: SelectionMode,
   disabledDateFunc?: (date: Date) => boolean,
   enableSecond?: boolean,
+  enableShowWeekNum?: boolean,
 }
 
 const BasePanel: React.FC<BasePanelProps> = (props) => {
-  const { selectionMode, defaultDate, onPick, onClose, disabledDateFunc, enableSecond } = props;
+  const {
+    selectionMode,
+    defaultDate,
+    onPick,
+    onClose,
+    disabledDateFunc,
+    enableSecond,
+    enableShowWeekNum,
+  } = props;
   const [date, setDate] = useState<Dayjs>(defaultDate);
   const [currentPanel, setCurrentPanel] = useState<string>(() => {
     if (_includes(['day', 'week'], selectionMode)){
@@ -104,11 +112,12 @@ const BasePanel: React.FC<BasePanelProps> = (props) => {
             className="icon-btn icon-double-right">
           </button>
         </div>
-        <DayPanel 
+        <DayPanel
           onPick={datePick}
           defaultDate={defaultDate}
           virtualDate={date}
           selectionMode={selectionMode}
+          enableShowWeekNum={enableShowWeekNum}
           disabledDateFunc={disabledDateFunc}
         />
       </>

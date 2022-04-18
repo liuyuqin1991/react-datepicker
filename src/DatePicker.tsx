@@ -26,7 +26,7 @@ interface DatePickerProps {
   // v2.0参数
   enableClear?: boolean,
   // v3.0参数
-  showWeekNumber?: boolean,
+  enableShowWeekNum?: boolean,
 }
 
 const DatePicker: React.FC<DatePickerProps> = (props) => {
@@ -38,6 +38,7 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
     defaultDate,
     placeholder = DEFAULT_PLACEHOLDER_MAP[selectionMode],
     enableClear = true,
+    enableShowWeekNum = true,
     disabledDateFunc
   } = props;
   // state
@@ -100,6 +101,7 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
             selectionMode={selectionMode}
             onPick={onDatePick}
             defaultDate={date}
+            enableShowWeekNum={enableShowWeekNum}
             disabledDateFunc={disabledDateFunc}
           />
         </div>
