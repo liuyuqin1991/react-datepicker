@@ -7,8 +7,9 @@ import classnames from 'classnames';
 import { usePopper } from 'react-popper';
 
 import { SelectionMode } from 'Typing';
-import { DEFAULT_FORMATS_MAP } from 'Src/constants';
+import { DEFAULT_FORMATS_MAP, DEFAULT_PLACEHOLDER_MAP } from 'Src/constants';
 import { useClickOutside } from 'Hook';
+import { singleDateToText } from 'Util';
 import Input from 'Src/input';
 import BasePanel from 'Src/panel/BasePanel';
 import 'Scss/picker.scss';
@@ -33,18 +34,16 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
     className,
     selectionMode = 'day',
     onPick,
-    format,
+    format = DEFAULT_FORMATS_MAP[selectionMode],
     defaultDate,
-    placeholder,
+    placeholder = DEFAULT_PLACEHOLDER_MAP[selectionMode],
     enableClear = true,
     disabledDateFunc
   } = props;
   // state
   const [pickerVisible, setPickerVisible] = useState<boolean>(false);
   const [date, setDate] = useState<Dayjs>(dayjs(defaultDate));
-  const [text, setText] = useState<string>(() => {
-    return defaultDate ? dayjs(defaultDate).format(format || DEFAULT_FORMATS_MAP[selectionMode]) : '';
-  });
+  const [text, setText] = useState<string>(defaultDate ? singleDateToText(date, format) : '');
   const datePickerRef = useRef<HTMLDivElement>(null);
   // popper相关
   const [referenceElement, setReferenceElement] = useState(null);

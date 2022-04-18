@@ -1,5 +1,8 @@
 import React, { useState, useRef } from 'react';
-import { assign as _assign, isFunction as _isFunction } from 'lodash';
+import {
+  assign as _assign,
+  isFunction as _isFunction,
+} from 'lodash';
 import dayjs, { Dayjs } from 'dayjs';
 import advancedFormat from 'dayjs/plugin/advancedFormat';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
@@ -7,7 +10,7 @@ import classnames from 'classnames';
 import { usePopper } from 'react-popper';
 
 import { SelectionMode } from 'Typing';
-import { DEFAULT_FORMATS_MAP } from 'Src/constants';
+import { DEFAULT_FORMATS_MAP, DEFAULT_PLACEHOLDER_MAP } from 'Src/constants';
 import { rangeDateToText } from 'Util';
 import Input from 'Src/input';
 import DateRangePanel from 'Src/panel/DateRangePanel';
@@ -23,6 +26,8 @@ interface DateRangePickerProps {
   disabledDateFunc?: (date: Date) => boolean,
   className?: string,
   enableClear?: boolean,
+  titleLabel?: string,
+  contentLabel?: string[],
 }
 
 const DateRangePicker: React.FC<DateRangePickerProps> = (props) => {
@@ -32,8 +37,10 @@ const DateRangePicker: React.FC<DateRangePickerProps> = (props) => {
     onPick,
     format = DEFAULT_FORMATS_MAP[selectionMode],
     defaultDate,
-    placeholder,
+    placeholder = DEFAULT_PLACEHOLDER_MAP['date-range'],
     enableClear = true,
+    titleLabel = '请选择日期范围',
+    contentLabel = ['起始日期：', '结束日期：'],
     disabledDateFunc
   } = props;
   // state
@@ -107,6 +114,9 @@ const DateRangePicker: React.FC<DateRangePickerProps> = (props) => {
             onClose={closePanel}
             defaultDate={date}
             disabledDateFunc={disabledDateFunc}
+            format={format}
+            titleLabel={titleLabel}
+            contentLabel={contentLabel}
           />
         </div>
       }

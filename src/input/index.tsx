@@ -2,7 +2,7 @@ import React, { useMemo, useRef } from 'react';
 import { isFunction as _isFunction } from 'lodash';
 import classNames from 'classnames';
 
-import { SelectionMode, ParameterMap } from 'Typing';
+import { SelectionMode } from 'Typing';
 import { useHover } from 'Hook';
 import 'Scss/input.scss';
 
@@ -24,15 +24,6 @@ interface InputProps {
 	selectionMode: SelectionMode
 	// 是否允许清除
 	enableClear: boolean
-}
-
-const DEFAULT_PLACEHOLDER_MAP: ParameterMap<string> = {
-	'day': '请选择日期',
-	'week': '请选择周',
-	'month': '请选择月',
-	'quarter': '请选择季',
-	'year': '请选择年',
-	'time': '请选择时间',
 }
 
 const Input: React.FC<InputProps> = (props) => {
@@ -85,7 +76,7 @@ const Input: React.FC<InputProps> = (props) => {
 				className={classNames(inputClassName)}
 				value={value}
 				readOnly
-				placeholder={placeholder || DEFAULT_PLACEHOLDER_MAP[selectionMode]}
+				placeholder={placeholder}
 				ref = {inputRef}
 				onFocus={handleFocus}
 				onBlur={handleBlur}

@@ -2,7 +2,6 @@
 @import "./color.scss";
 
 .daterange-panel {
-  width: 280px;
 	color: $c-datepicker-text;
 	border: 1px solid $c-datepicker-border;
 	box-shadow: 0 2px 6px $c-datepicker-border;
@@ -31,6 +30,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 15px;
+
+    .datepicker-box {
+      margin-left: 20px;
+    }
   }
 
   .daterange-btn-panel {

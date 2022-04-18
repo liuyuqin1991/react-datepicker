@@ -8,7 +8,10 @@ import 'Scss/date-range-panel.scss';
 
 interface DateRangePanelProps {
   selectionMode: SelectionMode,
-  defaultDate?: Dayjs[],
+  defaultDate: Dayjs[],
+  format: string,
+  titleLabel: string,
+  contentLabel: string[],
   onPick: (date: Dayjs[]) => void,
   onClose: () => void,
   disabledDateFunc?: (date: Date) => boolean,
@@ -16,7 +19,16 @@ interface DateRangePanelProps {
 
 const DateRangePanel: React.FC<DateRangePanelProps> = (props) => {
 
-  const { selectionMode, defaultDate, onPick, onClose, disabledDateFunc } = props;
+  const {
+    selectionMode,
+    defaultDate,
+    format,
+    titleLabel,
+    contentLabel,
+    onPick,
+    onClose,
+    disabledDateFunc
+  } = props;
 
   const [date, setDate] = useState<Dayjs[]>(defaultDate);
 
@@ -38,25 +50,27 @@ const DateRangePanel: React.FC<DateRangePanelProps> = (props) => {
   return (
     <div className="daterange-panel">
       <div className="daterange-title">
-        <span>请选择日期范围</span>
+        <span>{titleLabel}</span>
         <span className="icon-close" onClick={onClose}></span>
       </div>
       <div className="daterange-select-panel">
-        <div>起始日期：</div>
+        <div>{contentLabel[0]}</div>
         <DatePicker
           selectionMode={selectionMode}
           onPick={(d: Date[]) => tempDatePick(d[0], 0)}
           defaultDate={date[0].toDate()}
           disabledDateFunc={disabledDateFunc}
+          format={format}
         />
       </div>
       <div className="daterange-select-panel">
-        <div>结束日期：</div>
+        <div>{contentLabel[1]}</div>
         <DatePicker
           selectionMode={selectionMode}
           onPick={(d: Date[]) => tempDatePick(d[1], 1)}
           defaultDate={date[1].toDate()}
           disabledDateFunc={disabledDateFunc}
+          format={format}
         />
       </div>
       <div className="daterange-tip-panel">
