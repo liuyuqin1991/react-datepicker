@@ -6,6 +6,7 @@ interface DayPanelProps {
     selectionMode: SelectionMode;
     virtualDate?: Dayjs;
     defaultDate?: Dayjs;
+    enableShowWeekNum: boolean;
     onPick: (date: Dayjs[]) => void;
     disabledDateFunc?: (date: Date) => void;
 }

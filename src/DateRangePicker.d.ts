@@ -10,6 +10,9 @@ interface DateRangePickerProps {
     disabledDateFunc?: (date: Date) => boolean;
     className?: string;
     enableClear?: boolean;
+    enableShowWeekNum?: boolean;
+    titleLabel?: string;
+    contentLabel?: string[];
 }
 declare const DateRangePicker: React.FC<DateRangePickerProps>;
 export default DateRangePicker;

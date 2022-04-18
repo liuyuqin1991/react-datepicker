@@ -10,7 +10,7 @@ interface DatePickerProps {
     disabledDateFunc?: (date: Date) => boolean;
     className?: string;
     enableClear?: boolean;
-    showWeekNumber?: boolean;
+    enableShowWeekNum?: boolean;
 }
 declare const DatePicker: React.FC<DatePickerProps>;
 export default DatePicker;

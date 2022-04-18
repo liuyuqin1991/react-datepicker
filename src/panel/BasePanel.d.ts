@@ -6,10 +6,10 @@ interface BasePanelProps {
     defaultDate?: Dayjs;
     onPick: (date: Dayjs[] | Dayjs) => void;
     onClose?: () => void;
-    isShowTime?: boolean;
     selectionMode: SelectionMode;
     disabledDateFunc?: (date: Date) => boolean;
     enableSecond?: boolean;
+    enableShowWeekNum?: boolean;
 }
 declare const BasePanel: React.FC<BasePanelProps>;
 export default BasePanel;

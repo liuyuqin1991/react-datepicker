@@ -4,7 +4,11 @@ import { SelectionMode } from 'Typing';
 import 'Scss/date-range-panel.scss';
 interface DateRangePanelProps {
     selectionMode: SelectionMode;
-    defaultDate?: Dayjs[];
+    defaultDate: Dayjs[];
+    format: string;
+    titleLabel: string;
+    contentLabel: string[];
+    enableShowWeekNum: boolean;
     onPick: (date: Dayjs[]) => void;
     onClose: () => void;
     disabledDateFunc?: (date: Date) => boolean;
