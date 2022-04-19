@@ -150,19 +150,19 @@ const Demo: React.FC = () => {
             </div>
             <div className="date-select">
               <span>预设时间：</span>
-              <TimePicker onPick={timePick} defaultTime="2022-2-22 06:50:25" enableClear={false} />
+              <TimePicker onPick={timePick} defaultTime="2022-2-22 06:50" enableClear={false} />
             </div>
             <div className="date-select">
               <span>格式化：</span>
-              <TimePicker onPick={timePick} defaultTime="2022-2-22 06:50:25" format="HH时mm分ss秒" />
+              <TimePicker onPick={timePick} defaultTime="2022-2-22 06:50" format="HH时mm分" />
             </div>
             <div className="date-select">
               <span>占位符：</span>
               <TimePicker onPick={timePick} placeholder="请选择起始时间" />
             </div>
             <div className="date-select">
-              <span>禁用秒：</span>
-              <TimePicker onPick={timePick} defaultTime="2022-2-22 06:50:25" enableSecond={false} />
+              <span>启用秒：</span>
+              <TimePicker onPick={timePick} defaultTime="2022-2-22 06:50:25" enableSecond={true} />
             </div>
           </div>
         </div>

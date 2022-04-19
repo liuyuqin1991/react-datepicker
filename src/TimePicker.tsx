@@ -26,7 +26,7 @@ const TimePicker: React.FC<TimePickerProps> = (props) => {
     format,
     defaultTime,
     placeholder,
-    enableSecond = true,
+    enableSecond = false,
     enableClear = true,
     onPick
   } = props;

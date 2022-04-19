@@ -57,7 +57,7 @@ import { TimePicker } from 'react-datepicker-ts';
 | placeholder  | 未选日期时的占位符<可选> | string | '请选择日期'|
 | disabledDateFunc  | 禁用日期回调函数<可选> | (d: Date) => boolean | |
 | enableClear  | 允许日期清除<可选> | boolean | true |
-| enableShowWeekNum  | 允许周数显示<可选> | boolean | true |
+| enableShowWeekNum  | 允许周数显示，仅周选择模式下生效<可选> | boolean | true |
 
 
 ### TimePicker参数

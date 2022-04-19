@@ -51,15 +51,15 @@ const TimePanel: React.FC<TimePanelProps> = (props) => {
     if (i === 7) {
       _set(hourMarks, 23, addPrefixZero(23));
     }
-  })
+  });
 
   const minuteMarks = {};
-  _times(12, (i: number) => {
-    _set(minuteMarks, i * 5, addPrefixZero(i * 5));
-    if (i === 11) {
+  _times(6, (i: number) => {
+    _set(minuteMarks, i * 10, addPrefixZero(i * 10));
+    if (i === 5) {
       _set(minuteMarks, 59, addPrefixZero(59));
     }
-  })
+  });
 
   const onTimeChange = (v: number, type: string) => {
     setTime({
