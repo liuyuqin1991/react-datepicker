@@ -21,6 +21,7 @@
 		],
 		"paths": {
 			"Src": ["src"],
+			"Component": ["src/component/"],
 			"Typing": ["src/typing"],
 			"Scss": ["src/scss"],
 			"Asset": ["src/asset"],

@@ -52,6 +52,7 @@ const baseOption = Object.assign({
 			'Asset': path.resolve(__dirname, 'src/asset/'),
 			'Hook': path.resolve(__dirname, 'src/hook/'),
 			'Util': path.resolve(__dirname, 'src/util/'),
+			"Component": path.resolve(__dirname, 'src/component/'),
     },
   },
 	devServer: {

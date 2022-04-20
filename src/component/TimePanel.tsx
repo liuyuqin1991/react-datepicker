@@ -6,6 +6,8 @@ import {
 import dayjs, { Dayjs } from 'dayjs';
 import Slider from 'rc-slider';
 
+import { ActionButton } from 'Component';
+
 import 'rc-slider/assets/index.css';
 import 'Scss/time-panel.scss';
 
@@ -140,10 +142,7 @@ const TimePanel: React.FC<TimePanelProps> = (props) => {
           </div>
         )}
       </div>
-      <div className="btn-panel">
-        <div className="btn-cancel" onClick={handleClose}>取消</div>
-        <div className="btn-ok" onClick={handlePick}>确定</div>
-      </div>
+      <ActionButton onOk={handlePick} onClose={handleClose} />
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import dayjs, { Dayjs } from 'dayjs';
 
 import { SelectionMode } from 'Typing';
+import { ActionButton } from 'Component';
 import DatePicker from 'Src/DatePicker';
 
 import 'Scss/date-range-panel.scss';
@@ -80,10 +81,7 @@ const DateRangePanel: React.FC<DateRangePanelProps> = (props) => {
       <div className="daterange-tip-panel">
         {isBefore && <span>结束日期早于起始日期，请重新选择</span>}
       </div>
-      <div className="daterange-btn-panel">
-        <div className="btn-cancel" onClick={onClose}>取消</div>
-        <div className="btn-ok" onClick={datePick} style={isBefore ? { cursor: 'not-allowed' } : {cursor: 'pointer' }}>确定</div>
-      </div>
+      <ActionButton onOk={datePick} onClose={onClose} disableOk={isBefore} />
     </div>
   );
 };

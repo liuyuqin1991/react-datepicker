@@ -5,8 +5,7 @@ import classnames from 'classnames';
 import { usePopper } from 'react-popper';
 
 import { useClickOutside } from 'Hook';
-import Input from 'Src/input';
-import BasePanel from 'Src/panel/BasePanel';
+import { Input, BasePanel } from 'Component';
 import 'Scss/picker.scss';
 
 interface TimePickerProps {

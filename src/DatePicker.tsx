@@ -10,8 +10,7 @@ import { SelectionMode } from 'Typing';
 import { DEFAULT_FORMATS_MAP, DEFAULT_PLACEHOLDER_MAP } from 'Src/constants';
 import { useClickOutside } from 'Hook';
 import { singleDateToText } from 'Util';
-import Input from 'Src/input';
-import BasePanel from 'Src/panel/BasePanel';
+import { Input, BasePanel } from 'Component';
 import 'Scss/picker.scss';
 
 interface DatePickerProps {

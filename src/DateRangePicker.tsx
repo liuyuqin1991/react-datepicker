@@ -12,8 +12,7 @@ import { usePopper } from 'react-popper';
 import { SelectionMode } from 'Typing';
 import { DEFAULT_FORMATS_MAP, DEFAULT_PLACEHOLDER_MAP } from 'Src/constants';
 import { rangeDateToText } from 'Util';
-import Input from 'Src/input';
-import DateRangePanel from 'Src/panel/DateRangePanel';
+import { Input, DateRangePanel } from 'Component';
 import 'Scss/picker.scss';
 
 interface DateRangePickerProps {

@@ -1,0 +1,28 @@
+@import "./color.scss";
+
+.btn-panel {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 15px;
+  border-top: 1px solid $c-datepicker-border;
+
+  .btn-cancel,
+  .btn-ok {
+    &.disable {
+      color: $c-datepicker-td-disabled-text;
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .btn-ok {
+    margin-left: 15px;
+    color: var(--c-datepicker-primary);
+    cursor: pointer;
+  }
+}
