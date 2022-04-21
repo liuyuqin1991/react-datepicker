@@ -136,6 +136,25 @@ const Demo: React.FC = () => {
             </div>
           </div>
         </div>
+        <div className="date-time">
+          <div className="label-panel">
+            6. 启用时间（选择模式只能为日选择）
+          </div>
+          <div className="date-panel">
+            <div className="date-select">
+              <span>日：</span>
+              <DatePicker onPick={datePick} selectionMode="daytime" />
+            </div>
+            <div className="date-select">
+              <span>启用秒：</span>
+              <DatePicker selectionMode="daytime" onPick={datePick} disabledDateFunc={disabledDateFunc} enableSecond={true} />
+            </div>
+            <div className="date-select">
+              <span>预设：</span>
+              <DatePicker selectionMode="daytime" onPick={datePick} defaultDate="2022-2-22 22:20"/>
+            </div>
+          </div>
+        </div>
         <div className="title">
             TimePicker组件
         </div>

@@ -1,16 +1,18 @@
 import { ParameterMap } from 'Typing';
 
-export const DEFAULT_FORMATS_MAP = {
+export const DEFAULT_FORMATS_MAP: ParameterMap<string> = {
   day: 'YYYY-MM-DD',
   month: 'YYYY-M',
   year: 'YYYY',
   week: 'YYYY-w',
   quarter: 'YYYY-Q',
-  time: 'HH:mm:ss',
+  time: 'HH:mm',
+  daytime: 'YYYY-MM-DD HH:mm',
 };
 
 export const DEFAULT_PLACEHOLDER_MAP: ParameterMap<string> = {
-	'day': '请选择日期',
+  'day': '请选择日期',
+  'daytime': '请选择日期',
 	'week': '请选择周',
 	'month': '请选择月',
 	'quarter': '请选择季',

@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { includes as _includes, toInteger as _toInteger } from 'lodash';
-import { Dayjs } from 'dayjs';
+import dayjs, { Dayjs } from 'dayjs';
 
 import { SelectionMode } from 'Typing';
+import { ActionButton } from 'Component';
 import DayPanel from './DayPanel';
 import MonthPanel from './MonthPanel';
 import YearPanel from './YearPanel';
@@ -20,6 +21,12 @@ interface BasePanelProps {
   enableShowWeekNum?: boolean,
 }
 
+type Time = {
+  hour: number;
+  minute: number;
+  second: number;
+}
+
 const BasePanel: React.FC<BasePanelProps> = (props) => {
   const {
     selectionMode,
@@ -31,8 +38,15 @@ const BasePanel: React.FC<BasePanelProps> = (props) => {
     enableShowWeekNum,
   } = props;
   const [date, setDate] = useState<Dayjs>(defaultDate);
+  const [time, setTime] = useState<Time>(() => {
+    return {
+      hour: defaultDate.hour(),
+      minute: defaultDate.minute(),
+      second: defaultDate.second(),
+    };
+  });
   const [currentPanel, setCurrentPanel] = useState<string>(() => {
-    if (_includes(['day', 'week'], selectionMode)){
+    if (_includes(['day', 'week', 'daytime'], selectionMode)){
       return 'day';
     } else if (_includes(['month', 'quarter'], selectionMode)){
       return 'month';
@@ -42,12 +56,12 @@ const BasePanel: React.FC<BasePanelProps> = (props) => {
 
   const datePick = (d: Dayjs[]) => {
     // 日，周视图点击年视图进入时
-    if (_includes(['day', 'week'], selectionMode) && currentPanel === 'year') {
+    if (_includes(['day', 'week', 'daytime'], selectionMode) && currentPanel === 'year') {
       setDate(date.year(d[1].year()));
       setCurrentPanel('day');
     }
     // 日，周视图点击月视图进入时
-    else if (_includes(['day', 'week'], selectionMode) && currentPanel === 'month') {
+    else if (_includes(['day', 'week', 'daytime'], selectionMode) && currentPanel === 'month') {
       setDate(date.month(d[1].month()));
       setCurrentPanel('day');
     }
@@ -56,12 +70,26 @@ const BasePanel: React.FC<BasePanelProps> = (props) => {
       setDate(date.year(d[1].year()));
       setCurrentPanel('month');
     }
-    else onPick(d);
+    // 日视图且开启时间选择时
+    else if (selectionMode === 'daytime') {
+      setDate(d[1]);
+    } else {
+      onPick(d);
+    }
   };
 
   const timePick = (d: Dayjs) => {
     onPick(d);
-  }
+  };
+
+  const dateTimePick = () => {
+    const d = dayjs(date).hour(time.hour).minute(time.minute).second(time.second);
+    onPick([d, d]);
+  };
+
+  const timeChange = (t: Time) => {
+    setTime(t);
+  };
 
   const last = (type: string, count: number) => {
     setDate(date.subtract(count, type));
@@ -120,6 +148,70 @@ const BasePanel: React.FC<BasePanelProps> = (props) => {
           enableShowWeekNum={enableShowWeekNum}
           disabledDateFunc={disabledDateFunc}
         />
+      </>
+    );
+  };
+
+  const renderTimePicker = useMemo(() => {
+    return (
+      <div className="date-time-panel">
+        <TimePanel
+          defaultTime={time}
+          enableSecond={enableSecond}
+          showButton={false}
+          onChange={timeChange}
+        />
+      </div>
+    );
+  }, [time]);
+
+  const renderDayTimePanel = () => {
+    return (
+      <>
+        <div style={{ display: 'flex', flexDirection: 'row' }}>
+          <div>
+            <div className="header">
+              <button
+                type="button"
+                onClick={() => last('year',1)}
+                className="icon-btn icon-double-left">
+              </button>
+              <button
+                type="button"
+                onClick={() => last('month',1)}
+                className="icon-btn icon-left">
+              </button>
+              <div className="date-label">
+                <div className="year" onClick={(e: React.BaseSyntheticEvent) => showPanel(e, 'year')}>
+                  {`${date.year()} 年 `}
+                </div>
+                <div className="month" onClick={(e: React.BaseSyntheticEvent) => showPanel(e, 'month')}>
+                  {`${date.month() + 1} 月 `}
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => next('month',1)}
+                className="icon-btn icon-right">
+              </button>
+              <button
+                type="button"
+                onClick={() => next('year',1)}
+                className="icon-btn icon-double-right">
+              </button>
+            </div>
+            <DayPanel
+              onPick={datePick}
+              defaultDate={date}
+              virtualDate={date}
+              selectionMode={selectionMode}
+              enableShowWeekNum={enableShowWeekNum}
+              disabledDateFunc={disabledDateFunc}
+            />
+          </div>
+          {renderTimePicker}
+        </div>
+        <ActionButton onOk={dateTimePick} onClose={closePanel} />
       </>
     );
   };
@@ -187,7 +279,7 @@ const BasePanel: React.FC<BasePanelProps> = (props) => {
     return (
       <TimePanel
         onPick={timePick}
-        defaultTime={defaultDate}
+        defaultTime={time}
         onClose={closePanel}
         enableSecond={enableSecond}
       />
@@ -196,7 +288,7 @@ const BasePanel: React.FC<BasePanelProps> = (props) => {
 
   const renderPanel = () => {
     if (currentPanel === 'day') {
-      return renderDayPanel();
+      return selectionMode === 'daytime' ? renderDayTimePanel() : renderDayPanel();
     } else if (currentPanel === 'month') {
       return renderMonthPanel();
     } else if (currentPanel === 'year') {

@@ -2,42 +2,33 @@ import React, { useMemo, useState } from 'react';
 import {
   times as _times,
   set as _set,
+  isFunction as _isFunction,
 } from 'lodash';
 import dayjs, { Dayjs } from 'dayjs';
 import Slider from 'rc-slider';
 
 import { ActionButton } from 'Component';
+import { Time } from 'Typing'
 
 import 'rc-slider/assets/index.css';
 import 'Scss/time-panel.scss';
 
 interface TimePanelProps {
-  defaultTime?: Dayjs,
-  onPick: (time: Dayjs) => void,
-  onClose: () => void,
+  defaultTime?: Time,
+  onPick?: (time: Dayjs) => void,
+  onClose?: () => void,
+  onChange?: (time: Time) => void,
   enableSecond: boolean,
+  showButton?: boolean,
 }
-
-type Time = {
-  hour: number;
-  minute: number;
-  second: number;
-}
-
 
 const addPrefixZero = (v: number): string => {
   return v < 10 ? `0${v}` : v.toString();
 }
 
 const TimePanel: React.FC<TimePanelProps> = (props) => {
-  const { defaultTime, onPick, onClose, enableSecond } = props;
-  const [time, setTime] = useState<Time>(() => {
-    return {
-      hour: defaultTime.hour(),
-      minute: defaultTime.minute(),
-      second: defaultTime.second(),
-    };
-  });
+  const { defaultTime, onPick, onClose, onChange, enableSecond, showButton = true } = props;
+  const [time, setTime] = useState<Time>(defaultTime);
 
   const handlePick = () => {
     onPick(dayjs().hour(time.hour).minute(time.minute).second(time.second));
@@ -63,11 +54,15 @@ const TimePanel: React.FC<TimePanelProps> = (props) => {
     }
   });
 
-  const onTimeChange = (v: number, type: string) => {
-    setTime({
+  const timeChange = (v: number, type: string) => {
+    const current: Time = {
       ...time,
       [type]: v,
-    });
+    };
+    setTime(current);
+    if (_isFunction(onChange)) {
+      onChange(current);
+    }
   };
 
   const renderHourSlider = useMemo(() => {
@@ -79,7 +74,7 @@ const TimePanel: React.FC<TimePanelProps> = (props) => {
         step={1}
         marks={hourMarks}
         defaultValue={time.hour}
-        onChange={(v: number) => onTimeChange(v, 'hour')}
+        onChange={(v: number) => timeChange(v, 'hour')}
       />
     );
   }, [time]);
@@ -93,7 +88,7 @@ const TimePanel: React.FC<TimePanelProps> = (props) => {
         step={1}
         marks={minuteMarks}
         defaultValue={time.minute}
-        onChange={(v: number) => onTimeChange(v, 'minute')}
+        onChange={(v: number) => timeChange(v, 'minute')}
       />
     );
   }, [time]);
@@ -107,7 +102,7 @@ const TimePanel: React.FC<TimePanelProps> = (props) => {
         step={1}
         marks={minuteMarks}
         defaultValue={time.second}
-        onChange={(v: number) => onTimeChange(v, 'second')}
+        onChange={(v: number) => timeChange(v, 'second')}
       />
     );
   }, [time]);
@@ -142,7 +137,7 @@ const TimePanel: React.FC<TimePanelProps> = (props) => {
           </div>
         )}
       </div>
-      <ActionButton onOk={handlePick} onClose={handleClose} />
+      {showButton && <ActionButton onOk={handlePick} onClose={handleClose} />}
     </div>
   );
 };

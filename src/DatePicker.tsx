@@ -7,9 +7,9 @@ import classnames from 'classnames';
 import { usePopper } from 'react-popper';
 
 import { SelectionMode } from 'Typing';
-import { DEFAULT_FORMATS_MAP, DEFAULT_PLACEHOLDER_MAP } from 'Src/constants';
+import { DEFAULT_PLACEHOLDER_MAP } from 'Src/constants';
 import { useClickOutside } from 'Hook';
-import { singleDateToText } from 'Util';
+import { singleDateToText, getDefaultFormat } from 'Util';
 import { Input, BasePanel } from 'Component';
 import 'Scss/picker.scss';
 
@@ -26,19 +26,21 @@ interface DatePickerProps {
   enableClear?: boolean,
   // v3.0参数
   enableShowWeekNum?: boolean,
+  enableSecond?: boolean,
 }
 
 const DatePicker: React.FC<DatePickerProps> = (props) => {
   const {
     className,
     selectionMode = 'day',
+    enableSecond = false,
     onPick,
-    format = DEFAULT_FORMATS_MAP[selectionMode],
+    format = getDefaultFormat(selectionMode, enableSecond),
     defaultDate,
     placeholder = DEFAULT_PLACEHOLDER_MAP[selectionMode],
     enableClear = true,
     enableShowWeekNum = true,
-    disabledDateFunc
+    disabledDateFunc,
   } = props;
   // state
   const [pickerVisible, setPickerVisible] = useState<boolean>(false);
@@ -69,17 +71,21 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
 
   const onDatePick = (d: Dayjs[]) => {
     setDate(d[1]);
-    setText(d[1].format(format || DEFAULT_FORMATS_MAP[selectionMode]));
+    setText(singleDateToText(d[1], format));
     if(_isFunction(onPick)){
       onPick([d[0].toDate(), d[1].toDate()]);
     }
     setPickerVisible(false);
   };
 
-  const onClearText = () => {
+  const clearText = () => {
     setText('');
     setDate(dayjs());
   }
+
+  const closePanel = () => {
+    setPickerVisible(false);
+  };
 
   return (
     <div ref={datePickerRef}  className={classnames('datepicker-box', className)}>
@@ -89,7 +95,7 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
           onFocus={onInputFocus}
           value={text}
           placeholder={placeholder}
-          onIconClick={onClearText}
+          onIconClick={clearText}
           enableClear={enableClear}
         />
       </div>
@@ -99,9 +105,11 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
           <BasePanel
             selectionMode={selectionMode}
             onPick={onDatePick}
+            onClose={closePanel}
             defaultDate={date}
             enableShowWeekNum={enableShowWeekNum}
             disabledDateFunc={disabledDateFunc}
+            enableSecond={enableSecond}
           />
         </div>
       }

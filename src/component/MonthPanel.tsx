@@ -64,7 +64,7 @@ const MonthPanel: React.FC<MonthPanelProps> = (props) => {
     let disabledTrFlag = false;
     computeCellArray().map((month: TD, index: number) => {
       // 月视图，日视图转月视图，周视图转月视图
-      if(_includes(['day', 'week', 'month'], selectionMode)){
+      if(_includes(['day', 'daytime', 'week', 'month'], selectionMode)){
         arrTemp.push(
           <td  key={`month-${month.label}`} className={classnames(month.style)} onClick={() => onDatePick(month, selectionMode)}>
             {month.label + '月'}

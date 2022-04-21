@@ -6,6 +6,7 @@ import { usePopper } from 'react-popper';
 
 import { useClickOutside } from 'Hook';
 import { Input, BasePanel } from 'Component';
+import { singleDateToText, getDefaultFormat } from 'Util';
 import 'Scss/picker.scss';
 
 interface TimePickerProps {
@@ -22,21 +23,20 @@ interface TimePickerProps {
 const TimePicker: React.FC<TimePickerProps> = (props) => {
   const {
     className,
-    format,
     defaultTime,
     placeholder,
     enableSecond = false,
     enableClear = true,
+    format = getDefaultFormat('time', enableSecond),
     onPick
   } = props;
-  const DEFAULT_FORMATS = enableSecond ? 'HH:mm:ss' : 'HH:mm';
   // state
   const [pickerVisible, setPickerVisible] = useState<boolean>(false);
   const [time, setTime] = useState<Dayjs>(() => {
     return defaultTime ? dayjs(defaultTime) : dayjs().hour(0).minute(0).second(0);
   });
   const [text, setText] = useState<string>(() => {
-    return defaultTime ? dayjs(defaultTime).format(format || DEFAULT_FORMATS) : '';
+    return defaultTime ? singleDateToText(time, format) : '';
   });
   const timePickerRef = useRef<HTMLDivElement>(null);
   // popper相关
@@ -60,7 +60,7 @@ const TimePicker: React.FC<TimePickerProps> = (props) => {
 
   const onTimePick = (d: Dayjs) => {
     setTime(d);
-    setText(d.format(format || DEFAULT_FORMATS));
+    setText(singleDateToText(d, format));
     if(_isFunction(onPick)){
       onPick(d.toDate());
     }

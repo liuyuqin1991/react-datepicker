@@ -162,7 +162,7 @@ const DayPanel: React.FC<DayPanelProps> = (props) => {
     let pickTrFlag = false;
     let disabledTrFlag = false;
     computeCellArray().map((day: TD, index: number) => {
-      if(selectionMode === 'day') {
+      if(selectionMode === 'day' || selectionMode === 'daytime') {
         dayTemp.push(
           <td key={index} className={classnames(day.style)} onClick={() => onPickDay(day)}>
             {day.label}
