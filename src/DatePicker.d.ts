@@ -11,6 +11,7 @@ interface DatePickerProps {
     className?: string;
     enableClear?: boolean;
     enableShowWeekNum?: boolean;
+    enableSecond?: boolean;
 }
 declare const DatePicker: React.FC<DatePickerProps>;
 export default DatePicker;

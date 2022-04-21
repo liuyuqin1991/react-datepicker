@@ -3258,6 +3258,33 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".rc-slider {\n  position: relative;\n 
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/action-button.scss":
+/*!******************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/action-button.scss ***!
+  \******************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --c-datepicker-primary: rgb(19,164,116);\n  --c-datepicker-primary-light: rgba(19,164,116,0.1);\n}\n\n.btn-panel {\n  display: flex;\n  justify-content: flex-end;\n  padding: 5px 15px;\n  border-top: 1px solid #eee;\n}\n.btn-panel .btn-cancel.disable,\n.btn-panel .btn-ok.disable {\n  color: #aaa;\n}\n.btn-panel .btn-cancel.disable:hover,\n.btn-panel .btn-ok.disable:hover {\n  cursor: not-allowed;\n}\n.btn-panel .btn-cancel:hover,\n.btn-panel .btn-ok:hover {\n  cursor: pointer;\n}\n.btn-panel .btn-ok {\n  margin-left: 15px;\n  color: var(--c-datepicker-primary);\n  cursor: pointer;\n}", "",{"version":3,"sources":["webpack://./src/scss/color.scss","webpack://./src/scss/action-button.scss"],"names":[],"mappings":"AAAA;EACE,uCAAA;EACA,kDAAA;ACCF;;AADA;EACE,aAAA;EACA,yBAAA;EACA,iBAAA;EACA,0BAAA;AAIF;AAAI;;EACE,WDE0B;ACChC;AAFM;;EACE,mBAAA;AAKR;AADI;;EACE,eAAA;AAIN;AAAE;EACE,iBAAA;EACA,kCAAA;EACA,eAAA;AAEJ","sourcesContent":[":root {\n  --c-datepicker-primary: rgb(19,164,116);\n  --c-datepicker-primary-light: rgba(19,164,116,0.1);\n}\n\n$c-datepicker-white: #fff;\n$c-datepicker-text: #111;\n$c-datepicker-text-light: #aaa;\n$c-datepicker-text-error: #cf3b37;\n$c-datepicker-border: #eee;\n$c-datepicker-icon: #ddd;\n$c-datepicker-th-text: #888;\n$c-datepicker-td-text: #333;\n$c-datepicker-td-disabled-text: #aaa;\n$c-datepicker-td-disabled-background: #eee;\n","@import \"./color.scss\";\n\n.btn-panel {\n  display: flex;\n  justify-content: flex-end;\n  padding: 5px 15px;\n  border-top: 1px solid $c-datepicker-border;\n\n  .btn-cancel,\n  .btn-ok {\n    &.disable {\n      color: $c-datepicker-td-disabled-text;\n      &:hover {\n        cursor: not-allowed;\n      }\n    }\n\n    &:hover {\n      cursor: pointer;\n    }\n  }\n\n  .btn-ok {\n    margin-left: 15px;\n    color: var(--c-datepicker-primary);\n    cursor: pointer;\n  }\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/base-panel.scss":
 /*!***************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/base-panel.scss ***!
@@ -3278,7 +3305,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --c-datepicker-primary: rgb(19,164,116);\n  --c-datepicker-primary-light: rgba(19,164,116,0.1);\n}\n\n.picker-panel {\n  color: #111;\n  border: 1px solid #eee;\n  box-shadow: 0 2px 6px #eee;\n  background: #fff;\n  border-radius: 2px;\n  line-height: 20px;\n  margin: 5px 0;\n}\n.picker-panel .header {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  padding: 15px 10px 0;\n  color: #333;\n}\n.picker-panel .header .icon-btn {\n  border: 0;\n  cursor: pointer;\n  outline: none;\n  padding: 3px 4px;\n  color: #111;\n  background-color: #fff;\n  font-size: 14px;\n}\n.picker-panel .header .icon-btn:hover {\n  color: var(--c-datepicker-primary);\n}\n.picker-panel .header .date-label {\n  padding: 0 12px;\n  display: flex;\n  justify-content: center;\n  font-size: 14px;\n}\n.picker-panel .header .date-label > div {\n  margin: 0 5px;\n}\n.picker-panel .header .date-label > div:not(.disabled) {\n  cursor: pointer;\n}\n.picker-panel .header .date-label > div:not(.disabled):hover {\n  color: var(--c-datepicker-primary);\n}", "",{"version":3,"sources":["webpack://./src/scss/color.scss","webpack://./src/scss/base-panel.scss"],"names":[],"mappings":"AAAA;EACE,uCAAA;EACA,kDAAA;ACCF;;AADA;EACC,WDGmB;ECFnB,sBAAA;EACA,0BAAA;EACA,gBDDoB;ECEpB,kBAAA;EACA,iBAAA;EACA,aAAA;AAID;AAFC;EACC,aAAA;EACA,mBAAA;EACA,8BAAA;EACA,oBAAA;EACA,WDJqB;ACQvB;AAFE;EACC,SAAA;EACA,eAAA;EACA,aAAA;EACA,gBAAA;EACA,WDjBiB;ECkBjB,sBDnBkB;ECoBlB,eAAA;AAIH;AAFG;EACC,kCAAA;AAIJ;AAAE;EACC,eAAA;EACA,aAAA;EACA,uBAAA;EACA,eAAA;AAEH;AAAG;EACC,aAAA;AAEJ;AAAI;EACC,eAAA;AAEL;AACI;EACC,kCAAA;AACL","sourcesContent":[":root {\n  --c-datepicker-primary: rgb(19,164,116);\n  --c-datepicker-primary-light: rgba(19,164,116,0.1);\n}\n\n$c-datepicker-white: #fff;\n$c-datepicker-text: #111;\n$c-datepicker-text-light: #aaa;\n$c-datepicker-text-error: #cf3b37;\n$c-datepicker-border: #eee;\n$c-datepicker-icon: #ddd;\n$c-datepicker-th-text: #888;\n$c-datepicker-td-text: #333;\n$c-datepicker-td-disabled-text: #aaa;\n$c-datepicker-td-disabled-background: #eee;\n","@import \"./color.scss\";\n\n.picker-panel {\n\tcolor: $c-datepicker-text;\n\tborder: 1px solid $c-datepicker-border;\n\tbox-shadow: 0 2px 6px $c-datepicker-border;\n\tbackground: $c-datepicker-white;\n\tborder-radius: 2px;\n\tline-height: 20px;\n\tmargin: 5px 0;\n\n\t.header {\n\t\tdisplay: flex;\n\t\tflex-direction: row;\n\t\tjustify-content: space-between;\n\t\tpadding: 15px 10px 0;\n\t\tcolor: $c-datepicker-td-text;\n\n\t\t.icon-btn {\n\t\t\tborder: 0;\n\t\t\tcursor: pointer;\n\t\t\toutline: none;\n\t\t\tpadding: 3px 4px;\n\t\t\tcolor: $c-datepicker-text;\n\t\t\tbackground-color: $c-datepicker-white;\n\t\t\tfont-size: 14px;\n\n\t\t\t&:hover {\n\t\t\t\tcolor: var(--c-datepicker-primary);\n\t\t\t}\n\t\t}\n\n\t\t.date-label {\n\t\t\tpadding: 0 12px;\n\t\t\tdisplay: flex;\n\t\t\tjustify-content: center;\n\t\t\tfont-size: 14px;\n\n\t\t\t>div {\n\t\t\t\tmargin: 0 5px;\n\n\t\t\t\t&:not(.disabled) {\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t&:not(.disabled):hover {\n\t\t\t\t\tcolor: var(--c-datepicker-primary);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}   \n\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --c-datepicker-primary: rgb(19,164,116);\n  --c-datepicker-primary-light: rgba(19,164,116,0.1);\n}\n\n.picker-panel {\n  color: #111;\n  border: 1px solid #eee;\n  box-shadow: 0 2px 6px #eee;\n  background: #fff;\n  border-radius: 2px;\n  line-height: 20px;\n  margin: 5px 0;\n}\n.picker-panel .date-time-panel {\n  border-left: 1px solid #eee;\n}\n.picker-panel .header {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  padding: 15px 10px 0;\n  color: #333;\n}\n.picker-panel .header .icon-btn {\n  border: 0;\n  cursor: pointer;\n  outline: none;\n  padding: 3px 4px;\n  color: #111;\n  background-color: #fff;\n  font-size: 14px;\n}\n.picker-panel .header .icon-btn:hover {\n  color: var(--c-datepicker-primary);\n}\n.picker-panel .header .date-label {\n  padding: 0 12px;\n  display: flex;\n  justify-content: center;\n  font-size: 14px;\n}\n.picker-panel .header .date-label > div {\n  margin: 0 5px;\n}\n.picker-panel .header .date-label > div:not(.disabled) {\n  cursor: pointer;\n}\n.picker-panel .header .date-label > div:not(.disabled):hover {\n  color: var(--c-datepicker-primary);\n}", "",{"version":3,"sources":["webpack://./src/scss/color.scss","webpack://./src/scss/base-panel.scss"],"names":[],"mappings":"AAAA;EACE,uCAAA;EACA,kDAAA;ACCF;;AADA;EACC,WDGmB;ECFnB,sBAAA;EACA,0BAAA;EACA,gBDDoB;ECEpB,kBAAA;EACA,iBAAA;EACA,aAAA;AAID;AAFC;EACC,2BAAA;AAIF;AADC;EACC,aAAA;EACA,mBAAA;EACA,8BAAA;EACA,oBAAA;EACA,WDRqB;ACWvB;AADE;EACC,SAAA;EACA,eAAA;EACA,aAAA;EACA,gBAAA;EACA,WDrBiB;ECsBjB,sBDvBkB;ECwBlB,eAAA;AAGH;AADG;EACC,kCAAA;AAGJ;AACE;EACC,eAAA;EACA,aAAA;EACA,uBAAA;EACA,eAAA;AACH;AACG;EACC,aAAA;AACJ;AACI;EACC,eAAA;AACL;AAEI;EACC,kCAAA;AAAL","sourcesContent":[":root {\n  --c-datepicker-primary: rgb(19,164,116);\n  --c-datepicker-primary-light: rgba(19,164,116,0.1);\n}\n\n$c-datepicker-white: #fff;\n$c-datepicker-text: #111;\n$c-datepicker-text-light: #aaa;\n$c-datepicker-text-error: #cf3b37;\n$c-datepicker-border: #eee;\n$c-datepicker-icon: #ddd;\n$c-datepicker-th-text: #888;\n$c-datepicker-td-text: #333;\n$c-datepicker-td-disabled-text: #aaa;\n$c-datepicker-td-disabled-background: #eee;\n","@import \"./color.scss\";\n\n.picker-panel {\n\tcolor: $c-datepicker-text;\n\tborder: 1px solid $c-datepicker-border;\n\tbox-shadow: 0 2px 6px $c-datepicker-border;\n\tbackground: $c-datepicker-white;\n\tborder-radius: 2px;\n\tline-height: 20px;\n\tmargin: 5px 0;\n\n\t.date-time-panel {\n\t\tborder-left: 1px solid $c-datepicker-border;\n\t}\n\n\t.header {\n\t\tdisplay: flex;\n\t\tflex-direction: row;\n\t\tjustify-content: space-between;\n\t\tpadding: 15px 10px 0;\n\t\tcolor: $c-datepicker-td-text;\n\n\t\t.icon-btn {\n\t\t\tborder: 0;\n\t\t\tcursor: pointer;\n\t\t\toutline: none;\n\t\t\tpadding: 3px 4px;\n\t\t\tcolor: $c-datepicker-text;\n\t\t\tbackground-color: $c-datepicker-white;\n\t\t\tfont-size: 14px;\n\n\t\t\t&:hover {\n\t\t\t\tcolor: var(--c-datepicker-primary);\n\t\t\t}\n\t\t}\n\n\t\t.date-label {\n\t\t\tpadding: 0 12px;\n\t\t\tdisplay: flex;\n\t\t\tjustify-content: center;\n\t\t\tfont-size: 14px;\n\n\t\t\t>div {\n\t\t\t\tmargin: 0 5px;\n\n\t\t\t\t&:not(.disabled) {\n\t\t\t\t\tcursor: pointer;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t&:not(.disabled):hover {\n\t\t\t\t\tcolor: var(--c-datepicker-primary);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}   \n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3443,7 +3470,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --c-datepicker-primary: rgb(19,164,116);\n  --c-datepicker-primary-light: rgba(19,164,116,0.1);\n}\n\n.time-panel .action-panel {\n  display: flex;\n  flex-direction: row;\n  padding: 10px;\n}\n.time-panel .action-panel .hour-panel,\n.time-panel .action-panel .minute-panel,\n.time-panel .action-panel .second-panel {\n  width: 60px;\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  position: relative;\n}\n.time-panel .action-panel .hour-panel:not(:last-child)::after,\n.time-panel .action-panel .minute-panel:not(:last-child)::after,\n.time-panel .action-panel .second-panel:not(:last-child)::after {\n  content: \":\";\n  position: absolute;\n  top: 13px;\n  right: 0;\n}\n.time-panel .action-panel .label {\n  display: flex;\n  justify-content: center;\n}\n.time-panel .action-panel .input-panel {\n  display: flex;\n  justify-content: center;\n  padding-top: 8px;\n}\n.time-panel .action-panel .input-panel > input {\n  box-sizing: content-box;\n  width: 16px;\n  height: 32px;\n  line-height: 32px;\n  border: 1px solid #eee;\n  border-radius: 4px;\n  padding: 0 8px;\n  cursor: not-allowed;\n}\n.time-panel .action-panel .input-panel > input:focus {\n  outline: 0;\n}\n.time-panel .action-panel .input-panel > input::placeholder {\n  color: #111;\n}\n.time-panel .action-panel .slider-panel {\n  display: flex;\n  justify-content: center;\n  height: 250px;\n  padding: 15px 0 5px;\n  margin-right: 20px;\n}\n.time-panel .btn-panel {\n  display: flex;\n  justify-content: flex-end;\n  padding: 5px 15px;\n  border-top: 1px solid #eee;\n}\n.time-panel .btn-panel .btn-cancel:hover,\n.time-panel .btn-panel .btn-ok:hover {\n  cursor: pointer;\n}\n.time-panel .btn-panel .btn-ok {\n  margin-left: 15px;\n  color: var(--c-datepicker-primary);\n  cursor: pointer;\n}\n\n.rc-slider-handle {\n  border: solid 3px var(--c-datepicker-primary);\n}\n.rc-slider-handle:hover {\n  border-color: var(--c-datepicker-primary);\n}\n.rc-slider-handle.rc-slider-handle-dragging {\n  border-color: var(--c-datepicker-primary) !important;\n  box-shadow: 0 0 0 5px var(--c-datepicker-primary-light) !important;\n}\n\n.rc-slider-rail {\n  background-color: #eee;\n}\n\n.rc-slider-track {\n  background-color: #eee;\n}\n\n.rc-slider-dot-active {\n  border-color: #eee;\n}", "",{"version":3,"sources":["webpack://./src/scss/color.scss","webpack://./src/scss/time-panel.scss"],"names":[],"mappings":"AAAA;EACE,uCAAA;EACA,kDAAA;ACCF;;AAAE;EACE,aAAA;EACA,mBAAA;EACA,aAAA;AAGJ;AADI;;;EAGE,WAAA;EACA,OAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,kBAAA;AAGN;AADM;;;EACE,YAAA;EACA,kBAAA;EACA,SAAA;EACA,QAAA;AAKR;AADI;EACE,aAAA;EACA,uBAAA;AAGN;AAAI;EACE,aAAA;EACA,uBAAA;EACA,gBAAA;AAEN;AAAM;EACE,uBAAA;EACA,WAAA;EACA,YAAA;EACA,iBAAA;EACA,sBAAA;EACA,kBAAA;EACA,cAAA;EACA,mBAAA;AAER;AAAQ;EACE,UAAA;AAEV;AACQ;EACE,WD7CU;AC8CpB;AAII;EACE,aAAA;EACA,uBAAA;EACA,aAAA;EACA,mBAAA;EACA,kBAAA;AAFN;AAME;EACE,aAAA;EACA,yBAAA;EACA,iBAAA;EACA,0BAAA;AAJJ;AAQM;;EACE,eAAA;AALR;AASI;EACE,iBAAA;EACA,kCAAA;EACA,eAAA;AAPN;;AAYA;EACE,6CAAA;AATF;AAWE;EACE,yCAAA;AATJ;AAYE;EACE,oDAAA;EACA,kEAAA;AAVJ;;AAcA;EACE,sBD3FoB;ACgFtB;;AAcA;EACE,sBD/FoB;ACoFtB;;AAcA;EACE,kBDnGoB;ACwFtB","sourcesContent":[":root {\n  --c-datepicker-primary: rgb(19,164,116);\n  --c-datepicker-primary-light: rgba(19,164,116,0.1);\n}\n\n$c-datepicker-white: #fff;\n$c-datepicker-text: #111;\n$c-datepicker-text-light: #aaa;\n$c-datepicker-text-error: #cf3b37;\n$c-datepicker-border: #eee;\n$c-datepicker-icon: #ddd;\n$c-datepicker-th-text: #888;\n$c-datepicker-td-text: #333;\n$c-datepicker-td-disabled-text: #aaa;\n$c-datepicker-td-disabled-background: #eee;\n","@import \"./color.scss\";\n\n.time-panel {\n  .action-panel {\n    display: flex;\n    flex-direction: row;\n    padding: 10px;\n\n    .hour-panel,\n    .minute-panel,\n    .second-panel {\n      width: 60px;\n      flex: 1;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      position: relative;\n\n      &:not(:last-child)::after {\n        content: \":\";\n        position: absolute;\n        top: 13px;\n        right: 0;\n      }\n    }\n  \n    .label { \n      display: flex;\n      justify-content: center;\n    }\n  \n    .input-panel {\n      display: flex;\n      justify-content: center;\n      padding-top: 8px;\n  \n      > input {\n        box-sizing: content-box;\n        width: 16px;\n        height: 32px;\n        line-height: 32px;\n        border: 1px solid $c-datepicker-border;\n        border-radius: 4px;\n        padding: 0 8px;\n        cursor: not-allowed;\n  \n        &:focus {\n          outline: 0;\n        }\n    \n        &::placeholder {\n          color: $c-datepicker-text;\n        }\n      }\n    }\n  \n    .slider-panel {\n      display: flex;\n      justify-content: center;\n      height: 250px;\n      padding: 15px 0 5px;\n      margin-right: 20px;\n    }\n  }\n\n  .btn-panel {\n    display: flex;\n    justify-content: flex-end;\n    padding: 5px 15px;\n    border-top: 1px solid $c-datepicker-border;\n\n    .btn-cancel,\n    .btn-ok {\n      &:hover {\n        cursor: pointer;\n      }\n    }\n\n    .btn-ok {\n      margin-left: 15px;\n      color: var(--c-datepicker-primary);\n      cursor: pointer;\n    }\n  }\n}\n\n.rc-slider-handle {\n  border: solid 3px var(--c-datepicker-primary);\n\n  &:hover {\n    border-color: var(--c-datepicker-primary);\n  }\n\n  &.rc-slider-handle-dragging {\n    border-color: var(--c-datepicker-primary) !important;\n    box-shadow: 0 0 0 5px var(--c-datepicker-primary-light) !important;\n  }\n}\n\n.rc-slider-rail {\n  background-color: $c-datepicker-border;\n}\n\n.rc-slider-track {\n  background-color: $c-datepicker-border;\n}\n\n.rc-slider-dot-active {\n  border-color: $c-datepicker-border;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --c-datepicker-primary: rgb(19,164,116);\n  --c-datepicker-primary-light: rgba(19,164,116,0.1);\n}\n\n.time-panel .action-panel {\n  display: flex;\n  flex-direction: row;\n  padding: 10px 5px;\n}\n.time-panel .action-panel .hour-panel,\n.time-panel .action-panel .minute-panel,\n.time-panel .action-panel .second-panel {\n  width: 60px;\n  height: 260px;\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  position: relative;\n}\n.time-panel .action-panel .hour-panel:not(:last-child)::after,\n.time-panel .action-panel .minute-panel:not(:last-child)::after,\n.time-panel .action-panel .second-panel:not(:last-child)::after {\n  content: \":\";\n  position: absolute;\n  top: 5px;\n  right: 0;\n}\n.time-panel .action-panel .label {\n  display: flex;\n  justify-content: center;\n}\n.time-panel .action-panel .input-panel {\n  display: flex;\n  justify-content: center;\n}\n.time-panel .action-panel .input-panel > input {\n  box-sizing: content-box;\n  width: 16px;\n  height: 28px;\n  line-height: 24px;\n  border: 1px solid #eee;\n  border-radius: 4px;\n  padding: 0 8px;\n  cursor: not-allowed;\n}\n.time-panel .action-panel .input-panel > input:focus {\n  outline: 0;\n}\n.time-panel .action-panel .input-panel > input::placeholder {\n  color: #111;\n}\n.time-panel .action-panel .slider-panel {\n  display: flex;\n  justify-content: center;\n  height: 100%;\n  padding: 15px 0 5px;\n  margin-right: 20px;\n}\n.time-panel .btn-panel {\n  display: flex;\n  justify-content: flex-end;\n  padding: 5px 15px;\n  border-top: 1px solid #eee;\n}\n.time-panel .btn-panel .btn-cancel:hover,\n.time-panel .btn-panel .btn-ok:hover {\n  cursor: pointer;\n}\n.time-panel .btn-panel .btn-ok {\n  margin-left: 15px;\n  color: var(--c-datepicker-primary);\n  cursor: pointer;\n}\n\n.rc-slider-handle {\n  border: solid 3px var(--c-datepicker-primary);\n}\n.rc-slider-handle:hover {\n  border-color: var(--c-datepicker-primary);\n}\n.rc-slider-handle.rc-slider-handle-dragging {\n  border-color: var(--c-datepicker-primary) !important;\n  box-shadow: 0 0 0 5px var(--c-datepicker-primary-light) !important;\n}\n\n.rc-slider-rail {\n  background-color: #eee;\n}\n\n.rc-slider-track {\n  background-color: #eee;\n}\n\n.rc-slider-dot-active {\n  border-color: #eee;\n}", "",{"version":3,"sources":["webpack://./src/scss/color.scss","webpack://./src/scss/time-panel.scss"],"names":[],"mappings":"AAAA;EACE,uCAAA;EACA,kDAAA;ACCF;;AAAE;EACE,aAAA;EACA,mBAAA;EACA,iBAAA;AAGJ;AADI;;;EAGE,WAAA;EACA,aAAA;EACA,OAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,kBAAA;AAGN;AADM;;;EACE,YAAA;EACA,kBAAA;EACA,QAAA;EACA,QAAA;AAKR;AADI;EACE,aAAA;EACA,uBAAA;AAGN;AAAI;EACE,aAAA;EACA,uBAAA;AAEN;AAAM;EACE,uBAAA;EACA,WAAA;EACA,YAAA;EACA,iBAAA;EACA,sBAAA;EACA,kBAAA;EACA,cAAA;EACA,mBAAA;AAER;AAAQ;EACE,UAAA;AAEV;AACQ;EACE,WD7CU;AC8CpB;AAII;EACE,aAAA;EACA,uBAAA;EACA,YAAA;EACA,mBAAA;EACA,kBAAA;AAFN;AAME;EACE,aAAA;EACA,yBAAA;EACA,iBAAA;EACA,0BAAA;AAJJ;AAQM;;EACE,eAAA;AALR;AASI;EACE,iBAAA;EACA,kCAAA;EACA,eAAA;AAPN;;AAYA;EACE,6CAAA;AATF;AAWE;EACE,yCAAA;AATJ;AAYE;EACE,oDAAA;EACA,kEAAA;AAVJ;;AAcA;EACE,sBD3FoB;ACgFtB;;AAcA;EACE,sBD/FoB;ACoFtB;;AAcA;EACE,kBDnGoB;ACwFtB","sourcesContent":[":root {\n  --c-datepicker-primary: rgb(19,164,116);\n  --c-datepicker-primary-light: rgba(19,164,116,0.1);\n}\n\n$c-datepicker-white: #fff;\n$c-datepicker-text: #111;\n$c-datepicker-text-light: #aaa;\n$c-datepicker-text-error: #cf3b37;\n$c-datepicker-border: #eee;\n$c-datepicker-icon: #ddd;\n$c-datepicker-th-text: #888;\n$c-datepicker-td-text: #333;\n$c-datepicker-td-disabled-text: #aaa;\n$c-datepicker-td-disabled-background: #eee;\n","@import \"./color.scss\";\n\n.time-panel {\n  .action-panel {\n    display: flex;\n    flex-direction: row;\n    padding: 10px 5px;\n\n    .hour-panel,\n    .minute-panel,\n    .second-panel {\n      width: 60px;\n      height: 260px;\n      flex: 1;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      position: relative;\n\n      &:not(:last-child)::after {\n        content: \":\";\n        position: absolute;\n        top: 5px;\n        right: 0;\n      }\n    }\n  \n    .label { \n      display: flex;\n      justify-content: center;\n    }\n  \n    .input-panel {\n      display: flex;\n      justify-content: center;\n  \n      > input {\n        box-sizing: content-box;\n        width: 16px;\n        height: 28px;\n        line-height: 24px;\n        border: 1px solid $c-datepicker-border;\n        border-radius: 4px;\n        padding: 0 8px;\n        cursor: not-allowed;\n  \n        &:focus {\n          outline: 0;\n        }\n    \n        &::placeholder {\n          color: $c-datepicker-text;\n        }\n      }\n    }\n  \n    .slider-panel {\n      display: flex;\n      justify-content: center;\n      height: 100%;\n      padding: 15px 0 5px;\n      margin-right: 20px;\n    }\n  }\n\n  .btn-panel {\n    display: flex;\n    justify-content: flex-end;\n    padding: 5px 15px;\n    border-top: 1px solid $c-datepicker-border;\n\n    .btn-cancel,\n    .btn-ok {\n      &:hover {\n        cursor: pointer;\n      }\n    }\n\n    .btn-ok {\n      margin-left: 15px;\n      color: var(--c-datepicker-primary);\n      cursor: pointer;\n    }\n  }\n}\n\n.rc-slider-handle {\n  border: solid 3px var(--c-datepicker-primary);\n\n  &:hover {\n    border-color: var(--c-datepicker-primary);\n  }\n\n  &.rc-slider-handle-dragging {\n    border-color: var(--c-datepicker-primary) !important;\n    box-shadow: 0 0 0 5px var(--c-datepicker-primary-light) !important;\n  }\n}\n\n.rc-slider-rail {\n  background-color: $c-datepicker-border;\n}\n\n.rc-slider-track {\n  background-color: $c-datepicker-border;\n}\n\n.rc-slider-dot-active {\n  border-color: $c-datepicker-border;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -52571,6 +52598,61 @@ var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMP
 
 /***/ }),
 
+/***/ "./src/scss/action-button.scss":
+/*!*************************************!*\
+  !*** ./src/scss/action-button.scss ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_action_button_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./action-button.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/action-button.scss");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_action_button_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_action_button_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_action_button_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_action_button_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
 /***/ "./src/scss/base-panel.scss":
 /*!**********************************!*\
   !*** ./src/scss/base-panel.scss ***!
@@ -53426,6 +53508,18 @@ var Demo = function () {
                     react_1.default.createElement("div", { className: "date-select" },
                         react_1.default.createElement("span", null, "\u65E5\uFF1A"),
                         react_1.default.createElement(DatePicker_1.default, { selectionMode: "day", onPick: datePick, disabledDateFunc: disabledDateFunc })))),
+            react_1.default.createElement("div", { className: "date-time" },
+                react_1.default.createElement("div", { className: "label-panel" }, "6. \u542F\u7528\u65F6\u95F4\uFF08\u9009\u62E9\u6A21\u5F0F\u53EA\u80FD\u4E3A\u65E5\u9009\u62E9\uFF09"),
+                react_1.default.createElement("div", { className: "date-panel" },
+                    react_1.default.createElement("div", { className: "date-select" },
+                        react_1.default.createElement("span", null, "\u65E5\uFF1A"),
+                        react_1.default.createElement(DatePicker_1.default, { onPick: datePick, selectionMode: "daytime" })),
+                    react_1.default.createElement("div", { className: "date-select" },
+                        react_1.default.createElement("span", null, "\u542F\u7528\u79D2\uFF1A"),
+                        react_1.default.createElement(DatePicker_1.default, { selectionMode: "daytime", onPick: datePick, disabledDateFunc: disabledDateFunc, enableSecond: true })),
+                    react_1.default.createElement("div", { className: "date-select" },
+                        react_1.default.createElement("span", null, "\u9884\u8BBE\uFF1A"),
+                        react_1.default.createElement(DatePicker_1.default, { selectionMode: "daytime", onPick: datePick, defaultDate: "2022-2-22 22:20" })))),
             react_1.default.createElement("div", { className: "title" }, "TimePicker\u7EC4\u4EF6"),
             react_1.default.createElement("div", { className: "time" },
                 react_1.default.createElement("div", { className: "label-panel" }, "6. \u65F6\u95F4\u9009\u62E9\u7EC4\u4EF6\uFF08\u8BBE\u8BA1\u7075\u611F\uFF1A\u907F\u514D\u6EDA\u52A8\u9009\u62E9\uFF0C\u7279\u5B9A\u65F6\u95F4\u76F4\u89C2\u663E\u793A\u70B9\u51FB\uFF09"),
@@ -53435,16 +53529,16 @@ var Demo = function () {
                         react_1.default.createElement(TimePicker_1.default, { onPick: timePick })),
                     react_1.default.createElement("div", { className: "date-select" },
                         react_1.default.createElement("span", null, "\u9884\u8BBE\u65F6\u95F4\uFF1A"),
-                        react_1.default.createElement(TimePicker_1.default, { onPick: timePick, defaultTime: "2022-2-22 06:50:25", enableClear: false })),
+                        react_1.default.createElement(TimePicker_1.default, { onPick: timePick, defaultTime: "2022-2-22 06:50", enableClear: false })),
                     react_1.default.createElement("div", { className: "date-select" },
                         react_1.default.createElement("span", null, "\u683C\u5F0F\u5316\uFF1A"),
-                        react_1.default.createElement(TimePicker_1.default, { onPick: timePick, defaultTime: "2022-2-22 06:50:25", format: "HH\u65F6mm\u5206ss\u79D2" })),
+                        react_1.default.createElement(TimePicker_1.default, { onPick: timePick, defaultTime: "2022-2-22 06:50", format: "HH\u65F6mm\u5206" })),
                     react_1.default.createElement("div", { className: "date-select" },
                         react_1.default.createElement("span", null, "\u5360\u4F4D\u7B26\uFF1A"),
                         react_1.default.createElement(TimePicker_1.default, { onPick: timePick, placeholder: "\u8BF7\u9009\u62E9\u8D77\u59CB\u65F6\u95F4" })),
                     react_1.default.createElement("div", { className: "date-select" },
-                        react_1.default.createElement("span", null, "\u7981\u7528\u79D2\uFF1A"),
-                        react_1.default.createElement(TimePicker_1.default, { onPick: timePick, defaultTime: "2022-2-22 06:50:25", enableSecond: false })))),
+                        react_1.default.createElement("span", null, "\u542F\u7528\u79D2\uFF1A"),
+                        react_1.default.createElement(TimePicker_1.default, { onPick: timePick, defaultTime: "2022-2-22 06:50:25", enableSecond: true })))),
             react_1.default.createElement("div", { className: "title" }, "DateRangePicker\u7EC4\u4EF6"),
             react_1.default.createElement("div", { className: "daterange" },
                 react_1.default.createElement("div", { className: "label-panel" }, "1. \u9ED8\u8BA4"),
@@ -53546,26 +53640,25 @@ var react_popper_1 = __webpack_require__(/*! react-popper */ "./node_modules/rea
 var constants_1 = __webpack_require__(/*! Src/constants */ "./src/constants.ts");
 var Hook_1 = __webpack_require__(/*! Hook */ "./src/hook/index.ts");
 var Util_1 = __webpack_require__(/*! Util */ "./src/util/index.ts");
-var input_1 = __importDefault(__webpack_require__(/*! Src/input */ "./src/input/index.tsx"));
-var BasePanel_1 = __importDefault(__webpack_require__(/*! Src/panel/BasePanel */ "./src/panel/BasePanel.tsx"));
+var Component_1 = __webpack_require__(/*! Component */ "./src/component/index.ts");
 __webpack_require__(/*! Scss/picker.scss */ "./src/scss/picker.scss");
 var DatePicker = function (props) {
-    var className = props.className, _a = props.selectionMode, selectionMode = _a === void 0 ? 'day' : _a, onPick = props.onPick, _b = props.format, format = _b === void 0 ? constants_1.DEFAULT_FORMATS_MAP[selectionMode] : _b, defaultDate = props.defaultDate, _c = props.placeholder, placeholder = _c === void 0 ? constants_1.DEFAULT_PLACEHOLDER_MAP[selectionMode] : _c, _d = props.enableClear, enableClear = _d === void 0 ? true : _d, _e = props.enableShowWeekNum, enableShowWeekNum = _e === void 0 ? true : _e, disabledDateFunc = props.disabledDateFunc;
+    var className = props.className, _a = props.selectionMode, selectionMode = _a === void 0 ? 'day' : _a, _b = props.enableSecond, enableSecond = _b === void 0 ? false : _b, onPick = props.onPick, _c = props.format, format = _c === void 0 ? (0, Util_1.getDefaultFormat)(selectionMode, enableSecond) : _c, defaultDate = props.defaultDate, _d = props.placeholder, placeholder = _d === void 0 ? constants_1.DEFAULT_PLACEHOLDER_MAP[selectionMode] : _d, _e = props.enableClear, enableClear = _e === void 0 ? true : _e, _f = props.enableShowWeekNum, enableShowWeekNum = _f === void 0 ? true : _f, disabledDateFunc = props.disabledDateFunc;
     // state
-    var _f = (0, react_1.useState)(false), pickerVisible = _f[0], setPickerVisible = _f[1];
-    var _g = (0, react_1.useState)((0, dayjs_1.default)(defaultDate)), date = _g[0], setDate = _g[1];
-    var _h = (0, react_1.useState)(defaultDate ? (0, Util_1.singleDateToText)(date, format) : ''), text = _h[0], setText = _h[1];
+    var _g = (0, react_1.useState)(false), pickerVisible = _g[0], setPickerVisible = _g[1];
+    var _h = (0, react_1.useState)((0, dayjs_1.default)(defaultDate)), date = _h[0], setDate = _h[1];
+    var _j = (0, react_1.useState)(defaultDate ? (0, Util_1.singleDateToText)(date, format) : ''), text = _j[0], setText = _j[1];
     var datePickerRef = (0, react_1.useRef)(null);
     // popper相关
-    var _j = (0, react_1.useState)(null), referenceElement = _j[0], setReferenceElement = _j[1];
-    var _k = (0, react_1.useState)(null), popperElement = _k[0], setPopperElement = _k[1];
-    var _l = (0, react_popper_1.usePopper)(referenceElement, popperElement, {
+    var _k = (0, react_1.useState)(null), referenceElement = _k[0], setReferenceElement = _k[1];
+    var _l = (0, react_1.useState)(null), popperElement = _l[0], setPopperElement = _l[1];
+    var _m = (0, react_popper_1.usePopper)(referenceElement, popperElement, {
         placement: 'bottom-start',
         modifiers: [{
                 name: 'preventOverflow',
                 options: { padding: 8 }
             }],
-    }), styles = _l.styles, attributes = _l.attributes;
+    }), styles = _m.styles, attributes = _m.attributes;
     // 扩展dayjs的功能
     dayjs_1.default.extend(advancedFormat_1.default);
     dayjs_1.default.extend(weekOfYear_1.default);
@@ -53577,22 +53670,29 @@ var DatePicker = function (props) {
     };
     var onDatePick = function (d) {
         setDate(d[1]);
-        setText(d[1].format(format || constants_1.DEFAULT_FORMATS_MAP[selectionMode]));
+        setText((0, Util_1.singleDateToText)(d[1], format));
         if ((0, lodash_1.isFunction)(onPick)) {
             onPick([d[0].toDate(), d[1].toDate()]);
         }
         setPickerVisible(false);
     };
-    var onClearText = function () {
+    // 仅在selectionMode为daytime时，点击日期时调用
+    var virtualDatePick = function (d) {
+        setDate(d[1]);
+    };
+    var clearText = function () {
         setText('');
         setDate((0, dayjs_1.default)());
     };
+    var closePanel = function () {
+        setPickerVisible(false);
+    };
     return (react_1.default.createElement("div", { ref: datePickerRef, className: (0, classnames_1.default)('datepicker-box', className) },
         react_1.default.createElement("div", { ref: setReferenceElement },
-            react_1.default.createElement(input_1.default, { selectionMode: selectionMode, onFocus: onInputFocus, value: text, placeholder: placeholder, onIconClick: onClearText, enableClear: enableClear })),
+            react_1.default.createElement(Component_1.Input, { selectionMode: selectionMode, onFocus: onInputFocus, value: text, placeholder: placeholder, onIconClick: clearText, enableClear: enableClear })),
         pickerVisible &&
             react_1.default.createElement("div", __assign({ ref: setPopperElement, style: (0, lodash_1.assign)(styles.popper, { zIndex: 10 }) }, attributes.popper),
-                react_1.default.createElement(BasePanel_1.default, { selectionMode: selectionMode, onPick: onDatePick, defaultDate: date, enableShowWeekNum: enableShowWeekNum, disabledDateFunc: disabledDateFunc }))));
+                react_1.default.createElement(Component_1.BasePanel, { selectionMode: selectionMode, onPick: onDatePick, onVirtualPick: virtualDatePick, onClose: closePanel, defaultDate: date, enableShowWeekNum: enableShowWeekNum, disabledDateFunc: disabledDateFunc, enableSecond: enableSecond }))));
 };
 exports["default"] = DatePicker;
 
@@ -53654,8 +53754,7 @@ var classnames_1 = __importDefault(__webpack_require__(/*! classnames */ "./node
 var react_popper_1 = __webpack_require__(/*! react-popper */ "./node_modules/react-popper/lib/esm/index.js");
 var constants_1 = __webpack_require__(/*! Src/constants */ "./src/constants.ts");
 var Util_1 = __webpack_require__(/*! Util */ "./src/util/index.ts");
-var input_1 = __importDefault(__webpack_require__(/*! Src/input */ "./src/input/index.tsx"));
-var DateRangePanel_1 = __importDefault(__webpack_require__(/*! Src/panel/DateRangePanel */ "./src/panel/DateRangePanel.tsx"));
+var Component_1 = __webpack_require__(/*! Component */ "./src/component/index.ts");
 __webpack_require__(/*! Scss/picker.scss */ "./src/scss/picker.scss");
 var DateRangePicker = function (props) {
     var className = props.className, _a = props.selectionMode, selectionMode = _a === void 0 ? 'day' : _a, onPick = props.onPick, _b = props.format, format = _b === void 0 ? constants_1.DEFAULT_FORMATS_MAP[selectionMode] : _b, defaultDate = props.defaultDate, _c = props.placeholder, placeholder = _c === void 0 ? constants_1.DEFAULT_PLACEHOLDER_MAP['date-range'] : _c, _d = props.enableClear, enableClear = _d === void 0 ? true : _d, _e = props.enableShowWeekNum, enableShowWeekNum = _e === void 0 ? true : _e, _f = props.titleLabel, titleLabel = _f === void 0 ? '请选择日期范围' : _f, _g = props.contentLabel, contentLabel = _g === void 0 ? ['起始日期：', '结束日期：'] : _g, disabledDateFunc = props.disabledDateFunc;
@@ -53706,10 +53805,10 @@ var DateRangePicker = function (props) {
     };
     return (react_1.default.createElement("div", { ref: dateRangePickerRef, className: (0, classnames_1.default)('daterangepicker-box', className) },
         react_1.default.createElement("div", { ref: setReferenceElement },
-            react_1.default.createElement(input_1.default, { selectionMode: selectionMode, onFocus: onInputFocus, value: text, placeholder: placeholder, onIconClick: clearText, enableClear: enableClear })),
+            react_1.default.createElement(Component_1.Input, { selectionMode: selectionMode, onFocus: onInputFocus, value: text, placeholder: placeholder, onIconClick: clearText, enableClear: enableClear })),
         pickerVisible &&
             react_1.default.createElement("div", __assign({ ref: setPopperElement, style: (0, lodash_1.assign)(styles.popper, { zIndex: 10 }) }, attributes.popper),
-                react_1.default.createElement(DateRangePanel_1.default, { selectionMode: selectionMode, onPick: datePick, onClose: closePanel, defaultDate: date, disabledDateFunc: disabledDateFunc, format: format, enableShowWeekNum: enableShowWeekNum, titleLabel: titleLabel, contentLabel: contentLabel }))));
+                react_1.default.createElement(Component_1.DateRangePanel, { selectionMode: selectionMode, onPick: datePick, onClose: closePanel, defaultDate: date, disabledDateFunc: disabledDateFunc, format: format, enableShowWeekNum: enableShowWeekNum, titleLabel: titleLabel, contentLabel: contentLabel }))));
 };
 exports["default"] = DateRangePicker;
 
@@ -53768,31 +53867,30 @@ var dayjs_1 = __importDefault(__webpack_require__(/*! dayjs */ "./node_modules/d
 var classnames_1 = __importDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
 var react_popper_1 = __webpack_require__(/*! react-popper */ "./node_modules/react-popper/lib/esm/index.js");
 var Hook_1 = __webpack_require__(/*! Hook */ "./src/hook/index.ts");
-var input_1 = __importDefault(__webpack_require__(/*! Src/input */ "./src/input/index.tsx"));
-var BasePanel_1 = __importDefault(__webpack_require__(/*! Src/panel/BasePanel */ "./src/panel/BasePanel.tsx"));
+var Component_1 = __webpack_require__(/*! Component */ "./src/component/index.ts");
+var Util_1 = __webpack_require__(/*! Util */ "./src/util/index.ts");
 __webpack_require__(/*! Scss/picker.scss */ "./src/scss/picker.scss");
 var TimePicker = function (props) {
-    var className = props.className, format = props.format, defaultTime = props.defaultTime, placeholder = props.placeholder, _a = props.enableSecond, enableSecond = _a === void 0 ? true : _a, _b = props.enableClear, enableClear = _b === void 0 ? true : _b, onPick = props.onPick;
-    var DEFAULT_FORMATS = enableSecond ? 'HH:mm:ss' : 'HH:mm';
+    var className = props.className, defaultTime = props.defaultTime, placeholder = props.placeholder, _a = props.enableSecond, enableSecond = _a === void 0 ? false : _a, _b = props.enableClear, enableClear = _b === void 0 ? true : _b, _c = props.format, format = _c === void 0 ? (0, Util_1.getDefaultFormat)('time', enableSecond) : _c, onPick = props.onPick;
     // state
-    var _c = (0, react_1.useState)(false), pickerVisible = _c[0], setPickerVisible = _c[1];
-    var _d = (0, react_1.useState)(function () {
-        return defaultTime ? (0, dayjs_1.default)(defaultTime) : (0, dayjs_1.default)().hour(0).minute(0).second(0);
-    }), time = _d[0], setTime = _d[1];
+    var _d = (0, react_1.useState)(false), pickerVisible = _d[0], setPickerVisible = _d[1];
     var _e = (0, react_1.useState)(function () {
-        return defaultTime ? (0, dayjs_1.default)(defaultTime).format(format || DEFAULT_FORMATS) : '';
-    }), text = _e[0], setText = _e[1];
+        return defaultTime ? (0, dayjs_1.default)(defaultTime) : (0, dayjs_1.default)().hour(0).minute(0).second(0);
+    }), time = _e[0], setTime = _e[1];
+    var _f = (0, react_1.useState)(function () {
+        return defaultTime ? (0, Util_1.singleDateToText)(time, format) : '';
+    }), text = _f[0], setText = _f[1];
     var timePickerRef = (0, react_1.useRef)(null);
     // popper相关
-    var _f = (0, react_1.useState)(null), referenceElement = _f[0], setReferenceElement = _f[1];
-    var _g = (0, react_1.useState)(null), popperElement = _g[0], setPopperElement = _g[1];
-    var _h = (0, react_popper_1.usePopper)(referenceElement, popperElement, {
+    var _g = (0, react_1.useState)(null), referenceElement = _g[0], setReferenceElement = _g[1];
+    var _h = (0, react_1.useState)(null), popperElement = _h[0], setPopperElement = _h[1];
+    var _j = (0, react_popper_1.usePopper)(referenceElement, popperElement, {
         placement: 'bottom-start',
         modifiers: [{
                 name: 'preventOverflow',
                 options: { padding: 8 }
             }],
-    }), styles = _h.styles, attributes = _h.attributes;
+    }), styles = _j.styles, attributes = _j.attributes;
     (0, Hook_1.useClickOutside)(timePickerRef, function () { setPickerVisible(false); });
     var onInputFocus = function () {
         if (!pickerVisible) {
@@ -53801,7 +53899,7 @@ var TimePicker = function (props) {
     };
     var onTimePick = function (d) {
         setTime(d);
-        setText(d.format(format || DEFAULT_FORMATS));
+        setText((0, Util_1.singleDateToText)(d, format));
         if ((0, lodash_1.isFunction)(onPick)) {
             onPick(d.toDate());
         }
@@ -53816,53 +53914,20 @@ var TimePicker = function (props) {
     };
     return (react_1.default.createElement("div", { ref: timePickerRef, className: (0, classnames_1.default)('timepicker-box', className) },
         react_1.default.createElement("div", { ref: setReferenceElement },
-            react_1.default.createElement(input_1.default, { selectionMode: "time", onFocus: onInputFocus, value: text, placeholder: placeholder, onIconClick: onClearText, enableClear: enableClear })),
+            react_1.default.createElement(Component_1.Input, { selectionMode: "time", onFocus: onInputFocus, value: text, placeholder: placeholder, onIconClick: onClearText, enableClear: enableClear })),
         pickerVisible &&
             react_1.default.createElement("div", __assign({ ref: setPopperElement, style: (0, lodash_1.assign)(styles.popper, { zIndex: 10 }) }, attributes.popper),
-                react_1.default.createElement(BasePanel_1.default, { selectionMode: "time", onPick: onTimePick, onClose: closePanel, defaultDate: time, enableSecond: enableSecond }))));
+                react_1.default.createElement(Component_1.BasePanel, { selectionMode: "time", onPick: onTimePick, onClose: closePanel, defaultDate: time, enableSecond: enableSecond }))));
 };
 exports["default"] = TimePicker;
 
 
 /***/ }),
 
-/***/ "./src/constants.ts":
-/*!**************************!*\
-  !*** ./src/constants.ts ***!
-  \**************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.WEEK_CN_SHORT_ARRAY = exports.DEFAULT_PLACEHOLDER_MAP = exports.DEFAULT_FORMATS_MAP = void 0;
-exports.DEFAULT_FORMATS_MAP = {
-    day: 'YYYY-MM-DD',
-    month: 'YYYY-M',
-    year: 'YYYY',
-    week: 'YYYY-w',
-    quarter: 'YYYY-Q',
-    time: 'HH:mm:ss',
-};
-exports.DEFAULT_PLACEHOLDER_MAP = {
-    'day': '请选择日期',
-    'week': '请选择周',
-    'month': '请选择月',
-    'quarter': '请选择季',
-    'year': '请选择年',
-    'time': '请选择时间',
-    'date-range': '请选择日期范围',
-    'time-range': '请选择时间范围',
-};
-exports.WEEK_CN_SHORT_ARRAY = ['日', '一', '二', '三', '四', '五', '六'];
-
-
-/***/ }),
-
-/***/ "./src/hook/index.ts":
-/*!***************************!*\
-  !*** ./src/hook/index.ts ***!
-  \***************************/
+/***/ "./src/component/ActionButton.tsx":
+/*!****************************************!*\
+  !*** ./src/component/ActionButton.tsx ***!
+  \****************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -53871,165 +53936,31 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.useClickOutside = exports.useHover = void 0;
-var useHover_1 = __importDefault(__webpack_require__(/*! ./useHover */ "./src/hook/useHover.ts"));
-exports.useHover = useHover_1.default;
-var useClickOutside_1 = __importDefault(__webpack_require__(/*! ./useClickOutside */ "./src/hook/useClickOutside.ts"));
-exports.useClickOutside = useClickOutside_1.default;
-
-
-/***/ }),
-
-/***/ "./src/hook/useClickOutside.ts":
-/*!*************************************!*\
-  !*** ./src/hook/useClickOutside.ts ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-var react_1 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var lodash_1 = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-var useClickOutside = function (ref, callback) {
-    (0, react_1.useEffect)(function () {
-        var listener = function (evt) {
-            if (ref.current.contains(evt.target) || (0, lodash_1.includes)(['year', 'month', 'select', 'select pick'], evt.target.className))
-                return;
-            callback();
-        };
-        document.addEventListener("click", listener, false);
-        return function () {
-            document.removeEventListener("click", listener, false);
-        };
-    }, [ref, callback]);
-};
-exports["default"] = useClickOutside;
-
-
-/***/ }),
-
-/***/ "./src/hook/useHover.ts":
-/*!******************************!*\
-  !*** ./src/hook/useHover.ts ***!
-  \******************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-var react_1 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var useHover = function (ref) {
-    var _a = (0, react_1.useState)(false), value = _a[0], setValue = _a[1];
-    var handleMouseOver = function () { return setValue(true); };
-    var handleMouseOut = function () { return setValue(false); };
-    (0, react_1.useEffect)(function () {
-        var node = ref.current;
-        if (node) {
-            node.addEventListener("mouseover", handleMouseOver);
-            node.addEventListener("mouseout", handleMouseOut);
-            return function () {
-                node.removeEventListener("mouseover", handleMouseOver);
-                node.removeEventListener("mouseout", handleMouseOut);
-            };
-        }
-    }, [ref.current]);
-    return value;
-};
-exports["default"] = useHover;
-
-
-/***/ }),
-
-/***/ "./src/input/index.tsx":
-/*!*****************************!*\
-  !*** ./src/input/index.tsx ***!
-  \*****************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-var lodash_1 = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 var classnames_1 = __importDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-var Hook_1 = __webpack_require__(/*! Hook */ "./src/hook/index.ts");
-__webpack_require__(/*! Scss/input.scss */ "./src/scss/input.scss");
-var Input = function (props) {
-    var enableClear = props.enableClear, onFocus = props.onFocus, onBlur = props.onBlur, onIconClick = props.onIconClick;
-    var inputClassName = props.inputClassName, value = props.value, placeholder = props.placeholder, selectionMode = props.selectionMode;
-    var inputRef = (0, react_1.useRef)(null);
-    var iconRef = (0, react_1.useRef)(null);
-    var isHover = (0, Hook_1.useHover)(iconRef);
-    var focus = function () {
-        setTimeout(function () {
-            inputRef.current.focus();
-        });
+__webpack_require__(/*! Scss/action-button.scss */ "./src/scss/action-button.scss");
+var ActionButton = function (props) {
+    var onOk = props.onOk, onClose = props.onClose, _a = props.disableOk, disableOk = _a === void 0 ? false : _a, _b = props.disableClose, disableClose = _b === void 0 ? false : _b;
+    var btnCls = function (customCls, disable) {
+        var _a;
+        return (0, classnames_1.default)((_a = {},
+            _a[customCls] = true,
+            _a['disable'] = disable,
+            _a));
     };
-    var blur = function () {
-        setTimeout(function () {
-            inputRef.current.blur();
-        });
-    };
-    var handleFocus = function (e) {
-        focus();
-        if ((0, lodash_1.isFunction)(onFocus)) {
-            onFocus(e.target.value, e);
-        }
-    };
-    var handleBlur = function (e) {
-        blur();
-        if ((0, lodash_1.isFunction)(onBlur)) {
-            onBlur(e.target.value, e);
-        }
-    };
-    var handleIconClick = function () {
-        if (value && enableClear) {
-            onIconClick();
-        }
-    };
-    var iconCls = (0, react_1.useMemo)(function () {
-        return "input-icon ".concat((value && isHover && enableClear) ? 'icon-close' : selectionMode === 'time' ? 'icon-time' : 'icon-calendar');
-    }, [value, isHover]);
-    return (react_1.default.createElement("div", { className: "input-box" },
-        react_1.default.createElement("input", { className: (0, classnames_1.default)(inputClassName), value: value, readOnly: true, placeholder: placeholder, ref: inputRef, onFocus: handleFocus, onBlur: handleBlur }),
-        react_1.default.createElement("div", { className: iconCls, ref: iconRef, onClick: handleIconClick })));
+    return (react_1.default.createElement("div", { className: "btn-panel" },
+        react_1.default.createElement("div", { className: btnCls('btn-cancel', disableClose), onClick: onClose }, "\u53D6\u6D88"),
+        react_1.default.createElement("div", { className: btnCls('btn-ok', disableOk), onClick: onOk }, "\u786E\u5B9A")));
 };
-exports["default"] = Input;
+exports["default"] = ActionButton;
 
 
 /***/ }),
 
-/***/ "./src/panel/BasePanel.tsx":
-/*!*********************************!*\
-  !*** ./src/panel/BasePanel.tsx ***!
-  \*********************************/
+/***/ "./src/component/BasePanel.tsx":
+/*!*************************************!*\
+  !*** ./src/component/BasePanel.tsx ***!
+  \*************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -54063,31 +53994,40 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 var lodash_1 = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-var DayPanel_1 = __importDefault(__webpack_require__(/*! ./DayPanel */ "./src/panel/DayPanel.tsx"));
-var MonthPanel_1 = __importDefault(__webpack_require__(/*! ./MonthPanel */ "./src/panel/MonthPanel.tsx"));
-var YearPanel_1 = __importDefault(__webpack_require__(/*! ./YearPanel */ "./src/panel/YearPanel.tsx"));
-var TimePanel_1 = __importDefault(__webpack_require__(/*! ./TimePanel */ "./src/panel/TimePanel.tsx"));
+var dayjs_1 = __importDefault(__webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js"));
+var Component_1 = __webpack_require__(/*! Component */ "./src/component/index.ts");
+var DayPanel_1 = __importDefault(__webpack_require__(/*! ./DayPanel */ "./src/component/DayPanel.tsx"));
+var MonthPanel_1 = __importDefault(__webpack_require__(/*! ./MonthPanel */ "./src/component/MonthPanel.tsx"));
+var YearPanel_1 = __importDefault(__webpack_require__(/*! ./YearPanel */ "./src/component/YearPanel.tsx"));
+var TimePanel_1 = __importDefault(__webpack_require__(/*! ./TimePanel */ "./src/component/TimePanel.tsx"));
 __webpack_require__(/*! Scss/base-panel.scss */ "./src/scss/base-panel.scss");
 var BasePanel = function (props) {
-    var selectionMode = props.selectionMode, defaultDate = props.defaultDate, onPick = props.onPick, onClose = props.onClose, disabledDateFunc = props.disabledDateFunc, enableSecond = props.enableSecond, enableShowWeekNum = props.enableShowWeekNum;
+    var selectionMode = props.selectionMode, defaultDate = props.defaultDate, onPick = props.onPick, onVirtualPick = props.onVirtualPick, onClose = props.onClose, disabledDateFunc = props.disabledDateFunc, enableSecond = props.enableSecond, enableShowWeekNum = props.enableShowWeekNum;
     var _a = (0, react_1.useState)(defaultDate), date = _a[0], setDate = _a[1];
     var _b = (0, react_1.useState)(function () {
-        if ((0, lodash_1.includes)(['day', 'week'], selectionMode)) {
+        return {
+            hour: defaultDate.hour(),
+            minute: defaultDate.minute(),
+            second: defaultDate.second(),
+        };
+    }), time = _b[0], setTime = _b[1];
+    var _c = (0, react_1.useState)(function () {
+        if ((0, lodash_1.includes)(['day', 'week', 'daytime'], selectionMode)) {
             return 'day';
         }
         else if ((0, lodash_1.includes)(['month', 'quarter'], selectionMode)) {
             return 'month';
         }
         return selectionMode;
-    }), currentPanel = _b[0], setCurrentPanel = _b[1];
+    }), currentPanel = _c[0], setCurrentPanel = _c[1];
     var datePick = function (d) {
         // 日，周视图点击年视图进入时
-        if ((0, lodash_1.includes)(['day', 'week'], selectionMode) && currentPanel === 'year') {
+        if ((0, lodash_1.includes)(['day', 'week', 'daytime'], selectionMode) && currentPanel === 'year') {
             setDate(date.year(d[1].year()));
             setCurrentPanel('day');
         }
         // 日，周视图点击月视图进入时
-        else if ((0, lodash_1.includes)(['day', 'week'], selectionMode) && currentPanel === 'month') {
+        else if ((0, lodash_1.includes)(['day', 'week', 'daytime'], selectionMode) && currentPanel === 'month') {
             setDate(date.month(d[1].month()));
             setCurrentPanel('day');
         }
@@ -54096,11 +54036,24 @@ var BasePanel = function (props) {
             setDate(date.year(d[1].year()));
             setCurrentPanel('month');
         }
-        else
+        // 日视图且开启时间选择时
+        else if (selectionMode === 'daytime') {
+            setDate(d[1]);
+            onVirtualPick(d);
+        }
+        else {
             onPick(d);
+        }
     };
     var timePick = function (d) {
         onPick(d);
+    };
+    var dateTimePick = function () {
+        var d = (0, dayjs_1.default)(date).hour(time.hour).minute(time.minute).second(time.second);
+        onPick([d, d]);
+    };
+    var timeChange = function (t) {
+        setTime(t);
     };
     var last = function (type, count) {
         setDate(date.subtract(count, type));
@@ -54126,6 +54079,26 @@ var BasePanel = function (props) {
                 react_1.default.createElement("button", { type: "button", onClick: function () { return next('year', 1); }, className: "icon-btn icon-double-right" })),
             react_1.default.createElement(DayPanel_1.default, { onPick: datePick, defaultDate: defaultDate, virtualDate: date, selectionMode: selectionMode, enableShowWeekNum: enableShowWeekNum, disabledDateFunc: disabledDateFunc })));
     };
+    var renderTimePicker = (0, react_1.useMemo)(function () {
+        return (react_1.default.createElement("div", { className: "date-time-panel" },
+            react_1.default.createElement(TimePanel_1.default, { defaultTime: time, enableSecond: enableSecond, showButton: false, onChange: timeChange })));
+    }, [time]);
+    var renderDayTimePanel = function () {
+        return (react_1.default.createElement(react_1.default.Fragment, null,
+            react_1.default.createElement("div", { style: { display: 'flex', flexDirection: 'row' } },
+                react_1.default.createElement("div", null,
+                    react_1.default.createElement("div", { className: "header" },
+                        react_1.default.createElement("button", { type: "button", onClick: function () { return last('year', 1); }, className: "icon-btn icon-double-left" }),
+                        react_1.default.createElement("button", { type: "button", onClick: function () { return last('month', 1); }, className: "icon-btn icon-left" }),
+                        react_1.default.createElement("div", { className: "date-label" },
+                            react_1.default.createElement("div", { className: "year", onClick: function (e) { return showPanel(e, 'year'); } }, "".concat(date.year(), " \u5E74 ")),
+                            react_1.default.createElement("div", { className: "month", onClick: function (e) { return showPanel(e, 'month'); } }, "".concat(date.month() + 1, " \u6708 "))),
+                        react_1.default.createElement("button", { type: "button", onClick: function () { return next('month', 1); }, className: "icon-btn icon-right" }),
+                        react_1.default.createElement("button", { type: "button", onClick: function () { return next('year', 1); }, className: "icon-btn icon-double-right" })),
+                    react_1.default.createElement(DayPanel_1.default, { onPick: datePick, defaultDate: defaultDate, virtualDate: date, selectionMode: selectionMode, enableShowWeekNum: enableShowWeekNum, disabledDateFunc: disabledDateFunc })),
+                renderTimePicker),
+            react_1.default.createElement(Component_1.ActionButton, { onOk: dateTimePick, onClose: closePanel })));
+    };
     var renderMonthPanel = function () {
         return (react_1.default.createElement(react_1.default.Fragment, null,
             react_1.default.createElement("div", { className: "header" },
@@ -54145,11 +54118,11 @@ var BasePanel = function (props) {
             react_1.default.createElement(YearPanel_1.default, { onPick: datePick, defaultDate: defaultDate, virtualDate: date })));
     };
     var renderTimePanel = function () {
-        return (react_1.default.createElement(TimePanel_1.default, { onPick: timePick, defaultTime: defaultDate, onClose: closePanel, enableSecond: enableSecond }));
+        return (react_1.default.createElement(TimePanel_1.default, { onPick: timePick, defaultTime: time, onClose: closePanel, enableSecond: enableSecond }));
     };
     var renderPanel = function () {
         if (currentPanel === 'day') {
-            return renderDayPanel();
+            return selectionMode === 'daytime' ? renderDayTimePanel() : renderDayPanel();
         }
         else if (currentPanel === 'month') {
             return renderMonthPanel();
@@ -54167,10 +54140,10 @@ exports["default"] = BasePanel;
 
 /***/ }),
 
-/***/ "./src/panel/DateRangePanel.tsx":
-/*!**************************************!*\
-  !*** ./src/panel/DateRangePanel.tsx ***!
-  \**************************************/
+/***/ "./src/component/DateRangePanel.tsx":
+/*!******************************************!*\
+  !*** ./src/component/DateRangePanel.tsx ***!
+  \******************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -54204,6 +54177,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 var dayjs_1 = __importDefault(__webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js"));
+var Component_1 = __webpack_require__(/*! Component */ "./src/component/index.ts");
 var DatePicker_1 = __importDefault(__webpack_require__(/*! Src/DatePicker */ "./src/DatePicker.tsx"));
 __webpack_require__(/*! Scss/date-range-panel.scss */ "./src/scss/date-range-panel.scss");
 var DateRangePanel = function (props) {
@@ -54234,19 +54208,17 @@ var DateRangePanel = function (props) {
             react_1.default.createElement("div", null, contentLabel[1]),
             react_1.default.createElement(DatePicker_1.default, { selectionMode: selectionMode, onPick: function (d) { return tempDatePick(d[1], 1); }, defaultDate: date[1].toDate(), disabledDateFunc: disabledDateFunc, format: format, enableShowWeekNum: enableShowWeekNum })),
         react_1.default.createElement("div", { className: "daterange-tip-panel" }, isBefore && react_1.default.createElement("span", null, "\u7ED3\u675F\u65E5\u671F\u65E9\u4E8E\u8D77\u59CB\u65E5\u671F\uFF0C\u8BF7\u91CD\u65B0\u9009\u62E9")),
-        react_1.default.createElement("div", { className: "daterange-btn-panel" },
-            react_1.default.createElement("div", { className: "btn-cancel", onClick: onClose }, "\u53D6\u6D88"),
-            react_1.default.createElement("div", { className: "btn-ok", onClick: datePick, style: isBefore ? { cursor: 'not-allowed' } : { cursor: 'pointer' } }, "\u786E\u5B9A"))));
+        react_1.default.createElement(Component_1.ActionButton, { onOk: datePick, onClose: onClose, disableOk: isBefore })));
 };
 exports["default"] = DateRangePanel;
 
 
 /***/ }),
 
-/***/ "./src/panel/DayPanel.tsx":
-/*!********************************!*\
-  !*** ./src/panel/DayPanel.tsx ***!
-  \********************************/
+/***/ "./src/component/DayPanel.tsx":
+/*!************************************!*\
+  !*** ./src/component/DayPanel.tsx ***!
+  \************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -54398,7 +54370,7 @@ var DayPanel = function (props) {
         var pickTrFlag = false;
         var disabledTrFlag = false;
         computeCellArray().map(function (day, index) {
-            if (selectionMode === 'day') {
+            if (selectionMode === 'day' || selectionMode === 'daytime') {
                 dayTemp.push(react_1.default.createElement("td", { key: index, className: (0, classnames_1.default)(day.style), onClick: function () { return onPickDay(day); } }, day.label));
                 if (index !== 0 && (index + 1) % 7 === 0) {
                     week.push(react_1.default.createElement("tr", { key: "week-".concat(index / 7) }, dayTemp));
@@ -54437,10 +54409,95 @@ exports["default"] = DayPanel;
 
 /***/ }),
 
-/***/ "./src/panel/MonthPanel.tsx":
-/*!**********************************!*\
-  !*** ./src/panel/MonthPanel.tsx ***!
-  \**********************************/
+/***/ "./src/component/Input.tsx":
+/*!*********************************!*\
+  !*** ./src/component/Input.tsx ***!
+  \*********************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var lodash_1 = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+var classnames_1 = __importDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+var Hook_1 = __webpack_require__(/*! Hook */ "./src/hook/index.ts");
+__webpack_require__(/*! Scss/input.scss */ "./src/scss/input.scss");
+var Input = function (props) {
+    var enableClear = props.enableClear, onFocus = props.onFocus, onBlur = props.onBlur, onIconClick = props.onIconClick;
+    var inputClassName = props.inputClassName, value = props.value, placeholder = props.placeholder, selectionMode = props.selectionMode;
+    var inputRef = (0, react_1.useRef)(null);
+    var iconRef = (0, react_1.useRef)(null);
+    var isHover = (0, Hook_1.useHover)(iconRef);
+    var focus = function () {
+        setTimeout(function () {
+            inputRef.current.focus();
+        });
+    };
+    var blur = function () {
+        setTimeout(function () {
+            inputRef.current.blur();
+        });
+    };
+    var handleFocus = function (e) {
+        focus();
+        if ((0, lodash_1.isFunction)(onFocus)) {
+            onFocus(e.target.value, e);
+        }
+    };
+    var handleBlur = function (e) {
+        blur();
+        if ((0, lodash_1.isFunction)(onBlur)) {
+            onBlur(e.target.value, e);
+        }
+    };
+    var handleIconClick = function () {
+        if (value && enableClear) {
+            onIconClick();
+        }
+    };
+    var iconCls = (0, react_1.useMemo)(function () {
+        return "input-icon ".concat((value && isHover && enableClear) ? 'icon-close' : selectionMode === 'time' ? 'icon-time' : 'icon-calendar');
+    }, [value, isHover]);
+    return (react_1.default.createElement("div", { className: "input-box" },
+        react_1.default.createElement("input", { className: (0, classnames_1.default)(inputClassName), value: value, readOnly: true, placeholder: placeholder, ref: inputRef, onFocus: handleFocus, onBlur: handleBlur }),
+        react_1.default.createElement("div", { className: iconCls, ref: iconRef, onClick: handleIconClick })));
+};
+exports["default"] = Input;
+
+
+/***/ }),
+
+/***/ "./src/component/MonthPanel.tsx":
+/*!**************************************!*\
+  !*** ./src/component/MonthPanel.tsx ***!
+  \**************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -54502,7 +54559,7 @@ var MonthPanel = function (props) {
         var disabledTrFlag = false;
         computeCellArray().map(function (month, index) {
             // 月视图，日视图转月视图，周视图转月视图
-            if ((0, lodash_1.includes)(['day', 'week', 'month'], selectionMode)) {
+            if ((0, lodash_1.includes)(['day', 'daytime', 'week', 'month'], selectionMode)) {
                 arrTemp.push(react_1.default.createElement("td", { key: "month-".concat(month.label), className: (0, classnames_1.default)(month.style), onClick: function () { return onDatePick(month, selectionMode); } }, month.label + '月'));
                 if (index !== 0 && (index + 1) % 3 === 0) {
                     quarter.push(react_1.default.createElement("tr", { key: "quarter-".concat(index / 3) }, arrTemp));
@@ -54539,10 +54596,10 @@ exports["default"] = MonthPanel;
 
 /***/ }),
 
-/***/ "./src/panel/TimePanel.tsx":
-/*!*********************************!*\
-  !*** ./src/panel/TimePanel.tsx ***!
-  \*********************************/
+/***/ "./src/component/TimePanel.tsx":
+/*!*************************************!*\
+  !*** ./src/component/TimePanel.tsx ***!
+  \*************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -54589,20 +54646,15 @@ var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/reac
 var lodash_1 = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 var dayjs_1 = __importDefault(__webpack_require__(/*! dayjs */ "./node_modules/dayjs/dayjs.min.js"));
 var rc_slider_1 = __importDefault(__webpack_require__(/*! rc-slider */ "./node_modules/rc-slider/es/index.js"));
+var Component_1 = __webpack_require__(/*! Component */ "./src/component/index.ts");
 __webpack_require__(/*! rc-slider/assets/index.css */ "./node_modules/rc-slider/assets/index.css");
 __webpack_require__(/*! Scss/time-panel.scss */ "./src/scss/time-panel.scss");
 var addPrefixZero = function (v) {
     return v < 10 ? "0".concat(v) : v.toString();
 };
 var TimePanel = function (props) {
-    var defaultTime = props.defaultTime, onPick = props.onPick, onClose = props.onClose, enableSecond = props.enableSecond;
-    var _a = (0, react_1.useState)(function () {
-        return {
-            hour: defaultTime.hour(),
-            minute: defaultTime.minute(),
-            second: defaultTime.second(),
-        };
-    }), time = _a[0], setTime = _a[1];
+    var defaultTime = props.defaultTime, onPick = props.onPick, onClose = props.onClose, onChange = props.onChange, enableSecond = props.enableSecond, _a = props.showButton, showButton = _a === void 0 ? true : _a;
+    var _b = (0, react_1.useState)(defaultTime), time = _b[0], setTime = _b[1];
     var handlePick = function () {
         onPick((0, dayjs_1.default)().hour(time.hour).minute(time.minute).second(time.second));
     };
@@ -54617,24 +54669,28 @@ var TimePanel = function (props) {
         }
     });
     var minuteMarks = {};
-    (0, lodash_1.times)(12, function (i) {
-        (0, lodash_1.set)(minuteMarks, i * 5, addPrefixZero(i * 5));
-        if (i === 11) {
+    (0, lodash_1.times)(6, function (i) {
+        (0, lodash_1.set)(minuteMarks, i * 10, addPrefixZero(i * 10));
+        if (i === 5) {
             (0, lodash_1.set)(minuteMarks, 59, addPrefixZero(59));
         }
     });
-    var onTimeChange = function (v, type) {
+    var timeChange = function (v, type) {
         var _a;
-        setTime(__assign(__assign({}, time), (_a = {}, _a[type] = v, _a)));
+        var current = __assign(__assign({}, time), (_a = {}, _a[type] = v, _a));
+        setTime(current);
+        if ((0, lodash_1.isFunction)(onChange)) {
+            onChange(current);
+        }
     };
     var renderHourSlider = (0, react_1.useMemo)(function () {
-        return (react_1.default.createElement(rc_slider_1.default, { vertical: true, min: 0, max: 23, step: 1, marks: hourMarks, defaultValue: time.hour, onChange: function (v) { return onTimeChange(v, 'hour'); } }));
+        return (react_1.default.createElement(rc_slider_1.default, { vertical: true, min: 0, max: 23, step: 1, marks: hourMarks, defaultValue: time.hour, onChange: function (v) { return timeChange(v, 'hour'); } }));
     }, [time]);
     var renderMinuteSlider = (0, react_1.useMemo)(function () {
-        return (react_1.default.createElement(rc_slider_1.default, { vertical: true, min: 0, max: 59, step: 1, marks: minuteMarks, defaultValue: time.minute, onChange: function (v) { return onTimeChange(v, 'minute'); } }));
+        return (react_1.default.createElement(rc_slider_1.default, { vertical: true, min: 0, max: 59, step: 1, marks: minuteMarks, defaultValue: time.minute, onChange: function (v) { return timeChange(v, 'minute'); } }));
     }, [time]);
     var renderSecondSlider = (0, react_1.useMemo)(function () {
-        return (react_1.default.createElement(rc_slider_1.default, { vertical: true, min: 0, max: 59, step: 1, marks: minuteMarks, defaultValue: time.second, onChange: function (v) { return onTimeChange(v, 'second'); } }));
+        return (react_1.default.createElement(rc_slider_1.default, { vertical: true, min: 0, max: 59, step: 1, marks: minuteMarks, defaultValue: time.second, onChange: function (v) { return timeChange(v, 'second'); } }));
     }, [time]);
     return (react_1.default.createElement("div", { className: "time-panel" },
         react_1.default.createElement("div", { className: "action-panel" },
@@ -54650,19 +54706,17 @@ var TimePanel = function (props) {
                 react_1.default.createElement("div", { className: "input-panel" },
                     react_1.default.createElement("input", { className: "time-input", value: addPrefixZero(time.second), readOnly: true })),
                 react_1.default.createElement("div", { className: "slider-panel" }, renderSecondSlider)))),
-        react_1.default.createElement("div", { className: "btn-panel" },
-            react_1.default.createElement("div", { className: "btn-cancel", onClick: handleClose }, "\u53D6\u6D88"),
-            react_1.default.createElement("div", { className: "btn-ok", onClick: handlePick }, "\u786E\u5B9A"))));
+        showButton && react_1.default.createElement(Component_1.ActionButton, { onOk: handlePick, onClose: handleClose })));
 };
 exports["default"] = TimePanel;
 
 
 /***/ }),
 
-/***/ "./src/panel/YearPanel.tsx":
-/*!*********************************!*\
-  !*** ./src/panel/YearPanel.tsx ***!
-  \*********************************/
+/***/ "./src/component/YearPanel.tsx":
+/*!*************************************!*\
+  !*** ./src/component/YearPanel.tsx ***!
+  \*************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -54740,21 +54794,176 @@ exports["default"] = YearPanel;
 
 /***/ }),
 
-/***/ "./src/util/index.ts":
-/*!***************************!*\
-  !*** ./src/util/index.ts ***!
-  \***************************/
+/***/ "./src/component/index.ts":
+/*!********************************!*\
+  !*** ./src/component/index.ts ***!
+  \********************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ActionButton = exports.DateRangePanel = exports.TimePanel = exports.YearPanel = exports.MonthPanel = exports.DayPanel = exports.BasePanel = exports.Input = void 0;
+var Input_1 = __importDefault(__webpack_require__(/*! ./Input */ "./src/component/Input.tsx"));
+exports.Input = Input_1.default;
+var BasePanel_1 = __importDefault(__webpack_require__(/*! ./BasePanel */ "./src/component/BasePanel.tsx"));
+exports.BasePanel = BasePanel_1.default;
+var DayPanel_1 = __importDefault(__webpack_require__(/*! ./DayPanel */ "./src/component/DayPanel.tsx"));
+exports.DayPanel = DayPanel_1.default;
+var MonthPanel_1 = __importDefault(__webpack_require__(/*! ./MonthPanel */ "./src/component/MonthPanel.tsx"));
+exports.MonthPanel = MonthPanel_1.default;
+var YearPanel_1 = __importDefault(__webpack_require__(/*! ./YearPanel */ "./src/component/YearPanel.tsx"));
+exports.YearPanel = YearPanel_1.default;
+var TimePanel_1 = __importDefault(__webpack_require__(/*! ./TimePanel */ "./src/component/TimePanel.tsx"));
+exports.TimePanel = TimePanel_1.default;
+var DateRangePanel_1 = __importDefault(__webpack_require__(/*! ./DateRangePanel */ "./src/component/DateRangePanel.tsx"));
+exports.DateRangePanel = DateRangePanel_1.default;
+var ActionButton_1 = __importDefault(__webpack_require__(/*! ./ActionButton */ "./src/component/ActionButton.tsx"));
+exports.ActionButton = ActionButton_1.default;
+
+
+/***/ }),
+
+/***/ "./src/constants.ts":
+/*!**************************!*\
+  !*** ./src/constants.ts ***!
+  \**************************/
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.rangeDateToText = exports.singleDateToText = void 0;
+exports.WEEK_CN_SHORT_ARRAY = exports.DEFAULT_PLACEHOLDER_MAP = exports.DEFAULT_FORMATS_MAP = void 0;
+exports.DEFAULT_FORMATS_MAP = {
+    day: 'YYYY-MM-DD',
+    month: 'YYYY-M',
+    year: 'YYYY',
+    week: 'YYYY-w',
+    quarter: 'YYYY-Q',
+    time: 'HH:mm',
+    daytime: 'YYYY-MM-DD HH:mm',
+};
+exports.DEFAULT_PLACEHOLDER_MAP = {
+    'day': '请选择日期',
+    'daytime': '请选择日期',
+    'week': '请选择周',
+    'month': '请选择月',
+    'quarter': '请选择季',
+    'year': '请选择年',
+    'time': '请选择时间',
+    'date-range': '请选择日期范围',
+    'time-range': '请选择时间范围',
+};
+exports.WEEK_CN_SHORT_ARRAY = ['日', '一', '二', '三', '四', '五', '六'];
+
+
+/***/ }),
+
+/***/ "./src/hook/index.ts":
+/*!***************************!*\
+  !*** ./src/hook/index.ts ***!
+  \***************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.useClickOutside = exports.useHover = void 0;
+var useHover_1 = __importDefault(__webpack_require__(/*! ./useHover */ "./src/hook/useHover.ts"));
+exports.useHover = useHover_1.default;
+var useClickOutside_1 = __importDefault(__webpack_require__(/*! ./useClickOutside */ "./src/hook/useClickOutside.ts"));
+exports.useClickOutside = useClickOutside_1.default;
+
+
+/***/ }),
+
+/***/ "./src/hook/useClickOutside.ts":
+/*!*************************************!*\
+  !*** ./src/hook/useClickOutside.ts ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var lodash_1 = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+var useClickOutside = function (ref, callback) {
+    (0, react_1.useEffect)(function () {
+        var listener = function (evt) {
+            if (ref.current.contains(evt.target) || (0, lodash_1.includes)(['year', 'month', 'select', 'select pick'], evt.target.className))
+                return;
+            callback();
+        };
+        document.addEventListener("click", listener, false);
+        return function () {
+            document.removeEventListener("click", listener, false);
+        };
+    }, [ref, callback]);
+};
+exports["default"] = useClickOutside;
+
+
+/***/ }),
+
+/***/ "./src/hook/useHover.ts":
+/*!******************************!*\
+  !*** ./src/hook/useHover.ts ***!
+  \******************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var useHover = function (ref) {
+    var _a = (0, react_1.useState)(false), value = _a[0], setValue = _a[1];
+    var handleMouseOver = function () { return setValue(true); };
+    var handleMouseOut = function () { return setValue(false); };
+    (0, react_1.useEffect)(function () {
+        var node = ref.current;
+        if (node) {
+            node.addEventListener("mouseover", handleMouseOver);
+            node.addEventListener("mouseout", handleMouseOut);
+            return function () {
+                node.removeEventListener("mouseover", handleMouseOver);
+                node.removeEventListener("mouseout", handleMouseOut);
+            };
+        }
+    }, [ref.current]);
+    return value;
+};
+exports["default"] = useHover;
+
+
+/***/ }),
+
+/***/ "./src/util/index.ts":
+/*!***************************!*\
+  !*** ./src/util/index.ts ***!
+  \***************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.rangeDateToText = exports.singleDateToText = exports.getDefaultFormat = void 0;
+var constants_1 = __webpack_require__(/*! Src/constants */ "./src/constants.ts");
+var getDefaultFormat = function (selectionMode, enableSecond) {
+    if (enableSecond === void 0) { enableSecond = false; }
+    return "".concat(constants_1.DEFAULT_FORMATS_MAP[selectionMode]).concat((enableSecond && (selectionMode === 'daytime' || selectionMode === 'time')) ? ':ss' : '');
+};
+exports.getDefaultFormat = getDefaultFormat;
 var singleDateToText = function (d, f) {
-    if (d) {
-        return d.format(f);
-    }
-    return '';
+    if (!d)
+        return '';
+    return d.format(f);
 };
 exports.singleDateToText = singleDateToText;
 var rangeDateToText = function (d, f) {

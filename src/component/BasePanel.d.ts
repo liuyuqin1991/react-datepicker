@@ -5,6 +5,7 @@ import 'Scss/base-panel.scss';
 interface BasePanelProps {
     defaultDate?: Dayjs;
     onPick: (date: Dayjs[] | Dayjs) => void;
+    onVirtualPick?: (date: Dayjs[] | Dayjs) => void;
     onClose?: () => void;
     selectionMode: SelectionMode;
     disabledDateFunc?: (date: Date) => boolean;
