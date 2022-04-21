@@ -78,6 +78,11 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
     setPickerVisible(false);
   };
 
+  // 仅在selectionMode为daytime时，点击日期时调用
+  const virtualDatePick = (d: Dayjs[]) => {
+    setDate(d[1]);
+  }
+
   const clearText = () => {
     setText('');
     setDate(dayjs());
@@ -105,6 +110,7 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
           <BasePanel
             selectionMode={selectionMode}
             onPick={onDatePick}
+            onVirtualPick={virtualDatePick}
             onClose={closePanel}
             defaultDate={date}
             enableShowWeekNum={enableShowWeekNum}

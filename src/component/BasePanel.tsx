@@ -14,6 +14,8 @@ import 'Scss/base-panel.scss';
 interface BasePanelProps {
   defaultDate?: Dayjs,
   onPick: (date: Dayjs[] | Dayjs) => void,
+  // 仅在selectionMode为daytime时，点击日期时调用
+  onVirtualPick?: (date: Dayjs[] | Dayjs) => void,
   onClose?: () => void,
   selectionMode: SelectionMode,
   disabledDateFunc?: (date: Date) => boolean,
@@ -32,6 +34,7 @@ const BasePanel: React.FC<BasePanelProps> = (props) => {
     selectionMode,
     defaultDate,
     onPick,
+    onVirtualPick,
     onClose,
     disabledDateFunc,
     enableSecond,
@@ -73,6 +76,7 @@ const BasePanel: React.FC<BasePanelProps> = (props) => {
     // 日视图且开启时间选择时
     else if (selectionMode === 'daytime') {
       setDate(d[1]);
+      onVirtualPick(d);
     } else {
       onPick(d);
     }
@@ -202,7 +206,7 @@ const BasePanel: React.FC<BasePanelProps> = (props) => {
             </div>
             <DayPanel
               onPick={datePick}
-              defaultDate={date}
+              defaultDate={defaultDate}
               virtualDate={date}
               selectionMode={selectionMode}
               enableShowWeekNum={enableShowWeekNum}
