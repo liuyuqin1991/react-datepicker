@@ -6,7 +6,7 @@
 
 > String | 可选 | v1.0
 
-日期模式，默认值为`day`，可选值为` day | week | month | quarter | year `。
+日期模式，默认值为`day`，可选值为` day | week | month | quarter | year | daytime`。
 
 ### defaultDate
 

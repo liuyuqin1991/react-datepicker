@@ -1,6 +1,6 @@
 # react-datepicker
 Datepicker基础组件库，react hook + typescript 代码风格，包含DatePicker，TimePicker，DateRangePicker三个子组件:
-* DatePicker，标准单日期选择组件，支持日，周，月，季，年5种日期维度选择；
+* DatePicker，标准单日期选择组件，支持日，周，月，季，年，日期时间共6种日期类型选择；
 * TimePicker，标准时间选择组件，全新设计，避免滚动选择，特定时间点直观显示
 * DateRangePicker，范围双日期选择组件，支持日，周，月，季，年5种日期维度选择；
 
