@@ -11,13 +11,13 @@ import 'Scss/picker.scss';
 
 interface TimePickerProps {
   // v2.0参数
-  defaultTime?: Date | string,
-  onPick: (date: Date) => void,
-  format?: string,
-  placeholder?: string,
+  defaultTime?: Date | string;
+  onPick: (date: Date) => void;
+  format?: string;
+  placeholder?: string;
   className?: string;
-  enableSecond?: boolean,
-  enableClear?: boolean,
+  enableSecond?: boolean;
+  enableClear?: boolean;
 }
 
 const TimePicker: React.FC<TimePickerProps> = (props) => {
@@ -28,12 +28,14 @@ const TimePicker: React.FC<TimePickerProps> = (props) => {
     enableSecond = false,
     enableClear = true,
     format = getDefaultFormat('time', enableSecond),
-    onPick
+    onPick,
   } = props;
   // state
   const [pickerVisible, setPickerVisible] = useState<boolean>(false);
   const [time, setTime] = useState<Dayjs>(() => {
-    return defaultTime ? dayjs(defaultTime) : dayjs().hour(0).minute(0).second(0);
+    return defaultTime
+      ? dayjs(defaultTime)
+      : dayjs().hour(0).minute(0).second(0);
   });
   const [text, setText] = useState<string>(() => {
     return defaultTime ? singleDateToText(time, format) : '';
@@ -44,24 +46,28 @@ const TimePicker: React.FC<TimePickerProps> = (props) => {
   const [popperElement, setPopperElement] = useState(null);
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
     placement: 'bottom-start',
-    modifiers: [{ 
-      name: 'preventOverflow',
-      options: { padding: 8 } 
-    }],
+    modifiers: [
+      {
+        name: 'preventOverflow',
+        options: { padding: 8 },
+      },
+    ],
   });
 
-  useClickOutside(timePickerRef, () => { setPickerVisible(false) });
+  useClickOutside(timePickerRef, () => {
+    setPickerVisible(false);
+  });
 
   const onInputFocus = () => {
     if (!pickerVisible) {
       setPickerVisible(true);
     }
-  }
+  };
 
   const onTimePick = (d: Dayjs) => {
     setTime(d);
     setText(singleDateToText(d, format));
-    if(_isFunction(onPick)){
+    if (_isFunction(onPick)) {
       onPick(d.toDate());
     }
     setPickerVisible(false);
@@ -70,16 +76,19 @@ const TimePicker: React.FC<TimePickerProps> = (props) => {
   const onClearText = () => {
     setText('');
     setTime(dayjs().hour(0).minute(0).second(0));
-  }
+  };
 
   const closePanel = () => {
     setPickerVisible(false);
   };
 
   return (
-    <div ref={timePickerRef}  className={classnames('timepicker-box', className)}>
+    <div
+      ref={timePickerRef}
+      className={classnames('timepicker-box', className)}
+    >
       <div ref={setReferenceElement}>
-        <Input 
+        <Input
           selectionMode="time"
           onFocus={onInputFocus}
           value={text}
@@ -88,9 +97,12 @@ const TimePicker: React.FC<TimePickerProps> = (props) => {
           enableClear={enableClear}
         />
       </div>
-      {
-        pickerVisible && 
-        <div ref={setPopperElement} style={_assign(styles.popper, { zIndex: 10 })} {...attributes.popper}>
+      {pickerVisible && (
+        <div
+          ref={setPopperElement}
+          style={_assign(styles.popper, { zIndex: 10 })}
+          {...attributes.popper}
+        >
           <BasePanel
             selectionMode="time"
             onPick={onTimePick}
@@ -99,10 +111,9 @@ const TimePicker: React.FC<TimePickerProps> = (props) => {
             enableSecond={enableSecond}
           />
         </div>
-      }
+      )}
     </div>
-  ) 
+  );
 };
 
 export default TimePicker;
-

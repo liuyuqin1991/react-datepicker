@@ -15,18 +15,18 @@ import 'Scss/picker.scss';
 
 interface DatePickerProps {
   // v1.0参数
-  selectionMode?: SelectionMode,
-  defaultDate?: Date | string,
-  onPick: (date: Date[]) => void,
-  format?: string,
-  placeholder?: string,
-  disabledDateFunc?: (date: Date) => boolean,
-  className?: string,
+  selectionMode?: SelectionMode;
+  defaultDate?: Date | string;
+  onPick: (date: Date[]) => void;
+  format?: string;
+  placeholder?: string;
+  disabledDateFunc?: (date: Date) => boolean;
+  className?: string;
   // v2.0参数
-  enableClear?: boolean,
+  enableClear?: boolean;
   // v3.0参数
-  enableShowWeekNum?: boolean,
-  enableSecond?: boolean,
+  enableShowWeekNum?: boolean;
+  enableSecond?: boolean;
 }
 
 const DatePicker: React.FC<DatePickerProps> = (props) => {
@@ -45,57 +45,66 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
   // state
   const [pickerVisible, setPickerVisible] = useState<boolean>(false);
   const [date, setDate] = useState<Dayjs>(dayjs(defaultDate));
-  const [text, setText] = useState<string>(defaultDate ? singleDateToText(date, format) : '');
+  const [text, setText] = useState<string>(
+    defaultDate ? singleDateToText(date, format) : ''
+  );
   const datePickerRef = useRef<HTMLDivElement>(null);
   // popper相关
   const [referenceElement, setReferenceElement] = useState(null);
   const [popperElement, setPopperElement] = useState(null);
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
     placement: 'bottom-start',
-    modifiers: [{ 
-      name: 'preventOverflow',
-      options: { padding: 8 } 
-    }],
+    modifiers: [
+      {
+        name: 'preventOverflow',
+        options: { padding: 8 },
+      },
+    ],
   });
   // 扩展dayjs的功能
   dayjs.extend(advancedFormat);
   dayjs.extend(weekOfYear);
 
-  useClickOutside(datePickerRef, () => { setPickerVisible(false) });
+  useClickOutside(datePickerRef, () => {
+    setPickerVisible(false);
+  });
 
   const onInputFocus = () => {
     if (!pickerVisible) {
       setPickerVisible(true);
     }
-  }
+  };
 
   const onDatePick = (d: Dayjs[]) => {
     setDate(d[1]);
     setText(singleDateToText(d[1], format));
-    if(_isFunction(onPick)){
+    if (_isFunction(onPick)) {
       onPick([d[0].toDate(), d[1].toDate()]);
     }
     setPickerVisible(false);
   };
 
-  // 仅在selectionMode为daytime时，点击日期时调用
+  // 仅在daytime模式时，点击日期时调用
   const virtualDatePick = (d: Dayjs[]) => {
     setDate(d[1]);
-  }
+  };
 
   const clearText = () => {
     setText('');
     setDate(dayjs());
-  }
+  };
 
   const closePanel = () => {
     setPickerVisible(false);
   };
 
   return (
-    <div ref={datePickerRef}  className={classnames('datepicker-box', className)}>
+    <div
+      ref={datePickerRef}
+      className={classnames('datepicker-box', className)}
+    >
       <div ref={setReferenceElement}>
-        <Input 
+        <Input
           selectionMode={selectionMode}
           onFocus={onInputFocus}
           value={text}
@@ -104,9 +113,12 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
           enableClear={enableClear}
         />
       </div>
-      {
-        pickerVisible && 
-        <div ref={setPopperElement} style={_assign(styles.popper, { zIndex: 10 })} {...attributes.popper}>
+      {pickerVisible && (
+        <div
+          ref={setPopperElement}
+          style={_assign(styles.popper, { zIndex: 10 })}
+          {...attributes.popper}
+        >
           <BasePanel
             selectionMode={selectionMode}
             onPick={onDatePick}
@@ -118,10 +130,9 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
             enableSecond={enableSecond}
           />
         </div>
-      }
+      )}
     </div>
-  ) 
+  );
 };
 
 export default DatePicker;
-

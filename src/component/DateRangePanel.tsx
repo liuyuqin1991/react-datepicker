@@ -8,19 +8,18 @@ import DatePicker from 'Src/DatePicker';
 import 'Scss/date-range-panel.scss';
 
 interface DateRangePanelProps {
-  selectionMode: SelectionMode,
-  defaultDate: Dayjs[],
-  format: string,
-  titleLabel: string,
-  contentLabel: string[],
-  enableShowWeekNum: boolean,
-  onPick: (date: Dayjs[]) => void,
-  onClose: () => void,
-  disabledDateFunc?: (date: Date) => boolean,
+  selectionMode: SelectionMode;
+  defaultDate: Dayjs[];
+  format: string;
+  titleLabel: string;
+  contentLabel: string[];
+  enableShowWeekNum: boolean;
+  onPick: (date: Dayjs[]) => void;
+  onClose: () => void;
+  disabledDateFunc?: (date: Date) => boolean;
 }
 
 const DateRangePanel: React.FC<DateRangePanelProps> = (props) => {
-
   const {
     selectionMode,
     defaultDate,
@@ -30,7 +29,7 @@ const DateRangePanel: React.FC<DateRangePanelProps> = (props) => {
     enableShowWeekNum,
     onPick,
     onClose,
-    disabledDateFunc
+    disabledDateFunc,
   } = props;
 
   const [date, setDate] = useState<Dayjs[]>(defaultDate);
@@ -46,7 +45,7 @@ const DateRangePanel: React.FC<DateRangePanelProps> = (props) => {
   const datePick = () => {
     if (isBefore) return;
     onPick(date);
-  }
+  };
 
   const isBefore = useMemo(() => date[1].isBefore(date[0]), [date]);
 

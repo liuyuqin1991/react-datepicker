@@ -8,26 +8,33 @@ import dayjs, { Dayjs } from 'dayjs';
 import Slider from 'rc-slider';
 
 import { ActionButton } from 'Component';
-import { Time } from 'Typing'
+import { Time } from 'Typing';
 
 import 'rc-slider/assets/index.css';
 import 'Scss/time-panel.scss';
 
 interface TimePanelProps {
-  defaultTime?: Time,
-  onPick?: (time: Dayjs) => void,
-  onClose?: () => void,
-  onChange?: (time: Time) => void,
-  enableSecond: boolean,
-  showButton?: boolean,
+  defaultTime?: Time;
+  onPick?: (time: Dayjs) => void;
+  onClose?: () => void;
+  onChange?: (time: Time) => void;
+  enableSecond: boolean;
+  showButton?: boolean;
 }
 
 const addPrefixZero = (v: number): string => {
   return v < 10 ? `0${v}` : v.toString();
-}
+};
 
 const TimePanel: React.FC<TimePanelProps> = (props) => {
-  const { defaultTime, onPick, onClose, onChange, enableSecond, showButton = true } = props;
+  const {
+    defaultTime,
+    onPick,
+    onClose,
+    onChange,
+    enableSecond,
+    showButton = true,
+  } = props;
   const [time, setTime] = useState<Time>(defaultTime);
 
   const handlePick = () => {
@@ -112,28 +119,34 @@ const TimePanel: React.FC<TimePanelProps> = (props) => {
       <div className="action-panel">
         <div className="hour-panel">
           <div className="input-panel">
-            <input className="time-input" value={addPrefixZero(time.hour)} readOnly/>
+            <input
+              className="time-input"
+              value={addPrefixZero(time.hour)}
+              readOnly
+            />
           </div>
-          <div className="slider-panel">
-            {renderHourSlider}
-          </div>
+          <div className="slider-panel">{renderHourSlider}</div>
         </div>
         <div className="minute-panel">
           <div className="input-panel">
-            <input className="time-input" value={addPrefixZero(time.minute)} readOnly/>
+            <input
+              className="time-input"
+              value={addPrefixZero(time.minute)}
+              readOnly
+            />
           </div>
-          <div className="slider-panel">
-            {renderMinuteSlider}
-          </div>
+          <div className="slider-panel">{renderMinuteSlider}</div>
         </div>
         {enableSecond && (
           <div className="second-panel">
             <div className="input-panel">
-              <input className="time-input" value={addPrefixZero(time.second)} readOnly/>
+              <input
+                className="time-input"
+                value={addPrefixZero(time.second)}
+                readOnly
+              />
             </div>
-            <div className="slider-panel">
-              {renderSecondSlider}
-            </div>
+            <div className="slider-panel">{renderSecondSlider}</div>
           </div>
         )}
       </div>

@@ -13,10 +13,10 @@ import { TD } from 'Typing';
 import 'Scss/year-panel.scss';
 
 interface YearPanelProps {
-  defaultDate?: Dayjs,
-  virtualDate?: Dayjs,
-  onPick: (date: Dayjs[]) => void,
-  disabledDateFunc?: (date: Dayjs) => void,
+  defaultDate?: Dayjs;
+  virtualDate?: Dayjs;
+  onPick: (date: Dayjs[]) => void;
+  disabledDateFunc?: (date: Dayjs) => void;
 }
 
 const YearPanel: React.FC<YearPanelProps> = (props) => {
@@ -36,31 +36,32 @@ const YearPanel: React.FC<YearPanelProps> = (props) => {
    */
   const computeCellArray = (): TD[] => {
     const cell: TD[] = [];
-    const preYear: number = _toInteger(virtualDate.year() / 10) ;
+    const preYear: number = _toInteger(virtualDate.year() / 10);
     _times(12).map((index: number) => {
       // 前缀为年份的前三位，后缀为年份的最后一位
-      const currentYear: number = _toInteger(`${_toString(preYear)}${_toString(index)}`);
+      const currentYear: number = _toInteger(
+        `${_toString(preYear)}${_toString(index)}`
+      );
       const theYear: Dayjs = virtualDate.year(currentYear);
       const style = {
-        'select': true,
-        'pick':  currentYear === defaultDate.year(),
-        'disabled': _isFunction(disabledDateFunc) && disabledDateFunc(theYear)
+        select: true,
+        pick: currentYear === defaultDate.year(),
+        disabled: _isFunction(disabledDateFunc) && disabledDateFunc(theYear),
       };
-      if(index < 10){
+      if (index < 10) {
         cell.push({
           label: currentYear,
           style,
-        }); 
-      }
-      else{
+        });
+      } else {
         cell.push({
           label: index,
-          style: {'hide': true },
-        }); 
+          style: { hide: true },
+        });
       }
     });
     return cell;
-  }
+  };
 
   /**
    * 渲染日历Tbody
@@ -71,27 +72,28 @@ const YearPanel: React.FC<YearPanelProps> = (props) => {
     const cellArray: TD[] = computeCellArray();
     cellArray.map((year: TD, index: number) => {
       tdArray.push(
-        <td  key={`year-${year.label}`} className={classnames(year.style)} onClick={() => onDatePick(year)}>
+        <td
+          key={`year-${year.label}`}
+          className={classnames(year.style)}
+          onClick={() => onDatePick(year)}
+        >
           {year.label}
         </td>
-      )
-      if((index !== 0 && ( index + 1 ) % 4 === 0) || index === cellArray.length - 1){
-        trArray.push(
-          <tr key={`years-${index/4}`}>
-            {tdArray}
-          </tr>
-        );
+      );
+      if (
+        (index !== 0 && (index + 1) % 4 === 0) ||
+        index === cellArray.length - 1
+      ) {
+        trArray.push(<tr key={`years-${index / 4}`}>{tdArray}</tr>);
         tdArray = [];
       }
     });
     return trArray;
-  }
+  };
 
   return (
     <table cellSpacing="0" cellPadding="0" className="year-table">
-      <tbody>
-        {renderTbody()}
-      </tbody>
+      <tbody>{renderTbody()}</tbody>
     </table>
   );
 };

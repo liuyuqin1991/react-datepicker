@@ -1,6 +1,6 @@
 {
   "name": "react-datepicker-ts",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "DatePicker基础组件，react hook + typescript 代码风格，日期组件支持日、周、月、季、年选择，时间组件支持标准时、分、秒选择。",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
@@ -30,10 +30,15 @@
     "@typescript-eslint/parser": "^5.17.0",
     "css-loader": "^6.7.1",
     "eslint": "^7.19.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "html-webpack-plugin": "^5.5.0",
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.6.0",
+    "prettier": "2.6.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
@@ -42,9 +47,7 @@
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4",
-    "yargs": "^17.4.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "yargs": "^17.4.0"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.4",

@@ -1,8 +1,5 @@
 import React, { useState, useRef } from 'react';
-import {
-  assign as _assign,
-  isFunction as _isFunction,
-} from 'lodash';
+import { assign as _assign, isFunction as _isFunction } from 'lodash';
 import dayjs, { Dayjs } from 'dayjs';
 import advancedFormat from 'dayjs/plugin/advancedFormat';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
@@ -17,17 +14,17 @@ import 'Scss/picker.scss';
 
 interface DateRangePickerProps {
   // v3.0参数
-  selectionMode?: SelectionMode,
-  defaultDate?: Date[] | string[],
-  onPick: (date: Date[]) => void,
-  format?: string,
-  placeholder?: string,
-  disabledDateFunc?: (date: Date) => boolean,
-  className?: string,
-  enableClear?: boolean,
-  enableShowWeekNum?: boolean,
-  titleLabel?: string,
-  contentLabel?: string[],
+  selectionMode?: SelectionMode;
+  defaultDate?: Date[] | string[];
+  onPick: (date: Date[]) => void;
+  format?: string;
+  placeholder?: string;
+  disabledDateFunc?: (date: Date) => boolean;
+  className?: string;
+  enableClear?: boolean;
+  enableShowWeekNum?: boolean;
+  titleLabel?: string;
+  contentLabel?: string[];
 }
 
 const DateRangePicker: React.FC<DateRangePickerProps> = (props) => {
@@ -42,7 +39,7 @@ const DateRangePicker: React.FC<DateRangePickerProps> = (props) => {
     enableShowWeekNum = true,
     titleLabel = '请选择日期范围',
     contentLabel = ['起始日期：', '结束日期：'],
-    disabledDateFunc
+    disabledDateFunc,
   } = props;
   // state
   const [pickerVisible, setPickerVisible] = useState<boolean>(false);
@@ -53,17 +50,21 @@ const DateRangePicker: React.FC<DateRangePickerProps> = (props) => {
     }
     return [dayjs(), dayjs()];
   });
-  const [text, setText] = useState<string>(defaultDate ? rangeDateToText(date, format) : '');
+  const [text, setText] = useState<string>(
+    defaultDate ? rangeDateToText(date, format) : ''
+  );
   const dateRangePickerRef = useRef<HTMLDivElement>(null);
   // popper相关
   const [referenceElement, setReferenceElement] = useState(null);
   const [popperElement, setPopperElement] = useState(null);
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
     placement: 'bottom-start',
-    modifiers: [{ 
-      name: 'preventOverflow',
-      options: { padding: 8 } 
-    }],
+    modifiers: [
+      {
+        name: 'preventOverflow',
+        options: { padding: 8 },
+      },
+    ],
   });
   // 扩展dayjs的功能
   dayjs.extend(advancedFormat);
@@ -73,13 +74,13 @@ const DateRangePicker: React.FC<DateRangePickerProps> = (props) => {
     if (!pickerVisible) {
       setPickerVisible(true);
     }
-  }
+  };
 
   // 点击确定后的回调函数
   const datePick = (d: Dayjs[]) => {
     setDate(d);
     setText(rangeDateToText(d, format));
-    if(_isFunction(onPick)){
+    if (_isFunction(onPick)) {
       onPick([d[0].toDate(), d[1].toDate()]);
     }
     setPickerVisible(false);
@@ -88,16 +89,19 @@ const DateRangePicker: React.FC<DateRangePickerProps> = (props) => {
   const clearText = () => {
     setText('');
     setDate([dayjs(), dayjs()]);
-  }
+  };
 
   const closePanel = () => {
     setPickerVisible(false);
-  }
+  };
 
   return (
-    <div ref={dateRangePickerRef}  className={classnames('daterangepicker-box', className)}>
+    <div
+      ref={dateRangePickerRef}
+      className={classnames('daterangepicker-box', className)}
+    >
       <div ref={setReferenceElement}>
-        <Input 
+        <Input
           selectionMode={selectionMode}
           onFocus={onInputFocus}
           value={text}
@@ -106,9 +110,12 @@ const DateRangePicker: React.FC<DateRangePickerProps> = (props) => {
           enableClear={enableClear}
         />
       </div>
-      {
-        pickerVisible && 
-        <div ref={setPopperElement} style={_assign(styles.popper, { zIndex: 10 })} {...attributes.popper}>
+      {pickerVisible && (
+        <div
+          ref={setPopperElement}
+          style={_assign(styles.popper, { zIndex: 10 })}
+          {...attributes.popper}
+        >
           <DateRangePanel
             selectionMode={selectionMode}
             onPick={datePick}
@@ -121,10 +128,9 @@ const DateRangePicker: React.FC<DateRangePickerProps> = (props) => {
             contentLabel={contentLabel}
           />
         </div>
-      }
+      )}
     </div>
-  ) 
+  );
 };
 
 export default DateRangePicker;
-
