@@ -1,13 +1,12 @@
-
-@import "./color.scss";
+@import './color.scss';
 
 .daterange-panel {
-	color: $c-datepicker-text;
-	border: 1px solid $c-datepicker-border;
-	box-shadow: 0 2px 6px $c-datepicker-border;
-	background: $c-datepicker-white;
-	border-radius: 2px;
-	line-height: 20px;
+  color: $c-datepicker-text;
+  border: 1px solid $c-datepicker-border;
+  box-shadow: 0 2px 6px $c-datepicker-border;
+  background: $c-datepicker-white;
+  border-radius: 2px;
+  line-height: 20px;
   margin: 5px 0;
 
   > .daterange-title {
@@ -16,7 +15,7 @@
     align-items: center;
     font-size: 14px;
     color: $c-datepicker-text-light;
-    padding: 15px 15px 5px;
+    padding: 15px;
 
     > .icon-close {
       font-size: 16px;
@@ -29,31 +28,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 15px;
+    padding: 0 15px 10px;
 
     .datepicker-box {
       margin-left: 20px;
-    }
-  }
-
-  .daterange-btn-panel {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 5px;
-    padding: 5px 15px;
-    border-top: 1px solid $c-datepicker-border;
-
-    .btn-cancel,
-    .btn-ok {
-      &:hover {
-        cursor: pointer;
-      }
-    }
-
-    .btn-ok {
-      margin-left: 15px;
-      color: var(--c-datepicker-primary);
-      cursor: pointer;
     }
   }
 
