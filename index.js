@@ -3224,7 +3224,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  padding: 0;\n}\n\n.content {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  padding: 0 20px 30px;\n}\n.content .title {\n  padding: 20px 0 0;\n  font-size: 24px;\n}\n.content .title.common {\n  padding: 20px 0;\n  margin: 0 20px;\n}\n.content .title.special {\n  padding: 20px 0;\n  margin: 0 20px;\n}\n.content .label-panel {\n  padding: 30px 0 10px;\n  font-size: 20px;\n  color: #111;\n}\n.content .date-panel {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  align-items: center;\n}\n.content .date-panel .date-select {\n  display: flex;\n  align-items: center;\n  margin-right: 10px;\n  margin-bottom: 10px;\n}\n.content .date-panel .date-select > span {\n  color: #aaa;\n}", "",{"version":3,"sources":["webpack://./example/src/app.scss"],"names":[],"mappings":"AAAA;EACE,SAAA;EACA,UAAA;AACF;;AAEA;EACE,WAAA;EACA,aAAA;EACA,sBAAA;EACA,oBAAA;AACF;AACE;EACE,iBAAA;EACA,eAAA;AACJ;AACI;EACE,eAAA;EACA,cAAA;AACN;AAEI;EACE,eAAA;EACA,cAAA;AAAN;AAIE;EACE,oBAAA;EACA,eAAA;EACA,WAAA;AAFJ;AAKE;EACE,aAAA;EACA,mBAAA;EACA,eAAA;EACA,mBAAA;AAHJ;AAKI;EACE,aAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;AAHN;AAKM;EACE,WAAA;AAHR","sourcesContent":["body {\n  margin: 0;\n  padding: 0;\n}\n\n.content {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  padding: 0 20px 30px;\n\n  .title {\n    padding: 20px 0 0;\n    font-size: 24px;\n\n    &.common {\n      padding: 20px 0;\n      margin: 0 20px;\n    }\n\n    &.special {\n      padding: 20px 0;\n      margin: 0 20px;\n    }\n  }\n\n  .label-panel {\n    padding: 30px 0 10px;\n    font-size: 20px;\n    color: #111;\n  }\n\n  .date-panel {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    align-items: center;\n\n    .date-select {\n      display: flex;\n      align-items: center;\n      margin-right: 10px;\n      margin-bottom: 10px;\n\n      > span {\n        color: #aaa;\n      }\n    }\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  padding: 0;\n}\n\n.content {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  padding: 0 20px 30px;\n}\n.content .title {\n  padding: 20px 0 0;\n  font-size: 24px;\n}\n.content .title.common {\n  padding: 20px 0;\n  margin: 0 20px;\n}\n.content .title.special {\n  padding: 20px 0;\n  margin: 0 20px;\n}\n.content .label-panel {\n  padding: 30px 0 10px;\n  font-size: 20px;\n  color: #111;\n}\n.content .date-panel {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  align-items: center;\n}\n.content .date-panel .date-select {\n  display: flex;\n  align-items: center;\n  margin-right: 10px;\n  margin-bottom: 10px;\n}\n.content .date-panel .date-select > span {\n  color: #aaa;\n}\n.content .design-tip {\n  color: #777;\n  font-size: 12px;\n}", "",{"version":3,"sources":["webpack://./example/src/app.scss"],"names":[],"mappings":"AAAA;EACE,SAAA;EACA,UAAA;AACF;;AAEA;EACE,WAAA;EACA,aAAA;EACA,sBAAA;EACA,oBAAA;AACF;AACE;EACE,iBAAA;EACA,eAAA;AACJ;AACI;EACE,eAAA;EACA,cAAA;AACN;AAEI;EACE,eAAA;EACA,cAAA;AAAN;AAIE;EACE,oBAAA;EACA,eAAA;EACA,WAAA;AAFJ;AAKE;EACE,aAAA;EACA,mBAAA;EACA,eAAA;EACA,mBAAA;AAHJ;AAKI;EACE,aAAA;EACA,mBAAA;EACA,kBAAA;EACA,mBAAA;AAHN;AAKM;EACE,WAAA;AAHR;AAQE;EACE,WAAA;EACA,eAAA;AANJ","sourcesContent":["body {\n  margin: 0;\n  padding: 0;\n}\n\n.content {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  padding: 0 20px 30px;\n\n  .title {\n    padding: 20px 0 0;\n    font-size: 24px;\n\n    &.common {\n      padding: 20px 0;\n      margin: 0 20px;\n    }\n\n    &.special {\n      padding: 20px 0;\n      margin: 0 20px;\n    }\n  }\n\n  .label-panel {\n    padding: 30px 0 10px;\n    font-size: 20px;\n    color: #111;\n  }\n\n  .date-panel {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    align-items: center;\n\n    .date-select {\n      display: flex;\n      align-items: center;\n      margin-right: 10px;\n      margin-bottom: 10px;\n\n      > span {\n        color: #aaa;\n      }\n    }\n  }\n\n  .design-tip {\n    color: #777;\n    font-size: 12px;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3332,7 +3332,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --c-datepicker-primary: rgb(19,164,116);\n  --c-datepicker-primary-light: rgba(19,164,116,0.1);\n}\n\n.daterange-panel {\n  color: #111;\n  border: 1px solid #eee;\n  box-shadow: 0 2px 6px #eee;\n  background: #fff;\n  border-radius: 2px;\n  line-height: 20px;\n  margin: 5px 0;\n}\n.daterange-panel > .daterange-title {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  font-size: 14px;\n  color: #aaa;\n  padding: 15px 15px 5px;\n}\n.daterange-panel > .daterange-title > .icon-close {\n  font-size: 16px;\n  cursor: pointer;\n}\n.daterange-panel .daterange-select-panel {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n  padding: 5px 15px;\n}\n.daterange-panel .daterange-select-panel .datepicker-box {\n  margin-left: 20px;\n}\n.daterange-panel .daterange-btn-panel {\n  display: flex;\n  justify-content: flex-end;\n  margin-top: 5px;\n  padding: 5px 15px;\n  border-top: 1px solid #eee;\n}\n.daterange-panel .daterange-btn-panel .btn-cancel:hover,\n.daterange-panel .daterange-btn-panel .btn-ok:hover {\n  cursor: pointer;\n}\n.daterange-panel .daterange-btn-panel .btn-ok {\n  margin-left: 15px;\n  color: var(--c-datepicker-primary);\n  cursor: pointer;\n}\n.daterange-panel .daterange-tip-panel {\n  padding: 0 15px;\n  color: #cf3b37;\n}", "",{"version":3,"sources":["webpack://./src/scss/color.scss","webpack://./src/scss/date-range-panel.scss"],"names":[],"mappings":"AAAA;EACE,uCAAA;EACA,kDAAA;ACCF;;AAAA;EACC,WDEmB;ECDnB,sBAAA;EACA,0BAAA;EACA,gBDFoB;ECGpB,kBAAA;EACA,iBAAA;EACC,aAAA;AAGF;AADE;EACE,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,eAAA;EACA,WDVsB;ECWtB,sBAAA;AAGJ;AADI;EACE,eAAA;EACA,eAAA;AAGN;AACE;EACE,aAAA;EACA,mBAAA;EACA,8BAAA;EACA,mBAAA;EACA,iBAAA;AACJ;AACI;EACE,iBAAA;AACN;AAGE;EACE,aAAA;EACA,yBAAA;EACA,eAAA;EACA,iBAAA;EACA,0BAAA;AADJ;AAKM;;EACE,eAAA;AAFR;AAMI;EACE,iBAAA;EACA,kCAAA;EACA,eAAA;AAJN;AAQE;EACE,eAAA;EACA,cDrDsB;AC+C1B","sourcesContent":[":root {\n  --c-datepicker-primary: rgb(19,164,116);\n  --c-datepicker-primary-light: rgba(19,164,116,0.1);\n}\n\n$c-datepicker-white: #fff;\n$c-datepicker-text: #111;\n$c-datepicker-text-light: #aaa;\n$c-datepicker-text-error: #cf3b37;\n$c-datepicker-border: #eee;\n$c-datepicker-icon: #ddd;\n$c-datepicker-th-text: #888;\n$c-datepicker-td-text: #333;\n$c-datepicker-td-disabled-text: #aaa;\n$c-datepicker-td-disabled-background: #eee;\n","\n@import \"./color.scss\";\n\n.daterange-panel {\n\tcolor: $c-datepicker-text;\n\tborder: 1px solid $c-datepicker-border;\n\tbox-shadow: 0 2px 6px $c-datepicker-border;\n\tbackground: $c-datepicker-white;\n\tborder-radius: 2px;\n\tline-height: 20px;\n  margin: 5px 0;\n\n  > .daterange-title {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    font-size: 14px;\n    color: $c-datepicker-text-light;\n    padding: 15px 15px 5px;\n\n    > .icon-close {\n      font-size: 16px;\n      cursor: pointer;\n    }\n  }\n\n  .daterange-select-panel {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n    padding: 5px 15px;\n\n    .datepicker-box {\n      margin-left: 20px;\n    }\n  }\n\n  .daterange-btn-panel {\n    display: flex;\n    justify-content: flex-end;\n    margin-top: 5px;\n    padding: 5px 15px;\n    border-top: 1px solid $c-datepicker-border;\n\n    .btn-cancel,\n    .btn-ok {\n      &:hover {\n        cursor: pointer;\n      }\n    }\n\n    .btn-ok {\n      margin-left: 15px;\n      color: var(--c-datepicker-primary);\n      cursor: pointer;\n    }\n  }\n\n  .daterange-tip-panel {\n    padding: 0 15px;\n    color: $c-datepicker-text-error;\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --c-datepicker-primary: rgb(19,164,116);\n  --c-datepicker-primary-light: rgba(19,164,116,0.1);\n}\n\n.daterange-panel {\n  color: #111;\n  border: 1px solid #eee;\n  box-shadow: 0 2px 6px #eee;\n  background: #fff;\n  border-radius: 2px;\n  line-height: 20px;\n  margin: 5px 0;\n}\n.daterange-panel > .daterange-title {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  font-size: 14px;\n  color: #aaa;\n  padding: 15px;\n}\n.daterange-panel > .daterange-title > .icon-close {\n  font-size: 16px;\n  cursor: pointer;\n}\n.daterange-panel .daterange-select-panel {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n  padding: 0 15px 10px;\n}\n.daterange-panel .daterange-select-panel .datepicker-box {\n  margin-left: 20px;\n}\n.daterange-panel .daterange-tip-panel {\n  padding: 0 15px;\n  color: #cf3b37;\n}", "",{"version":3,"sources":["webpack://./src/scss/color.scss","webpack://./src/scss/date-range-panel.scss"],"names":[],"mappings":"AAAA;EACE,uCAAA;EACA,kDAAA;ACCF;;AADA;EACE,WDGkB;ECFlB,sBAAA;EACA,0BAAA;EACA,gBDDmB;ECEnB,kBAAA;EACA,iBAAA;EACA,aAAA;AAIF;AAFE;EACE,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,eAAA;EACA,WDTsB;ECUtB,aAAA;AAIJ;AAFI;EACE,eAAA;EACA,eAAA;AAIN;AAAE;EACE,aAAA;EACA,mBAAA;EACA,8BAAA;EACA,mBAAA;EACA,oBAAA;AAEJ;AAAI;EACE,iBAAA;AAEN;AAEE;EACE,eAAA;EACA,cD/BsB;AC+B1B","sourcesContent":[":root {\n  --c-datepicker-primary: rgb(19,164,116);\n  --c-datepicker-primary-light: rgba(19,164,116,0.1);\n}\n\n$c-datepicker-white: #fff;\n$c-datepicker-text: #111;\n$c-datepicker-text-light: #aaa;\n$c-datepicker-text-error: #cf3b37;\n$c-datepicker-border: #eee;\n$c-datepicker-icon: #ddd;\n$c-datepicker-th-text: #888;\n$c-datepicker-td-text: #333;\n$c-datepicker-td-disabled-text: #aaa;\n$c-datepicker-td-disabled-background: #eee;\n","@import './color.scss';\n\n.daterange-panel {\n  color: $c-datepicker-text;\n  border: 1px solid $c-datepicker-border;\n  box-shadow: 0 2px 6px $c-datepicker-border;\n  background: $c-datepicker-white;\n  border-radius: 2px;\n  line-height: 20px;\n  margin: 5px 0;\n\n  > .daterange-title {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    font-size: 14px;\n    color: $c-datepicker-text-light;\n    padding: 15px;\n\n    > .icon-close {\n      font-size: 16px;\n      cursor: pointer;\n    }\n  }\n\n  .daterange-select-panel {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n    padding: 0 15px 10px;\n\n    .datepicker-box {\n      margin-left: 20px;\n    }\n  }\n\n  .daterange-tip-panel {\n    padding: 0 15px;\n    color: $c-datepicker-text-error;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -53522,10 +53522,9 @@ var Demo = function () {
                         react_1.default.createElement(DatePicker_1.default, { selectionMode: "daytime", onPick: datePick, defaultDate: "2022-2-22 22:20" })))),
             react_1.default.createElement("div", { className: "title" }, "TimePicker\u7EC4\u4EF6"),
             react_1.default.createElement("div", { className: "time" },
-                react_1.default.createElement("div", { className: "label-panel" }, "6. \u65F6\u95F4\u9009\u62E9\u7EC4\u4EF6\uFF08\u8BBE\u8BA1\u7075\u611F\uFF1A\u907F\u514D\u6EDA\u52A8\u9009\u62E9\uFF0C\u7279\u5B9A\u65F6\u95F4\u76F4\u89C2\u663E\u793A\u70B9\u51FB\uFF09"),
                 react_1.default.createElement("div", { className: "date-panel" },
                     react_1.default.createElement("div", { className: "date-select" },
-                        react_1.default.createElement("span", null, "\u57FA\u7840\u65F6\u95F4\uFF1A"),
+                        react_1.default.createElement("span", null, "\u9ED8\u8BA4\uFF1A"),
                         react_1.default.createElement(TimePicker_1.default, { onPick: timePick })),
                     react_1.default.createElement("div", { className: "date-select" },
                         react_1.default.createElement("span", null, "\u9884\u8BBE\u65F6\u95F4\uFF1A"),
@@ -53538,10 +53537,14 @@ var Demo = function () {
                         react_1.default.createElement(TimePicker_1.default, { onPick: timePick, placeholder: "\u8BF7\u9009\u62E9\u8D77\u59CB\u65F6\u95F4" })),
                     react_1.default.createElement("div", { className: "date-select" },
                         react_1.default.createElement("span", null, "\u542F\u7528\u79D2\uFF1A"),
-                        react_1.default.createElement(TimePicker_1.default, { onPick: timePick, defaultTime: "2022-2-22 06:50:25", enableSecond: true })))),
+                        react_1.default.createElement(TimePicker_1.default, { onPick: timePick, defaultTime: "2022-2-22 06:50:25", enableSecond: true }))),
+                react_1.default.createElement("div", { className: "design-tip" },
+                    react_1.default.createElement("p", null, "\u8BBE\u8BA1\u601D\u8DEF\uFF1A"),
+                    "1. \u907F\u514D\u6EDA\u52A8 \u2014\u2014 \u5BF9\u65E0\u6EDA\u8F6E\u3001\u6EDA\u8F6E\u6709\u95EE\u9898\u3001\u6EDA\u8F6E\u4E0D\u7075\u6D3B\u7684\u7528\u6237\u53CB\u597D",
+                    react_1.default.createElement("br", null),
+                    "2. \u76F4\u89C2\u663E\u793A \u2014\u2014 \u5E38\u7528\u65F6\u95F4\u70B9\u76F4\u89C2\u663E\u793A\uFF0C\u65B9\u4FBF\u70B9\u51FB\uFF0C\u4E0D\u5E38\u7528\u65F6\u95F4\u70B9\u53EF\u62D6\u62FD\u64CD\u4F5C")),
             react_1.default.createElement("div", { className: "title" }, "DateRangePicker\u7EC4\u4EF6"),
             react_1.default.createElement("div", { className: "daterange" },
-                react_1.default.createElement("div", { className: "label-panel" }, "1. \u9ED8\u8BA4"),
                 react_1.default.createElement("div", { className: "date-panel" },
                     react_1.default.createElement("div", { className: "date-select" },
                         react_1.default.createElement("span", null, "\u65E5\uFF1A"),
@@ -53579,7 +53582,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 var react_dom_1 = __importDefault(__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"));
 var App_1 = __importDefault(__webpack_require__(/*! ./App */ "./example/src/App.tsx"));
-react_dom_1.default.render(react_1.default.createElement(App_1.default, null), document.getElementById("root"));
+react_dom_1.default.render(react_1.default.createElement(App_1.default, null), document.getElementById('root'));
 
 
 /***/ }),
@@ -53654,15 +53657,19 @@ var DatePicker = function (props) {
     var _l = (0, react_1.useState)(null), popperElement = _l[0], setPopperElement = _l[1];
     var _m = (0, react_popper_1.usePopper)(referenceElement, popperElement, {
         placement: 'bottom-start',
-        modifiers: [{
+        modifiers: [
+            {
                 name: 'preventOverflow',
-                options: { padding: 8 }
-            }],
+                options: { padding: 8 },
+            },
+        ],
     }), styles = _m.styles, attributes = _m.attributes;
     // 扩展dayjs的功能
     dayjs_1.default.extend(advancedFormat_1.default);
     dayjs_1.default.extend(weekOfYear_1.default);
-    (0, Hook_1.useClickOutside)(datePickerRef, function () { setPickerVisible(false); });
+    (0, Hook_1.useClickOutside)(datePickerRef, function () {
+        setPickerVisible(false);
+    });
     var onInputFocus = function () {
         if (!pickerVisible) {
             setPickerVisible(true);
@@ -53676,7 +53683,7 @@ var DatePicker = function (props) {
         }
         setPickerVisible(false);
     };
-    // 仅在selectionMode为daytime时，点击日期时调用
+    // 仅在daytime模式时，点击日期时调用
     var virtualDatePick = function (d) {
         setDate(d[1]);
     };
@@ -53690,9 +53697,8 @@ var DatePicker = function (props) {
     return (react_1.default.createElement("div", { ref: datePickerRef, className: (0, classnames_1.default)('datepicker-box', className) },
         react_1.default.createElement("div", { ref: setReferenceElement },
             react_1.default.createElement(Component_1.Input, { selectionMode: selectionMode, onFocus: onInputFocus, value: text, placeholder: placeholder, onIconClick: clearText, enableClear: enableClear })),
-        pickerVisible &&
-            react_1.default.createElement("div", __assign({ ref: setPopperElement, style: (0, lodash_1.assign)(styles.popper, { zIndex: 10 }) }, attributes.popper),
-                react_1.default.createElement(Component_1.BasePanel, { selectionMode: selectionMode, onPick: onDatePick, onVirtualPick: virtualDatePick, onClose: closePanel, defaultDate: date, enableShowWeekNum: enableShowWeekNum, disabledDateFunc: disabledDateFunc, enableSecond: enableSecond }))));
+        pickerVisible && (react_1.default.createElement("div", __assign({ ref: setPopperElement, style: (0, lodash_1.assign)(styles.popper, { zIndex: 10 }) }, attributes.popper),
+            react_1.default.createElement(Component_1.BasePanel, { selectionMode: selectionMode, onPick: onDatePick, onVirtualPick: virtualDatePick, onClose: closePanel, defaultDate: date, enableShowWeekNum: enableShowWeekNum, disabledDateFunc: disabledDateFunc, enableSecond: enableSecond })))));
 };
 exports["default"] = DatePicker;
 
@@ -53774,10 +53780,12 @@ var DateRangePicker = function (props) {
     var _m = (0, react_1.useState)(null), popperElement = _m[0], setPopperElement = _m[1];
     var _o = (0, react_popper_1.usePopper)(referenceElement, popperElement, {
         placement: 'bottom-start',
-        modifiers: [{
+        modifiers: [
+            {
                 name: 'preventOverflow',
-                options: { padding: 8 }
-            }],
+                options: { padding: 8 },
+            },
+        ],
     }), styles = _o.styles, attributes = _o.attributes;
     // 扩展dayjs的功能
     dayjs_1.default.extend(advancedFormat_1.default);
@@ -53806,9 +53814,8 @@ var DateRangePicker = function (props) {
     return (react_1.default.createElement("div", { ref: dateRangePickerRef, className: (0, classnames_1.default)('daterangepicker-box', className) },
         react_1.default.createElement("div", { ref: setReferenceElement },
             react_1.default.createElement(Component_1.Input, { selectionMode: selectionMode, onFocus: onInputFocus, value: text, placeholder: placeholder, onIconClick: clearText, enableClear: enableClear })),
-        pickerVisible &&
-            react_1.default.createElement("div", __assign({ ref: setPopperElement, style: (0, lodash_1.assign)(styles.popper, { zIndex: 10 }) }, attributes.popper),
-                react_1.default.createElement(Component_1.DateRangePanel, { selectionMode: selectionMode, onPick: datePick, onClose: closePanel, defaultDate: date, disabledDateFunc: disabledDateFunc, format: format, enableShowWeekNum: enableShowWeekNum, titleLabel: titleLabel, contentLabel: contentLabel }))));
+        pickerVisible && (react_1.default.createElement("div", __assign({ ref: setPopperElement, style: (0, lodash_1.assign)(styles.popper, { zIndex: 10 }) }, attributes.popper),
+            react_1.default.createElement(Component_1.DateRangePanel, { selectionMode: selectionMode, onPick: datePick, onClose: closePanel, defaultDate: date, disabledDateFunc: disabledDateFunc, format: format, enableShowWeekNum: enableShowWeekNum, titleLabel: titleLabel, contentLabel: contentLabel })))));
 };
 exports["default"] = DateRangePicker;
 
@@ -53875,7 +53882,9 @@ var TimePicker = function (props) {
     // state
     var _d = (0, react_1.useState)(false), pickerVisible = _d[0], setPickerVisible = _d[1];
     var _e = (0, react_1.useState)(function () {
-        return defaultTime ? (0, dayjs_1.default)(defaultTime) : (0, dayjs_1.default)().hour(0).minute(0).second(0);
+        return defaultTime
+            ? (0, dayjs_1.default)(defaultTime)
+            : (0, dayjs_1.default)().hour(0).minute(0).second(0);
     }), time = _e[0], setTime = _e[1];
     var _f = (0, react_1.useState)(function () {
         return defaultTime ? (0, Util_1.singleDateToText)(time, format) : '';
@@ -53886,12 +53895,16 @@ var TimePicker = function (props) {
     var _h = (0, react_1.useState)(null), popperElement = _h[0], setPopperElement = _h[1];
     var _j = (0, react_popper_1.usePopper)(referenceElement, popperElement, {
         placement: 'bottom-start',
-        modifiers: [{
+        modifiers: [
+            {
                 name: 'preventOverflow',
-                options: { padding: 8 }
-            }],
+                options: { padding: 8 },
+            },
+        ],
     }), styles = _j.styles, attributes = _j.attributes;
-    (0, Hook_1.useClickOutside)(timePickerRef, function () { setPickerVisible(false); });
+    (0, Hook_1.useClickOutside)(timePickerRef, function () {
+        setPickerVisible(false);
+    });
     var onInputFocus = function () {
         if (!pickerVisible) {
             setPickerVisible(true);
@@ -53915,9 +53928,8 @@ var TimePicker = function (props) {
     return (react_1.default.createElement("div", { ref: timePickerRef, className: (0, classnames_1.default)('timepicker-box', className) },
         react_1.default.createElement("div", { ref: setReferenceElement },
             react_1.default.createElement(Component_1.Input, { selectionMode: "time", onFocus: onInputFocus, value: text, placeholder: placeholder, onIconClick: onClearText, enableClear: enableClear })),
-        pickerVisible &&
-            react_1.default.createElement("div", __assign({ ref: setPopperElement, style: (0, lodash_1.assign)(styles.popper, { zIndex: 10 }) }, attributes.popper),
-                react_1.default.createElement(Component_1.BasePanel, { selectionMode: "time", onPick: onTimePick, onClose: closePanel, defaultDate: time, enableSecond: enableSecond }))));
+        pickerVisible && (react_1.default.createElement("div", __assign({ ref: setPopperElement, style: (0, lodash_1.assign)(styles.popper, { zIndex: 10 }) }, attributes.popper),
+            react_1.default.createElement(Component_1.BasePanel, { selectionMode: "time", onPick: onTimePick, onClose: closePanel, defaultDate: time, enableSecond: enableSecond })))));
 };
 exports["default"] = TimePicker;
 
@@ -53945,7 +53957,7 @@ var ActionButton = function (props) {
         var _a;
         return (0, classnames_1.default)((_a = {},
             _a[customCls] = true,
-            _a['disable'] = disable,
+            _a.disable = disable,
             _a));
     };
     return (react_1.default.createElement("div", { className: "btn-panel" },
@@ -54022,17 +54034,20 @@ var BasePanel = function (props) {
     }), currentPanel = _c[0], setCurrentPanel = _c[1];
     var datePick = function (d) {
         // 日，周视图点击年视图进入时
-        if ((0, lodash_1.includes)(['day', 'week', 'daytime'], selectionMode) && currentPanel === 'year') {
+        if ((0, lodash_1.includes)(['day', 'week', 'daytime'], selectionMode) &&
+            currentPanel === 'year') {
             setDate(date.year(d[1].year()));
             setCurrentPanel('day');
         }
         // 日，周视图点击月视图进入时
-        else if ((0, lodash_1.includes)(['day', 'week', 'daytime'], selectionMode) && currentPanel === 'month') {
+        else if ((0, lodash_1.includes)(['day', 'week', 'daytime'], selectionMode) &&
+            currentPanel === 'month') {
             setDate(date.month(d[1].month()));
             setCurrentPanel('day');
         }
         // 月，季视图点击年视图进入时
-        else if ((0, lodash_1.includes)(['month', 'quarter'], selectionMode) && currentPanel === 'year') {
+        else if ((0, lodash_1.includes)(['month', 'quarter'], selectionMode) &&
+            currentPanel === 'year') {
             setDate(date.year(d[1].year()));
             setCurrentPanel('month');
         }
@@ -54049,7 +54064,10 @@ var BasePanel = function (props) {
         onPick(d);
     };
     var dateTimePick = function () {
-        var d = (0, dayjs_1.default)(date).hour(time.hour).minute(time.minute).second(time.second);
+        var d = (0, dayjs_1.default)(date)
+            .hour(time.hour)
+            .minute(time.minute)
+            .second(time.second);
         onPick([d, d]);
     };
     var timeChange = function (t) {
@@ -54091,8 +54109,12 @@ var BasePanel = function (props) {
                         react_1.default.createElement("button", { type: "button", onClick: function () { return last('year', 1); }, className: "icon-btn icon-double-left" }),
                         react_1.default.createElement("button", { type: "button", onClick: function () { return last('month', 1); }, className: "icon-btn icon-left" }),
                         react_1.default.createElement("div", { className: "date-label" },
-                            react_1.default.createElement("div", { className: "year", onClick: function (e) { return showPanel(e, 'year'); } }, "".concat(date.year(), " \u5E74 ")),
-                            react_1.default.createElement("div", { className: "month", onClick: function (e) { return showPanel(e, 'month'); } }, "".concat(date.month() + 1, " \u6708 "))),
+                            react_1.default.createElement("div", { className: "year", onClick: function (e) {
+                                    return showPanel(e, 'year');
+                                } }, "".concat(date.year(), " \u5E74 ")),
+                            react_1.default.createElement("div", { className: "month", onClick: function (e) {
+                                    return showPanel(e, 'month');
+                                } }, "".concat(date.month() + 1, " \u6708 "))),
                         react_1.default.createElement("button", { type: "button", onClick: function () { return next('month', 1); }, className: "icon-btn icon-right" }),
                         react_1.default.createElement("button", { type: "button", onClick: function () { return next('year', 1); }, className: "icon-btn icon-double-right" })),
                     react_1.default.createElement(DayPanel_1.default, { onPick: datePick, defaultDate: defaultDate, virtualDate: date, selectionMode: selectionMode, enableShowWeekNum: enableShowWeekNum, disabledDateFunc: disabledDateFunc })),
@@ -54122,7 +54144,9 @@ var BasePanel = function (props) {
     };
     var renderPanel = function () {
         if (currentPanel === 'day') {
-            return selectionMode === 'daytime' ? renderDayTimePanel() : renderDayPanel();
+            return selectionMode === 'daytime'
+                ? renderDayTimePanel()
+                : renderDayPanel();
         }
         else if (currentPanel === 'month') {
             return renderMonthPanel();
@@ -54133,7 +54157,7 @@ var BasePanel = function (props) {
         else
             return renderTimePanel();
     };
-    return (react_1.default.createElement("div", { className: "picker-panel" }, renderPanel()));
+    return react_1.default.createElement("div", { className: "picker-panel" }, renderPanel());
 };
 exports["default"] = BasePanel;
 
@@ -54302,13 +54326,16 @@ var DayPanel = function (props) {
         (0, lodash_1.times)(42, function (i) {
             // 上个月数
             if (i < currentDayWeek) {
-                var theDate = virtualDate.date(lastDaysInMonth + 1 - currentDayWeekCounter).subtract(1, 'month');
+                var theDate = virtualDate
+                    .date(lastDaysInMonth + 1 - currentDayWeekCounter)
+                    .subtract(1, 'month');
                 cell.push({
                     label: lastDaysInMonth + 1 - currentDayWeekCounter,
                     style: {
-                        'last': true,
-                        'disabled': (0, lodash_1.isFunction)(disabledDateFunc) && disabledDateFunc(theDate.toDate()),
-                    }
+                        last: true,
+                        disabled: (0, lodash_1.isFunction)(disabledDateFunc) &&
+                            disabledDateFunc(theDate.toDate()),
+                    },
                 });
                 currentDayWeekCounter -= 1;
             }
@@ -54316,13 +54343,13 @@ var DayPanel = function (props) {
             else if (i < currentDayWeek + daysInMonth) {
                 var currentDay = daysInMonth + 1 - currentMonthsDayCounter;
                 var theDate = virtualDate.date(currentDay);
-                if (virtualDate.date() === currentDay
-                    && virtualDate.month() === defaultDate.month()
-                    && virtualDate.year() === defaultDate.year()) {
+                if (virtualDate.date() === currentDay &&
+                    virtualDate.month() === defaultDate.month() &&
+                    virtualDate.year() === defaultDate.year()) {
                     cell.push({
                         label: currentDay,
                         style: {
-                            'pick': true,
+                            pick: true,
                         },
                     });
                 }
@@ -54330,21 +54357,25 @@ var DayPanel = function (props) {
                     cell.push({
                         label: currentDay,
                         style: {
-                            'disabled': (0, lodash_1.isFunction)(disabledDateFunc) && disabledDateFunc(theDate.toDate()),
-                        }
+                            disabled: (0, lodash_1.isFunction)(disabledDateFunc) &&
+                                disabledDateFunc(theDate.toDate()),
+                        },
                     });
                 }
                 currentMonthsDayCounter -= 1;
             }
             // 下个月
             else {
-                var theDate = virtualDate.date(nextMonthsDayCounter).add(1, 'month');
+                var theDate = virtualDate
+                    .date(nextMonthsDayCounter)
+                    .add(1, 'month');
                 cell.push({
                     label: nextMonthsDayCounter,
                     style: {
-                        'next': true,
-                        'disabled': (0, lodash_1.isFunction)(disabledDateFunc) && disabledDateFunc(theDate.toDate()),
-                    }
+                        next: true,
+                        disabled: (0, lodash_1.isFunction)(disabledDateFunc) &&
+                            disabledDateFunc(theDate.toDate()),
+                    },
                 });
                 nextMonthsDayCounter += 1;
             }
@@ -54386,7 +54417,10 @@ var DayPanel = function (props) {
                     disabledTrFlag = true;
                 }
                 if (index !== 0 && (index + 1) % 7 === 0) {
-                    var cls = (0, classnames_1.default)({ 'pick': pickTrFlag, 'disabled': disabledTrFlag });
+                    var cls = (0, classnames_1.default)({
+                        pick: pickTrFlag,
+                        disabled: disabledTrFlag,
+                    });
                     if (enableShowWeekNum) {
                         var weekNum = getWeekNum(day);
                         dayTemp.unshift(react_1.default.createElement("td", { key: "week-num-".concat(weekNum), className: "week-num-td" }, weekNum));
@@ -54400,7 +54434,9 @@ var DayPanel = function (props) {
         });
         return week;
     };
-    return (react_1.default.createElement("table", { cellSpacing: "0", cellPadding: "0", className: (0, classnames_1.default)('day-table', { 'is-week-mode': selectionMode === 'week' }) },
+    return (react_1.default.createElement("table", { cellSpacing: "0", cellPadding: "0", className: (0, classnames_1.default)('day-table', {
+            'is-week-mode': selectionMode === 'week',
+        }) },
         react_1.default.createElement("thead", null, renderHeader()),
         react_1.default.createElement("tbody", null, renderTbody())));
 };
@@ -54483,7 +54519,11 @@ var Input = function (props) {
         }
     };
     var iconCls = (0, react_1.useMemo)(function () {
-        return "input-icon ".concat((value && isHover && enableClear) ? 'icon-close' : selectionMode === 'time' ? 'icon-time' : 'icon-calendar');
+        return "input-icon ".concat(value && isHover && enableClear
+            ? 'icon-close'
+            : selectionMode === 'time'
+                ? 'icon-time'
+                : 'icon-calendar');
     }, [value, isHover]);
     return (react_1.default.createElement("div", { className: "input-box" },
         react_1.default.createElement("input", { className: (0, classnames_1.default)(inputClassName), value: value, readOnly: true, placeholder: placeholder, ref: inputRef, onFocus: handleFocus, onBlur: handleBlur }),
@@ -54533,14 +54573,15 @@ var MonthPanel = function (props) {
      * 计算日历cell数据数组
      */
     var computeCellArray = function () {
-        //数字数组
+        // 数字数组
         var cell = [];
         (0, lodash_1.times)(12, function (month) {
             var theMonth = virtualDate.month(month);
             var style = {
-                'select': true,
-                'pick': (month === defaultDate.month()) && (virtualDate.year() === defaultDate.year()),
-                'disabled': (0, lodash_1.isFunction)(disabledDateFunc) && disabledDateFunc(theMonth),
+                select: true,
+                pick: month === defaultDate.month() &&
+                    virtualDate.year() === defaultDate.year(),
+                disabled: (0, lodash_1.isFunction)(disabledDateFunc) && disabledDateFunc(theMonth),
             };
             cell.push({
                 label: month + 1,
@@ -54576,8 +54617,8 @@ var MonthPanel = function (props) {
                 }
                 if (index !== 0 && (index + 1) % 3 === 0) {
                     var cls = {
-                        'pick': pickTrFlag,
-                        'disabled': disabledTrFlag
+                        pick: pickTrFlag,
+                        disabled: disabledTrFlag,
                     };
                     quarter.push(react_1.default.createElement("tr", { key: "quarter-".concat(index / 3), className: (0, classnames_1.default)(cls), onClick: function () { return onDatePick(month, selectionMode); } }, arrTemp));
                     arrTemp = [];
@@ -54588,7 +54629,9 @@ var MonthPanel = function (props) {
         });
         return quarter;
     };
-    return (react_1.default.createElement("table", { cellSpacing: "0", cellPadding: "0", className: (0, classnames_1.default)('month-table', { 'is-quarter-mode': selectionMode === 'quarter' }) },
+    return (react_1.default.createElement("table", { cellSpacing: "0", cellPadding: "0", className: (0, classnames_1.default)('month-table', {
+            'is-quarter-mode': selectionMode === 'quarter',
+        }) },
         react_1.default.createElement("tbody", null, renderTbody())));
 };
 exports["default"] = MonthPanel;
@@ -54751,9 +54794,9 @@ var YearPanel = function (props) {
             var currentYear = (0, lodash_1.toInteger)("".concat((0, lodash_1.toString)(preYear)).concat((0, lodash_1.toString)(index)));
             var theYear = virtualDate.year(currentYear);
             var style = {
-                'select': true,
-                'pick': currentYear === defaultDate.year(),
-                'disabled': (0, lodash_1.isFunction)(disabledDateFunc) && disabledDateFunc(theYear)
+                select: true,
+                pick: currentYear === defaultDate.year(),
+                disabled: (0, lodash_1.isFunction)(disabledDateFunc) && disabledDateFunc(theYear),
             };
             if (index < 10) {
                 cell.push({
@@ -54764,7 +54807,7 @@ var YearPanel = function (props) {
             else {
                 cell.push({
                     label: index,
-                    style: { 'hide': true },
+                    style: { hide: true },
                 });
             }
         });
@@ -54779,7 +54822,8 @@ var YearPanel = function (props) {
         var cellArray = computeCellArray();
         cellArray.map(function (year, index) {
             tdArray.push(react_1.default.createElement("td", { key: "year-".concat(year.label), className: (0, classnames_1.default)(year.style), onClick: function () { return onDatePick(year); } }, year.label));
-            if ((index !== 0 && (index + 1) % 4 === 0) || index === cellArray.length - 1) {
+            if ((index !== 0 && (index + 1) % 4 === 0) ||
+                index === cellArray.length - 1) {
                 trArray.push(react_1.default.createElement("tr", { key: "years-".concat(index / 4) }, tdArray));
                 tdArray = [];
             }
@@ -54847,17 +54891,25 @@ exports.DEFAULT_FORMATS_MAP = {
     daytime: 'YYYY-MM-DD HH:mm',
 };
 exports.DEFAULT_PLACEHOLDER_MAP = {
-    'day': '请选择日期',
-    'daytime': '请选择日期',
-    'week': '请选择周',
-    'month': '请选择月',
-    'quarter': '请选择季',
-    'year': '请选择年',
-    'time': '请选择时间',
+    day: '请选择日期',
+    daytime: '请选择日期',
+    week: '请选择周',
+    month: '请选择月',
+    quarter: '请选择季',
+    year: '请选择年',
+    time: '请选择时间',
     'date-range': '请选择日期范围',
     'time-range': '请选择时间范围',
 };
-exports.WEEK_CN_SHORT_ARRAY = ['日', '一', '二', '三', '四', '五', '六'];
+exports.WEEK_CN_SHORT_ARRAY = [
+    '日',
+    '一',
+    '二',
+    '三',
+    '四',
+    '五',
+    '六',
+];
 
 
 /***/ }),
@@ -54897,13 +54949,14 @@ var lodash_1 = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.j
 var useClickOutside = function (ref, callback) {
     (0, react_1.useEffect)(function () {
         var listener = function (evt) {
-            if (ref.current.contains(evt.target) || (0, lodash_1.includes)(['year', 'month', 'select', 'select pick'], evt.target.className))
+            if (ref.current.contains(evt.target) ||
+                (0, lodash_1.includes)(['year', 'month', 'select', 'select pick'], evt.target.className))
                 return;
             callback();
         };
-        document.addEventListener("click", listener, false);
+        document.addEventListener('click', listener, false);
         return function () {
-            document.removeEventListener("click", listener, false);
+            document.removeEventListener('click', listener, false);
         };
     }, [ref, callback]);
 };
@@ -54929,11 +54982,11 @@ var useHover = function (ref) {
     (0, react_1.useEffect)(function () {
         var node = ref.current;
         if (node) {
-            node.addEventListener("mouseover", handleMouseOver);
-            node.addEventListener("mouseout", handleMouseOut);
+            node.addEventListener('mouseover', handleMouseOver);
+            node.addEventListener('mouseout', handleMouseOut);
             return function () {
-                node.removeEventListener("mouseover", handleMouseOver);
-                node.removeEventListener("mouseout", handleMouseOut);
+                node.removeEventListener('mouseover', handleMouseOver);
+                node.removeEventListener('mouseout', handleMouseOut);
             };
         }
     }, [ref.current]);
@@ -54957,7 +55010,9 @@ exports.rangeDateToText = exports.singleDateToText = exports.getDefaultFormat = 
 var constants_1 = __webpack_require__(/*! Src/constants */ "./src/constants.ts");
 var getDefaultFormat = function (selectionMode, enableSecond) {
     if (enableSecond === void 0) { enableSecond = false; }
-    return "".concat(constants_1.DEFAULT_FORMATS_MAP[selectionMode]).concat((enableSecond && (selectionMode === 'daytime' || selectionMode === 'time')) ? ':ss' : '');
+    return "".concat(constants_1.DEFAULT_FORMATS_MAP[selectionMode]).concat(enableSecond && (selectionMode === 'daytime' || selectionMode === 'time')
+        ? ':ss'
+        : '');
 };
 exports.getDefaultFormat = getDefaultFormat;
 var singleDateToText = function (d, f) {
