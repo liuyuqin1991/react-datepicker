@@ -216,12 +216,9 @@ const Demo: React.FC = () => {
         </div>
         <div className="title">TimePicker组件</div>
         <div className="time">
-          <div className="label-panel">
-            6. 时间选择组件（设计灵感：避免滚动选择，特定时间直观显示点击）
-          </div>
           <div className="date-panel">
             <div className="date-select">
-              <span>基础时间：</span>
+              <span>默认：</span>
               <TimePicker onPick={timePick} />
             </div>
             <div className="date-select">
@@ -253,10 +250,15 @@ const Demo: React.FC = () => {
               />
             </div>
           </div>
+          <div className="design-tip">
+            <p>设计思路：</p>
+            1. 避免滚动 —— 对无滚轮、滚轮有问题、滚轮不灵活的用户友好
+            <br />
+            2. 直观显示 —— 常用时间点直观显示，方便点击，不常用时间点可拖拽操作
+          </div>
         </div>
         <div className="title">DateRangePicker组件</div>
         <div className="daterange">
-          <div className="label-panel">1. 默认</div>
           <div className="date-panel">
             <div className="date-select">
               <span>日：</span>
