@@ -53699,9 +53699,8 @@ var DatePicker = function (props) {
             react_1.default.createElement(Component_1.Input, { selectionMode: selectionMode, onFocus: onInputFocus, value: text, placeholder: placeholder, onIconClick: clearText, enableClear: enableClear })),
         react_1.default.createElement("div", __assign({ ref: setPopperElement, style: (0, lodash_1.assign)(styles.popper, {
                 zIndex: 10,
-            }) }, attributes.popper),
-            react_1.default.createElement("div", { className: "ani-fade-in", style: { display: pickerVisible ? 'block' : 'none' } },
-                react_1.default.createElement(Component_1.BasePanel, { selectionMode: selectionMode, onPick: onDatePick, onVirtualPick: virtualDatePick, onClose: closePanel, defaultDate: date, enableShowWeekNum: enableShowWeekNum, disabledDateFunc: disabledDateFunc, enableSecond: enableSecond })))));
+            }) }, attributes.popper), pickerVisible && (react_1.default.createElement("div", { className: "ani-fade-in" },
+            react_1.default.createElement(Component_1.BasePanel, { selectionMode: selectionMode, onPick: onDatePick, onVirtualPick: virtualDatePick, onClose: closePanel, defaultDate: date, enableShowWeekNum: enableShowWeekNum, disabledDateFunc: disabledDateFunc, enableSecond: enableSecond }))))));
 };
 exports["default"] = DatePicker;
 
