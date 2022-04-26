@@ -120,21 +120,20 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
         })}
         {...attributes.popper}
       >
-        <div
-          className="ani-fade-in"
-          style={{ display: pickerVisible ? 'block' : 'none' }}
-        >
-          <BasePanel
-            selectionMode={selectionMode}
-            onPick={onDatePick}
-            onVirtualPick={virtualDatePick}
-            onClose={closePanel}
-            defaultDate={date}
-            enableShowWeekNum={enableShowWeekNum}
-            disabledDateFunc={disabledDateFunc}
-            enableSecond={enableSecond}
-          />
-        </div>
+        {pickerVisible && (
+          <div className="ani-fade-in">
+            <BasePanel
+              selectionMode={selectionMode}
+              onPick={onDatePick}
+              onVirtualPick={virtualDatePick}
+              onClose={closePanel}
+              defaultDate={date}
+              enableShowWeekNum={enableShowWeekNum}
+              disabledDateFunc={disabledDateFunc}
+              enableSecond={enableSecond}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
