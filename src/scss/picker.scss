@@ -12,3 +12,17 @@
   position: relative;
   font-size: 12px;
 }
+
+.ani-fade-in {
+  animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

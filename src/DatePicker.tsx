@@ -113,11 +113,16 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
           enableClear={enableClear}
         />
       </div>
-      {pickerVisible && (
+      <div
+        ref={setPopperElement}
+        style={_assign(styles.popper, {
+          zIndex: 10,
+        })}
+        {...attributes.popper}
+      >
         <div
-          ref={setPopperElement}
-          style={_assign(styles.popper, { zIndex: 10 })}
-          {...attributes.popper}
+          className="ani-fade-in"
+          style={{ display: pickerVisible ? 'block' : 'none' }}
         >
           <BasePanel
             selectionMode={selectionMode}
@@ -130,7 +135,7 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
             enableSecond={enableSecond}
           />
         </div>
-      )}
+      </div>
     </div>
   );
 };

@@ -103,13 +103,18 @@ const TimePicker: React.FC<TimePickerProps> = (props) => {
           style={_assign(styles.popper, { zIndex: 10 })}
           {...attributes.popper}
         >
-          <BasePanel
-            selectionMode="time"
-            onPick={onTimePick}
-            onClose={closePanel}
-            defaultDate={time}
-            enableSecond={enableSecond}
-          />
+          <div
+            className="ani-fade-in"
+            style={{ display: pickerVisible ? 'block' : 'none' }}
+          >
+            <BasePanel
+              selectionMode="time"
+              onPick={onTimePick}
+              onClose={closePanel}
+              defaultDate={time}
+              enableSecond={enableSecond}
+            />
+          </div>
         </div>
       )}
     </div>
