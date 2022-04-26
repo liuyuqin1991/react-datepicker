@@ -3443,7 +3443,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_asset_font_iconfont_css__WEBPACK_IMPORTED_MODULE_2__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".datepicker-box,\n.timepicker-box {\n  width: 168px;\n  position: relative;\n  font-size: 12px;\n}\n\n.daterangepicker-box {\n  width: 280px;\n  position: relative;\n  font-size: 12px;\n}", "",{"version":3,"sources":["webpack://./src/scss/picker.scss"],"names":[],"mappings":"AAEA;;EAEE,YAAA;EACA,kBAAA;EACA,eAAA;AAAF;;AAGA;EACE,YAAA;EACA,kBAAA;EACA,eAAA;AAAF","sourcesContent":["@import 'Asset/font/iconfont.css';\n\n.datepicker-box,\n.timepicker-box {\n  width: 168px;\n  position: relative;\n  font-size: 12px;\n}\n\n.daterangepicker-box {\n  width: 280px;\n  position: relative;\n  font-size: 12px;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".datepicker-box,\n.timepicker-box {\n  width: 168px;\n  position: relative;\n  font-size: 12px;\n}\n\n.daterangepicker-box {\n  width: 280px;\n  position: relative;\n  font-size: 12px;\n}\n\n.ani-fade-in {\n  animation: fadeIn 0.2s ease-in;\n}\n\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}", "",{"version":3,"sources":["webpack://./src/scss/picker.scss"],"names":[],"mappings":"AAEA;;EAEE,YAAA;EACA,kBAAA;EACA,eAAA;AAAF;;AAGA;EACE,YAAA;EACA,kBAAA;EACA,eAAA;AAAF;;AAGA;EACE,8BAAA;AAAF;;AAGA;EACE;IACE,UAAA;EAAF;EAGA;IACE,UAAA;EADF;AACF","sourcesContent":["@import 'Asset/font/iconfont.css';\n\n.datepicker-box,\n.timepicker-box {\n  width: 168px;\n  position: relative;\n  font-size: 12px;\n}\n\n.daterangepicker-box {\n  width: 280px;\n  position: relative;\n  font-size: 12px;\n}\n\n.ani-fade-in {\n  animation: fadeIn 0.2s ease-in;\n}\n\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n\n  to {\n    opacity: 1;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -53697,8 +53697,11 @@ var DatePicker = function (props) {
     return (react_1.default.createElement("div", { ref: datePickerRef, className: (0, classnames_1.default)('datepicker-box', className) },
         react_1.default.createElement("div", { ref: setReferenceElement },
             react_1.default.createElement(Component_1.Input, { selectionMode: selectionMode, onFocus: onInputFocus, value: text, placeholder: placeholder, onIconClick: clearText, enableClear: enableClear })),
-        pickerVisible && (react_1.default.createElement("div", __assign({ ref: setPopperElement, style: (0, lodash_1.assign)(styles.popper, { zIndex: 10 }) }, attributes.popper),
-            react_1.default.createElement(Component_1.BasePanel, { selectionMode: selectionMode, onPick: onDatePick, onVirtualPick: virtualDatePick, onClose: closePanel, defaultDate: date, enableShowWeekNum: enableShowWeekNum, disabledDateFunc: disabledDateFunc, enableSecond: enableSecond })))));
+        react_1.default.createElement("div", __assign({ ref: setPopperElement, style: (0, lodash_1.assign)(styles.popper, {
+                zIndex: 10,
+            }) }, attributes.popper),
+            react_1.default.createElement("div", { className: "ani-fade-in", style: { display: pickerVisible ? 'block' : 'none' } },
+                react_1.default.createElement(Component_1.BasePanel, { selectionMode: selectionMode, onPick: onDatePick, onVirtualPick: virtualDatePick, onClose: closePanel, defaultDate: date, enableShowWeekNum: enableShowWeekNum, disabledDateFunc: disabledDateFunc, enableSecond: enableSecond })))));
 };
 exports["default"] = DatePicker;
 
@@ -53929,7 +53932,8 @@ var TimePicker = function (props) {
         react_1.default.createElement("div", { ref: setReferenceElement },
             react_1.default.createElement(Component_1.Input, { selectionMode: "time", onFocus: onInputFocus, value: text, placeholder: placeholder, onIconClick: onClearText, enableClear: enableClear })),
         pickerVisible && (react_1.default.createElement("div", __assign({ ref: setPopperElement, style: (0, lodash_1.assign)(styles.popper, { zIndex: 10 }) }, attributes.popper),
-            react_1.default.createElement(Component_1.BasePanel, { selectionMode: "time", onPick: onTimePick, onClose: closePanel, defaultDate: time, enableSecond: enableSecond })))));
+            react_1.default.createElement("div", { className: "ani-fade-in", style: { display: pickerVisible ? 'block' : 'none' } },
+                react_1.default.createElement(Component_1.BasePanel, { selectionMode: "time", onPick: onTimePick, onClose: closePanel, defaultDate: time, enableSecond: enableSecond }))))));
 };
 exports["default"] = TimePicker;
 
