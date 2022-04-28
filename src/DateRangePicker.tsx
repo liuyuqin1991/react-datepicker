@@ -6,24 +6,62 @@ import weekOfYear from 'dayjs/plugin/weekOfYear';
 import classnames from 'classnames';
 import { usePopper } from 'react-popper';
 
-import { SelectionMode } from 'Typing';
+import { DatePickerMode } from 'Typing';
 import { DEFAULT_FORMATS_MAP, DEFAULT_PLACEHOLDER_MAP } from 'Src/constants';
 import { rangeDateToText } from 'Util';
 import { Input, DateRangePanel } from 'Component';
 import 'Scss/picker.scss';
 
 interface DateRangePickerProps {
-  // v3.0参数
-  selectionMode?: SelectionMode;
+  /**
+   * 模式
+   * @default day
+   */
+  selectionMode?: DatePickerMode;
+  /**
+   * 初始日期
+   */
   defaultDate?: Date[] | string[];
+  /**
+   * 点击日期回调
+   * @default () => {}
+   */
   onPick: (date: Date[]) => void;
+  /**
+   * 格式化（符合dayjs风格的format）
+   */
   format?: string;
+  /**
+   * 占位符
+   */
   placeholder?: string;
+  /**
+   * 禁用日期回调
+   */
   disabledDateFunc?: (date: Date) => boolean;
+  /**
+   * 样式名称
+   */
   className?: string;
+  /**
+   * 是否开启日期清除
+   * @default true
+   */
   enableClear?: boolean;
+  /**
+   * 是否开启周数显示
+   * @default true
+   */
   enableShowWeekNum?: boolean;
+  /**
+   * 标题显示文本
+   * @default 请选择日期范围
+   */
   titleLabel?: string;
+  /**
+   * 起始，结束日期显示文本
+   * @default ['起始日期：', '结束日期：']
+   */
   contentLabel?: string[];
 }
 

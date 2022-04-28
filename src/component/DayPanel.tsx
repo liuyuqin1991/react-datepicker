@@ -6,13 +6,12 @@ import {
 } from 'lodash';
 import { Dayjs } from 'dayjs';
 import classnames from 'classnames';
-
-import { SelectionMode, TD } from 'Typing';
+import { DatePickerMode, TD } from 'Typing';
 import { WEEK_CN_SHORT_ARRAY } from 'Src/constants';
 import 'Scss/day-panel.scss';
 
 interface DayPanelProps {
-  selectionMode: SelectionMode;
+  selectionMode: DatePickerMode;
   // 虚拟日期，在对面板进行月加减，年加减和月，年切换时转化成的虚拟日期
   virtualDate?: Dayjs;
   // 默认日期，初始化和pick后的默认日期

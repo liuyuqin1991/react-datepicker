@@ -6,26 +6,58 @@ import weekOfYear from 'dayjs/plugin/weekOfYear';
 import classnames from 'classnames';
 import { usePopper } from 'react-popper';
 
-import { SelectionMode } from 'Typing';
+import { DatePickerMode } from 'Typing';
 import { DEFAULT_PLACEHOLDER_MAP } from 'Src/constants';
 import { useClickOutside } from 'Hook';
 import { singleDateToText, getDefaultFormat } from 'Util';
 import { Input, BasePanel } from 'Component';
 import 'Scss/picker.scss';
 
-interface DatePickerProps {
-  // v1.0参数
-  selectionMode?: SelectionMode;
+export interface DatePickerProps {
+  /**
+   * 模式
+   * @default day
+   */
+  selectionMode?: DatePickerMode;
+  /**
+   * 初始日期
+   */
   defaultDate?: Date | string;
-  onPick: (date: Date[]) => void;
+  /**
+   * 点击日期回调
+   * @default () => {}
+   */
+  onPick?: (date: Date[]) => void;
+  /**
+   * 格式化（符合dayjs风格的format）
+   */
   format?: string;
+  /**
+   * 占位符
+   */
   placeholder?: string;
+  /**
+   * 禁用日期回调
+   */
   disabledDateFunc?: (date: Date) => boolean;
+  /**
+   * 样式名称
+   */
   className?: string;
-  // v2.0参数
+  /**
+   * 是否开启日期清除
+   * @default true
+   */
   enableClear?: boolean;
-  // v3.0参数
+  /**
+   * 是否开启周数显示
+   * @default true
+   */
   enableShowWeekNum?: boolean;
+  /**
+   * 是否显示秒
+   * @default false
+   */
   enableSecond?: boolean;
 }
 
@@ -34,7 +66,8 @@ const DatePicker: React.FC<DatePickerProps> = (props) => {
     className,
     selectionMode = 'day',
     enableSecond = false,
-    onPick,
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    onPick = () => {},
     format = getDefaultFormat(selectionMode, enableSecond),
     defaultDate,
     placeholder = DEFAULT_PLACEHOLDER_MAP[selectionMode],

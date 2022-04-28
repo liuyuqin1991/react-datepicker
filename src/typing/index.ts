@@ -1,13 +1,14 @@
 type MAP_KEY = number | string;
 
-export type SelectionMode =
+export type DatePickerMode =
   | 'year'
   | 'month'
   | 'week'
   | 'day'
   | 'quarter'
-  | 'time'
   | 'daytime';
+
+export type TimePickerMode = 'time';
 
 export type TD = {
   style?: { [id: string]: boolean };

@@ -8,11 +8,11 @@ import {
 import { Dayjs } from 'dayjs';
 import classnames from 'classnames';
 
-import { SelectionMode, TD } from 'Typing';
+import { DatePickerMode, TD } from 'Typing';
 import 'Scss/month-panel.scss';
 
 interface MonthPanelProps {
-  selectionMode: SelectionMode;
+  selectionMode: DatePickerMode;
   defaultDate?: Dayjs;
   virtualDate?: Dayjs;
   onPick: (date: Dayjs[]) => void;

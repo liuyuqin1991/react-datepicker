@@ -1,7 +1,7 @@
 import React, { useMemo, useRef } from 'react';
 import { isFunction as _isFunction } from 'lodash';
 import classNames from 'classnames';
-import { SelectionMode } from 'Typing';
+import { DatePickerMode, TimePickerMode } from 'Typing';
 import { useHover } from 'Hook';
 import 'Scss/input.scss';
 
@@ -19,7 +19,7 @@ interface InputProps {
   // 图标点击事件
   onIconClick?(e?: React.MouseEvent): void;
   // 日期模式
-  selectionMode: SelectionMode;
+  selectionMode: DatePickerMode | TimePickerMode;
   // 是否允许清除
   enableClear: boolean;
 }

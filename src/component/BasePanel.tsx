@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { includes as _includes, toInteger as _toInteger } from 'lodash';
 import dayjs, { Dayjs } from 'dayjs';
 
-import { SelectionMode } from 'Typing';
+import { DatePickerMode, TimePickerMode } from 'Typing';
 import { ActionButton } from 'Component';
 import DayPanel from './DayPanel';
 import MonthPanel from './MonthPanel';
@@ -17,7 +17,7 @@ interface BasePanelProps {
   // 仅在daytime模式时，点击日期时调用
   onVirtualPick?: (date: Dayjs[] | Dayjs) => void;
   onClose?: () => void;
-  selectionMode: SelectionMode;
+  selectionMode: DatePickerMode | TimePickerMode;
   disabledDateFunc?: (date: Date) => boolean;
   enableSecond?: boolean;
   enableShowWeekNum?: boolean;
@@ -166,7 +166,7 @@ const BasePanel: React.FC<BasePanelProps> = (props) => {
           onPick={datePick}
           defaultDate={defaultDate}
           virtualDate={date}
-          selectionMode={selectionMode}
+          selectionMode={selectionMode as DatePickerMode}
           enableShowWeekNum={enableShowWeekNum}
           disabledDateFunc={disabledDateFunc}
         />
@@ -236,7 +236,7 @@ const BasePanel: React.FC<BasePanelProps> = (props) => {
               onPick={datePick}
               defaultDate={defaultDate}
               virtualDate={date}
-              selectionMode={selectionMode}
+              selectionMode={selectionMode as DatePickerMode}
               enableShowWeekNum={enableShowWeekNum}
               disabledDateFunc={disabledDateFunc}
             />
@@ -275,7 +275,7 @@ const BasePanel: React.FC<BasePanelProps> = (props) => {
           onPick={datePick}
           defaultDate={defaultDate}
           virtualDate={date}
-          selectionMode={selectionMode}
+          selectionMode={selectionMode as DatePickerMode}
         />
       </>
     );

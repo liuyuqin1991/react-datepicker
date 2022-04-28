@@ -1,14 +1,14 @@
 import React, { useState, useMemo } from 'react';
 import dayjs, { Dayjs } from 'dayjs';
 
-import { SelectionMode } from 'Typing';
+import { DatePickerMode } from 'Typing';
 import { ActionButton } from 'Component';
 import DatePicker from 'Src/DatePicker';
 
 import 'Scss/date-range-panel.scss';
 
 interface DateRangePanelProps {
-  selectionMode: SelectionMode;
+  selectionMode: DatePickerMode;
   defaultDate: Dayjs[];
   format: string;
   titleLabel: string;

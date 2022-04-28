@@ -6,27 +6,27 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const isDev = argv.mode == 'development';
 
 const devOption = {
-	entry: path.resolve(__dirname, './example/src/index.tsx'),
-	output: {
-		filename: 'index.js',
-		path: path.resolve(__dirname, './dist'),
-		clean: true,
-	},
-	devtool: 'source-map',
+  entry: path.resolve(__dirname, './example/src/index.tsx'),
+  output: {
+    filename: 'index.js',
+    path: path.resolve(__dirname, './dist'),
+    clean: true,
+  },
+  devtool: 'source-map',
 };
 
 const proOption = {
-	entry: path.resolve(__dirname, './src/index.ts'),
-	output: {
-		filename: 'index.js',
-		path: path.resolve(__dirname, './dist'),
-		clean: true,
-		library: {
-			name: 'react-datepicker-ts',
-			type: 'umd',
-		},
-	},
-	externals: {
+  entry: path.resolve(__dirname, './src/index.ts'),
+  output: {
+    filename: 'index.js',
+    path: path.resolve(__dirname, './dist'),
+    clean: true,
+    library: {
+      name: 'react-datepicker-ts',
+      type: 'umd',
+    },
+  },
+  externals: {
     react: {
       commonjs: 'react',
       commonjs2: 'react',
@@ -42,49 +42,48 @@ const proOption = {
   },
 };
 
-const baseOption = Object.assign({
-	resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.css', '.scss'],
-    alias: {
-			'Src': path.resolve(__dirname, 'src/'),
-			'Typing': path.resolve(__dirname, 'src/typing/'),
-			'Scss': path.resolve(__dirname, 'src/scss/'),
-			'Asset': path.resolve(__dirname, 'src/asset/'),
-			'Hook': path.resolve(__dirname, 'src/hook/'),
-			'Util': path.resolve(__dirname, 'src/util/'),
-			"Component": path.resolve(__dirname, 'src/component/'),
-    },
-  },
-	devServer: {
-		static: './dist',
-		port: 9000,
-	},
-	module: {
-		rules: [
-			{
-				test: /\.(tsx|ts)$/,
-				use: ['ts-loader'],
-			},
-			{
-				test: /\.(scss|css)$/,
-				use: ['style-loader', 'css-loader', 'sass-loader']
-			},
-			{
-				test:/\.(ttf|woff|eot|woff2)$/i,
-				type: 'asset'
-			},
-			{
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset'
+const baseOption = Object.assign(
+  {
+    resolve: {
+      extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.css', '.scss'],
+      alias: {
+        Src: path.resolve(__dirname, 'src/'),
+        Typing: path.resolve(__dirname, 'src/typing/'),
+        Scss: path.resolve(__dirname, 'src/scss/'),
+        Asset: path.resolve(__dirname, 'src/asset/'),
+        Hook: path.resolve(__dirname, 'src/hook/'),
+        Util: path.resolve(__dirname, 'src/util/'),
+        Component: path.resolve(__dirname, 'src/component/'),
       },
-		]
-	},
-	plugins: [
-		new HtmlWebpackPlugin({
-			template: path.resolve(__dirname, './example/public/index.html'),
-			filename: path.resolve(__dirname, './dist/index.html'),
-		}),
-	],
-}, isDev ? devOption : proOption);
+    },
+    devServer: {
+      static: './dist',
+      port: 9000,
+    },
+    module: {
+      rules: [
+        {
+          test: /\.(tsx|ts)$/,
+          use: ['ts-loader'],
+        },
+        {
+          test: /\.(scss|css)$/,
+          use: ['style-loader', 'css-loader', 'sass-loader'],
+        },
+        {
+          test: /\.(ttf|woff|eot|woff2|png|svg|jpg|jpeg|gif)$/i,
+          type: 'asset',
+        },
+      ],
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, './example/public/index.html'),
+        filename: path.resolve(__dirname, './dist/index.html'),
+      }),
+    ],
+  },
+  isDev ? devOption : proOption
+);
 
 module.exports = baseOption;
