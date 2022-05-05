@@ -9,7 +9,7 @@
     "start": "webpack serve --open --mode=development",
     "build": "webpack --config webpack.config.js --mode=production",
     "build-dev": "webpack --config webpack.config.js --mode=development",
-    "deploy": "gh-pages -b demo -d dist",
+    "deploy": "gh-pages -b demo -d .docz/dist",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
     "docz:serve": "docz build && docz serve"
