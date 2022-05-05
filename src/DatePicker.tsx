@@ -6,57 +6,57 @@ import weekOfYear from 'dayjs/plugin/weekOfYear';
 import classnames from 'classnames';
 import { usePopper } from 'react-popper';
 
-import { DatePickerMode } from 'Typing';
 import { DEFAULT_PLACEHOLDER_MAP } from 'Src/constants';
 import { useClickOutside } from 'Hook';
 import { singleDateToText, getDefaultFormat } from 'Util';
 import { Input, BasePanel } from 'Component';
+
 import 'Scss/picker.scss';
 
 export interface DatePickerProps {
   /**
-   * 模式
-   * @default day
+   * 模式，可选
+   * @default 默认: day
    */
-  selectionMode?: DatePickerMode;
+  selectionMode?: 'day' | 'week' | 'month' | 'quarter' | 'year' | 'daytime';
   /**
-   * 初始日期
+   * 初始日期，可选
    */
   defaultDate?: Date | string;
   /**
-   * 点击日期回调
-   * @default () => {}
+   * 点击日期回调，可选
+   * @default 默认: () => {}
    */
   onPick?: (date: Date[]) => void;
   /**
-   * 格式化（符合dayjs风格的format）
+   * 格式化，可选
    */
   format?: string;
   /**
-   * 占位符
+   * 占位符，可选
    */
   placeholder?: string;
   /**
-   * 禁用日期回调
+   * 禁用日期回调，可选
    */
   disabledDateFunc?: (date: Date) => boolean;
   /**
-   * 样式名称
+   * 样式名称，可选
    */
   className?: string;
   /**
-   * 是否开启日期清除
-   * @default true
+   * 是否开启日期清除，可选
+   * @default 默认: true
    */
   enableClear?: boolean;
   /**
-   * 是否开启周数显示
-   * @default true
+   * 是否开启周数显示，可选
+   * @default 默认: true
    */
   enableShowWeekNum?: boolean;
   /**
-   * 是否显示秒
-   * @default false
+   * 是否显示秒，可选
+   * @default 默认: false
    */
   enableSecond?: boolean;
 }

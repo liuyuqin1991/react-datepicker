@@ -1,0 +1,96 @@
+---
+name: DatePicker
+---
+
+import { Playground, Props } from 'docz';
+import DatePicker from 'Src/DatePicker';
+import dayjs from 'dayjs';
+
+# DatePicker
+
+标准单日期选择组件，用于选择日期，支持日，周，月，季，年，日期+时间共 6 种日期类型选择；
+
+## 默认
+
+<Playground>
+  {() => {
+    /*
+     * 回调参数d包含开始和结束日期的数组[starDate,endDate]，当只是日期选择而不包含时间选择时，时间部分均为当前时间
+     * 1. 选择day模式，startDate与endDate相等
+     * 2. 选择week模式，startDate为当周的起始日期，endDate为当周的结束日期
+     * 3. 选择month模式，startDate为当月的起始日期，endDate为当月的结束日期
+     * 4. 选择quarter模式，startDate为当季度的起始日期，endDate为当季度的结束日期
+     * 5. 选择year模式，startDate为当年的起始日期，endDate为当年的结束日期
+     */
+    const datePick = (d) => {
+      const startDate = d[0];
+      const endDate = d[1];
+      window.console.log(
+        `开始日期：${dayjs(startDate).format(
+          'YYYY/MM/DD HH:mm:ss'
+        )} —— 结束日期：${dayjs(endDate).format('YYYY/MM/DD HH:mm:ss')}`
+      );
+    };
+    return <DatePicker onPick={datePick} />;
+  }}
+</Playground>
+
+## 类型
+
+日期模式，默认值为`day`，可选值为` day | week | month | quarter | year | daytime`。
+
+<Playground>
+  <>
+    <DatePicker selectionMode="day" />
+    <DatePicker selectionMode="week" />
+    <DatePicker selectionMode="month" />
+    <DatePicker selectionMode="quarter" />
+    <DatePicker selectionMode="year" />
+    <DatePicker selectionMode="daytime" />
+  </>
+</Playground>
+
+## 预设值
+
+<Playground>
+  <DatePicker defaultDate="2022-2-22" />
+</Playground>
+
+## 格式化
+
+显示在输入框的格式。组件引入了 dayjs，必须符合 dayjs 的 format 规范。[查看 format 规范](https://dayjs.gitee.io/docs/zh-CN/display/format)
+
+<Playground>
+  <>
+    <DatePicker format="YYYY/MM/DD" />
+    <DatePicker selectionMode="week" format="YYYY年第w周" />
+    <DatePicker selectionMode="quarter" format="YYYY年第Q季度" />
+  </>
+</Playground>
+
+## 占位符
+
+<Playground>
+  <DatePicker placeholder="请请请选择开始日期" />
+</Playground>
+
+## 禁用
+
+禁用日期回调函数。
+
+<Playground>
+  {() => {
+    const disabledDateFunc = (currentDate) => {
+      const d = dayjs(currentDate);
+      const today = dayjs();
+      // 只能选择当日前的日期内
+      if (d.isAfter(today)) return true;
+    };
+    return <DatePicker disabledDateFunc={disabledDateFunc} />;
+  }}
+
+</Playground>
+
+## 详细 API
+
+<Props of={DatePicker} />

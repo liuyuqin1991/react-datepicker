@@ -4,7 +4,6 @@ import dayjs, { Dayjs } from 'dayjs';
 import classnames from 'classnames';
 import { usePopper } from 'react-popper';
 
-import { TimePickerMode } from 'Typing';
 import { useClickOutside } from 'Hook';
 import { Input, BasePanel } from 'Component';
 import { singleDateToText, getDefaultFormat } from 'Util';
@@ -12,46 +11,40 @@ import 'Scss/picker.scss';
 
 interface TimePickerProps {
   /**
-   * 模式
-   * @default time
-   */
-  selectionMode?: TimePickerMode;
-  /**
-   * 初始时间
+   * 初始时间，可选
    */
   defaultTime?: Date | string;
   /**
-   * 点击时间回调
-   * @default () => {}
+   * 点击时间回调，可选
+   * @default 默认: () => {}
    */
-  onPick: (date: Date) => void;
+  onPick?: (date: Date) => void;
   /**
-   * 格式化（符合dayjs风格的format）
+   * 格式化，可选
    */
   format?: string;
   /**
-   * 占位符
+   * 占位符，可选
    */
   placeholder?: string;
   /**
-   * 样式名称
+   * 样式名称，可选
    */
   className?: string;
   /**
-   * 是否显示秒
-   * @default false
+   * 是否显示秒，可选
+   * @default 默认: false
    */
   enableSecond?: boolean;
   /**
-   * 是否开启时间清除
-   * @default true
+   * 是否开启时间清除，可选
+   * @default 默认: true
    */
   enableClear?: boolean;
 }
 
 const TimePicker: React.FC<TimePickerProps> = (props) => {
   const {
-    selectionMode = 'time',
     className,
     defaultTime,
     placeholder,
@@ -61,6 +54,7 @@ const TimePicker: React.FC<TimePickerProps> = (props) => {
     onPick,
   } = props;
   // state
+  const selectionMode = 'time';
   const [pickerVisible, setPickerVisible] = useState<boolean>(false);
   const [time, setTime] = useState<Dayjs>(() => {
     return defaultTime

@@ -2,6 +2,8 @@
 const path = require('path');
 const argv = require('yargs').argv;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const isDev = argv.mode == 'development';
 
@@ -81,6 +83,7 @@ const baseOption = Object.assign(
         template: path.resolve(__dirname, './example/public/index.html'),
         filename: path.resolve(__dirname, './dist/index.html'),
       }),
+      new BundleAnalyzerPlugin(),
     ],
   },
   isDev ? devOption : proOption

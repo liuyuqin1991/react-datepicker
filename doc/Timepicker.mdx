@@ -1,0 +1,54 @@
+---
+name: TimePicker
+---
+
+import { Playground, Props } from 'docz';
+import TimePicker from 'Src/TimePicker';
+import dayjs from 'dayjs';
+
+# TimePicker
+
+标准时间选择组件，全新设计，避免滚动选择，特定时间点直观显示
+
+## 默认
+
+<Playground>
+  {() => {
+    /*
+     * 回调参数d为一个Date时间，只有时分秒有效
+     */
+    const timePick = (d) => {
+      const hour = d.getHours();
+      const minute = d.getMinutes();
+      const second = d.getSeconds();
+      window.console.log(`时间：${hour}:${minute}:${second}`);
+    };
+    return <TimePicker onPick={timePick} />;
+  }}
+</Playground>
+
+## 预设值
+
+<Playground>
+  <TimePicker defaultTime="2022-2-22 06:50" />
+</Playground>
+
+## 格式化
+
+显示在输入框的格式。组件引入了 dayjs，必须符合 dayjs 的 format 规范。[查看 format 规范](https://dayjs.gitee.io/docs/zh-CN/display/format)
+
+<Playground>
+  <>
+    <TimePicker format="HH时mm分" />
+  </>
+</Playground>
+
+## 占位符
+
+<Playground>
+  <TimePicker placeholder="请请请选择开始时间" />
+</Playground>
+
+## 详细 API
+
+<Props of={TimePicker} />

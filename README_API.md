@@ -1,4 +1,8 @@
-# API参数详细说明
+---
+name: 详细API文档
+---
+
+# API 参数详细说明
 
 ## DatePicker 参数
 
@@ -18,7 +22,7 @@
 
 > String | 可选 | v1.0
 
-日期组件容器className。
+日期组件容器 className。
 
 ### onPick
 
@@ -47,7 +51,7 @@ const onPick = (d: Date[]) => {
 
 > String | 可选 | v1.0
 
-显示在输入框的格式。组件引入了dayjs，必须符合dayjs的format规范。[查看format规范](https://dayjs.gitee.io/docs/zh-CN/display/format)
+显示在输入框的格式。组件引入了 dayjs，必须符合 dayjs 的 format 规范。[查看 format 规范](https://dayjs.gitee.io/docs/zh-CN/display/format)
 
 ### placeholder
 
@@ -83,13 +87,13 @@ const disabledDateFunc = (currentDate: Date): boolean => {
 
 > Boolean | 可选 | v2.0
 
-允许日期清除，默认为true。
+允许日期清除，默认为 true。
 
 ### enableShowWeekNum
 
 > Boolean | 可选 | v3.0
 
-允许周数显示，默认为true。
+允许周数显示，默认为 true。
 
 ## TimePicker 参数
 
@@ -103,7 +107,7 @@ const disabledDateFunc = (currentDate: Date): boolean => {
 
 > String | 可选 | v2.0
 
-时间组件容器className。
+时间组件容器 className。
 
 ### onPick
 
@@ -128,25 +132,25 @@ const onPick = (d: Date) => {
 
 > String | 可选 | v2.0
 
-显示在输入框的格式。组件引入了dayjs，必须符合dayjs的format规范。[查看format规范](https://dayjs.gitee.io/docs/zh-CN/display/format)
+显示在输入框的格式。组件引入了 dayjs，必须符合 dayjs 的 format 规范。[查看 format 规范](https://dayjs.gitee.io/docs/zh-CN/display/format)
 
 ### placeholder
 
 > String | 可选 | v2.0
 
 未选时间时的占位符。
+
 ### enableSecond
 
 > Boolean | 可选 | v2.0
 
-允许秒选择，默认为true。
+允许秒选择，默认为 true。
 
 ### enableClear
 
 > Boolean | 可选 | v2.0
 
-允许时间清除，默认为true。
-
+允许时间清除，默认为 true。
 
 ## DateRangePicker 参数
 
@@ -154,7 +158,7 @@ const onPick = (d: Date) => {
 
 > String | 可选 | v3.0
 
-日期模式，默认值为`day`，可选值为` day | week | month | quarter | year `。
+日期模式，默认值为`day`，可选值为`day | week | month | quarter | year`。
 
 ### defaultDate
 
@@ -166,7 +170,7 @@ const onPick = (d: Date) => {
 
 > String | 可选 | v3.0
 
-日期组件容器className。
+日期组件容器 className。
 
 ### onPick
 
@@ -195,7 +199,7 @@ const onPick = (d: Date[]) => {
 
 > String | 可选 | v3.0
 
-显示在输入框的格式。组件引入了dayjs，必须符合dayjs的format规范。[查看format规范](https://dayjs.gitee.io/docs/zh-CN/display/format)
+显示在输入框的格式。组件引入了 dayjs，必须符合 dayjs 的 format 规范。[查看 format 规范](https://dayjs.gitee.io/docs/zh-CN/display/format)
 
 ### placeholder
 
@@ -231,13 +235,13 @@ const disabledDateFunc = (currentDate: Date): boolean => {
 
 > Boolean | 可选 | v3.0
 
-允许日期清除，默认为true。
+允许日期清除，默认为 true。
 
 ### enableShowWeekNum
 
 > Boolean | 可选 | v3.0
 
-允许周数显示，默认为true。
+允许周数显示，默认为 true。
 
 ### titleLabel
 
@@ -250,5 +254,3 @@ const disabledDateFunc = (currentDate: Date): boolean => {
 > String[] | 可选 | v3.0
 
 内容文字数组，默认值为['起始日期：', '结束日期：']。
-
-

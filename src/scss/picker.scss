@@ -1,16 +1,20 @@
-@import 'Asset/font/iconfont.css';
+@import '../asset/font/iconfont.css';
 
 .datepicker-box,
-.timepicker-box {
-  width: 168px;
+.timepicker-box,
+.daterangepicker-box {
+  font-family: 'PingFang SC, Microsoft Yahei';
   position: relative;
   font-size: 12px;
 }
 
+.datepicker-box,
+.timepicker-box {
+  width: 168px;
+}
+
 .daterangepicker-box {
   width: 280px;
-  position: relative;
-  font-size: 12px;
 }
 
 .ani-fade-in {
