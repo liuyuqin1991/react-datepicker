@@ -15,7 +15,7 @@ import dayjs from 'dayjs';
 <Playground>
   {() => {
     /*
-     * 回调参数d包含开始和结束日期的数组，当只是日期选择而不包含时间选择时，时间部分均为当前时间
+     * 回调参数d包含开始和结束日期的数组[starDate: Date,endDate: Date]，当只是日期选择而不包含时间选择时，时间部分均为当前时间
      * 1. 选择day模式，startDate为起始日期，endDate为结束日期
      * 2. 选择week模式，startDate为起始日期里选择的周的第一天，endDate为结束日期里选择的周的最后一天
      * 3. 选择month模式，startDate为起始日期里选择的月的第一天，endDate为结束日期里选择的月的最后一天
