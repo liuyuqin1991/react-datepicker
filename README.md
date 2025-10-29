@@ -1,8 +1,3 @@
----
-name: readme
-route: /readme
-hidden: true
----
 
 # react-datepicker
 
